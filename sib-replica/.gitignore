@@ -1,3 +1,4 @@
-data/app/.internal/
-data/app/app/
+data/sib-replica/.internal/
+data/sib-replica/app/
+data/sib-replica/sib-replica/
 data/instances/**

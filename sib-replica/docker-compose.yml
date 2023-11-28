@@ -1,14 +1,13 @@
 services:
-  app:
+  sib-replica:
     image: solidproject/community-server:7.0.2
     restart: always
-    container_name: app
+    container_name: sib-replica
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8000
       - CSS_PORT=8000
     volumes:
-      - ./data/app/:/data
-      - ./data/app/seeds.json:/data
+      - ./data/sib-replica/:/data
     ports:
       - 8000:8000

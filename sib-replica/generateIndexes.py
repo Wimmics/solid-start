@@ -24,7 +24,7 @@ for instance in range(1, instances + 1):
             index[userSkill].append((instance, user))
 
 for skill, value in index.items():
-    filename = f"""./data/app/app/index/index{skill}$.ttl"""
+    filename = f"""./data/sib-replica/app/index/index{skill}$.ttl"""
     print(f"""Generate {filename}""")
     f = open(filename, "w")
     f.write("@prefix index: <http://example.org#>.\n\n")
@@ -38,7 +38,7 @@ for skill, value in index.items():
     f.close()
 
 # Generate ACL
-f = open("./data/app/app/index/.acl", "w")
+f = open("./data/sib-replica/app/index/.acl", "w")
 f.write('''
 # Root ACL resource for the agent account
 @prefix acl: <http://www.w3.org/ns/auth/acl#>.

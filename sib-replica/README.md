@@ -8,8 +8,8 @@ It is designed to filter users by a criteria (skill). Every user is indexed by s
 
 Before to run the app, execute the following commands in the *sib-replica* folder:
 ```sh
-docker compose up -d app
-mkdir ./data/app/app/index/
+docker compose up -d sib-replica
+mkdir -p ./data/sib-replica/app/index/
 python generateIndexes.py
 ```
 
@@ -27,7 +27,7 @@ Then click on "Refresh" to fetch the results.
 
 ## Indexes
 
-The `generateIndexes.py` script will create 600 index files in the *./data/app/app/index/* folder. It will also create the *.acl* file (ACL) to allow the app to query the indexes publicly (simpler).
+The `generateIndexes.py` script will create 600 index files in the *./data/sib-replica/app/index/* folder. It will also create the *.acl* file (ACL) to allow the app to query the indexes publicly (simpler).
 
 The script is configured with:
 ```py
