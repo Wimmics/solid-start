@@ -1,0 +1,14 @@
+@prefix index: <http://example.org#>.
+
+<> a index:Index;
+	index:entry 	<http://localhost:8002/user36/profile/card#me>,
+	<http://localhost:8005/user36/profile/card#me>,
+	<http://localhost:8008/user36/profile/card#me>,
+	<http://localhost:8011/user36/profile/card#me>,
+	<http://localhost:8014/user36/profile/card#me>,
+	<http://localhost:8017/user36/profile/card#me>,
+	<http://localhost:8020/user36/profile/card#me>,
+	<http://localhost:8023/user36/profile/card#me>,
+	<http://localhost:8026/user36/profile/card#me>,
+	<http://localhost:8029/user36/profile/card#me>,
+	<http://localhost:8032/user36/profile/card#me>.

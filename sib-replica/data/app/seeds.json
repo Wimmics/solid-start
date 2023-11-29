@@ -1,9 +1,1 @@
-[
-    {
-      "email": "app@example.org",
-      "password": "123456",
-      "pods": [
-        { "name": "app" }
-      ]
-    }
-]
+[{"email":"org@example.org",         "password":"123456",         "pods":[{"name":"org"}]}]

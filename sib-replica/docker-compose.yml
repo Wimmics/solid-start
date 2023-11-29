@@ -11,4 +11,453 @@ services:
       - ./data/app/:/data
       - ./data/app/seeds.json:/data
     ports:
-      - 8000:8000
+      - 8000:8000      
+    
+  sib1:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib1
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8001
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/1/:/data
+      - ./data/instances/1/seeds.json:/data
+    ports:
+      - 8001:8000        
+    
+  sib2:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib2
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8002
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/2/:/data
+      - ./data/instances/2/seeds.json:/data
+    ports:
+      - 8002:8000        
+    
+  sib3:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib3
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8003
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/3/:/data
+      - ./data/instances/3/seeds.json:/data
+    ports:
+      - 8003:8000        
+    
+  sib4:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib4
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8004
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/4/:/data
+      - ./data/instances/4/seeds.json:/data
+    ports:
+      - 8004:8000        
+    
+  sib5:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib5
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8005
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/5/:/data
+      - ./data/instances/5/seeds.json:/data
+    ports:
+      - 8005:8000        
+    
+  sib6:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib6
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8006
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/6/:/data
+      - ./data/instances/6/seeds.json:/data
+    ports:
+      - 8006:8000        
+    
+  sib7:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib7
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8007
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/7/:/data
+      - ./data/instances/7/seeds.json:/data
+    ports:
+      - 8007:8000        
+    
+  sib8:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib8
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8008
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/8/:/data
+      - ./data/instances/8/seeds.json:/data
+    ports:
+      - 8008:8000        
+    
+  sib9:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib9
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8009
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/9/:/data
+      - ./data/instances/9/seeds.json:/data
+    ports:
+      - 8009:8000        
+    
+  sib10:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib10
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8010
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/10/:/data
+      - ./data/instances/10/seeds.json:/data
+    ports:
+      - 8010:8000        
+    
+  sib11:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib11
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8011
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/11/:/data
+      - ./data/instances/11/seeds.json:/data
+    ports:
+      - 8011:8000        
+    
+  sib12:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib12
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8012
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/12/:/data
+      - ./data/instances/12/seeds.json:/data
+    ports:
+      - 8012:8000        
+    
+  sib13:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib13
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8013
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/13/:/data
+      - ./data/instances/13/seeds.json:/data
+    ports:
+      - 8013:8000        
+    
+  sib14:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib14
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8014
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/14/:/data
+      - ./data/instances/14/seeds.json:/data
+    ports:
+      - 8014:8000        
+    
+  sib15:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib15
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8015
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/15/:/data
+      - ./data/instances/15/seeds.json:/data
+    ports:
+      - 8015:8000        
+    
+  sib16:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib16
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8016
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/16/:/data
+      - ./data/instances/16/seeds.json:/data
+    ports:
+      - 8016:8000        
+    
+  sib17:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib17
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8017
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/17/:/data
+      - ./data/instances/17/seeds.json:/data
+    ports:
+      - 8017:8000        
+    
+  sib18:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib18
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8018
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/18/:/data
+      - ./data/instances/18/seeds.json:/data
+    ports:
+      - 8018:8000        
+    
+  sib19:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib19
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8019
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/19/:/data
+      - ./data/instances/19/seeds.json:/data
+    ports:
+      - 8019:8000        
+    
+  sib20:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib20
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8020
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/20/:/data
+      - ./data/instances/20/seeds.json:/data
+    ports:
+      - 8020:8000        
+    
+  sib21:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib21
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8021
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/21/:/data
+      - ./data/instances/21/seeds.json:/data
+    ports:
+      - 8021:8000        
+    
+  sib22:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib22
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8022
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/22/:/data
+      - ./data/instances/22/seeds.json:/data
+    ports:
+      - 8022:8000        
+    
+  sib23:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib23
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8023
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/23/:/data
+      - ./data/instances/23/seeds.json:/data
+    ports:
+      - 8023:8000        
+    
+  sib24:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib24
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8024
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/24/:/data
+      - ./data/instances/24/seeds.json:/data
+    ports:
+      - 8024:8000        
+    
+  sib25:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib25
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8025
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/25/:/data
+      - ./data/instances/25/seeds.json:/data
+    ports:
+      - 8025:8000        
+    
+  sib26:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib26
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8026
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/26/:/data
+      - ./data/instances/26/seeds.json:/data
+    ports:
+      - 8026:8000        
+    
+  sib27:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib27
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8027
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/27/:/data
+      - ./data/instances/27/seeds.json:/data
+    ports:
+      - 8027:8000        
+    
+  sib28:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib28
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8028
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/28/:/data
+      - ./data/instances/28/seeds.json:/data
+    ports:
+      - 8028:8000        
+    
+  sib29:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib29
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8029
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/29/:/data
+      - ./data/instances/29/seeds.json:/data
+    ports:
+      - 8029:8000        
+    
+  sib30:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib30
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8030
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/30/:/data
+      - ./data/instances/30/seeds.json:/data
+    ports:
+      - 8030:8000        
+    
+  sib31:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib31
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8031
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/31/:/data
+      - ./data/instances/31/seeds.json:/data
+    ports:
+      - 8031:8000        
+    
+  sib32:
+    image: solidproject/community-server:7.0.2
+    #restart: always
+    container_name: sib32
+    environment:
+      - CSS_SEED_CONFIG=/data/seeds.json
+      - CSS_BASE_URL=http://localhost:8032
+      - CSS_PORT=8000
+    volumes:
+      - ./data/instances/32/:/data
+      - ./data/instances/32/seeds.json:/data
+    ports:
+      - 8032:8000        
+    

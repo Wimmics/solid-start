@@ -8,22 +8,25 @@ It is designed to filter users by a criteria (skill). Every user is indexed by s
 
 Before to run the app, execute the following commands in the *sib-replica* folder:
 ```sh
-docker compose up -d app
-mkdir ./data/app/app/index/
+python generateDockerCompose.py > docker-compose.yml
+python generateSeeds.py
+# You may have to execute the following instructions in root mode
+docker compose up -d # this could take a while as it will start 32 CSS instances
+python generateProfiles.py # be sure to wait for the PODs to be created (docker logs -f sib1)
 python generateIndexes.py
 ```
 
 Then to run the app do:
 ```sh
 cd app
-npm start
+npm install && npm start
 ```
 
 Go to http://localhost:3000.
 
 In the input field, type a number between 1 and 600 (representing the skill) and click "Add to query". Repeat this step to query more skills.
 
-Then click on "Refresh" to fetch the results.
+Then click on "Query" or "Query traversal" to fetch the results.
 
 ## Indexes
 
@@ -42,12 +45,13 @@ skillsPerUser = 5 # number of skills assigned to each user
 The app was created with these commands:
 ```
 npx create-react-app app --template typescript
-npm install @comunica/query-sparql
+npm install @comunica/query-sparql @comunica/query-sparql-link-traversal ldflex @ldflex/comunica
 ```
 
-A script has been started to generate a `docker-compose.yml` file with multiple CSS instances :
-```sh
-python generateDockerCompose.py > docker-compose.yml
-```
+The `generateSeeds.py` script generate the files which will serve to populate the CSS instances. It will generate a `seeds.json` file inside each `data/instances/<instance>` folder. These files will be passed to CSS thanks to env variables. CSS will create accounts and PODs based on these seeds.json files.
 
-The `generateSeeds.py` script will be used later to generate the POD of each user.
+The `generateDockerCompose.py` script will generate the `docker-compose.yml` file containing multiple CSS instances.
+
+The `generateProfiles.py` script will generate the profile document of each user and replace the one created by default by CSS.
+
+The `generateProfiles.py` script will generate the global index owned by the organisation (the app container).
