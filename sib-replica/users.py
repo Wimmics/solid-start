@@ -38,7 +38,7 @@ class User:
 
 def all():
     with open(userFile, newline='') as users:
-        reader = csv.reader(users, delimiter=',', quotechar='"')
+        reader = csv.reader(users, delimiter=';', quotechar='"')
 
         # Skip header
         next(reader)

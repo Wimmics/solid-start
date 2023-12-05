@@ -14,20 +14,54 @@ function App() {
   const [cities, setCities] = useState<string[]>([]);
   const [results, setResults] = useState<string[]>([]);
 
-  const query = async (update: (result: string[]) => void) => {
-    setResults([]);
+  const skillQuery = `SELECT DISTINCT ?user WHERE {
+    ?index a <http://example.org#SkillIndex>;
+    <http://example.org#entry> ?user
+  } LIMIT 100`;
 
+  const skillCityQuery = `SELECT DISTINCT ?user WHERE {
+    ?skillIndex a <http://example.org#SkillIndex>;
+    <http://example.org#entry> ?user.
+    ?cityIndex a <http://example.org#CityIndex>;
+    <http://example.org#entry> ?user.
+  } LIMIT 100`;
+
+  const skillTraversalQuery = `SELECT DISTINCT ?user ?firstName ?lastName ?city WHERE {
+    ?index a <http://example.org#SkillIndex>;
+    <http://example.org#entry> ?user.
+    ?user <http://xmlns.com/foaf/0.1/#firstName> ?firstName;
+    <http://xmlns.com/foaf/0.1/#family_name> ?lastName;
+    <http://example.org/#city> ?city.
+  } LIMIT 100`;
+
+  const skillCityTraversalQuery = `SELECT DISTINCT ?user ?firstName ?lastName ?city WHERE {
+    ?skillIndex a <http://example.org#SkillIndex>;
+    <http://example.org#entry> ?user.
+    ?cityIndex a <http://example.org#CityIndex>;
+    <http://example.org#entry> ?user.
+    ?user <http://xmlns.com/foaf/0.1/#firstName> ?firstName;
+    <http://xmlns.com/foaf/0.1/#family_name> ?lastName;
+    <http://example.org/#city> ?city.
+  } LIMIT 100`;
+
+  const getSources = () => {
     let sources: string[] = []
     skills.forEach(skill => {
       sources.push("http://localhost:8000/org/indexes/skill/" + skill)
     });
+    cities.forEach(city => {
+      sources.push("http://localhost:8000/org/indexes/city/" + city)
+    });
+    return sources;
+  }
 
-    const bindingsStream = await engine.queryBindings(`
-      SELECT DISTINCT ?user WHERE {
-        ?index a <http://example.org#SkillIndex>;
-        <http://example.org#entry> ?user
-      } LIMIT 100`, {
-      sources: sources,
+  const query = async (update: (result: string[]) => void) => {
+    setResults([]);
+
+    const query = cities.length === 0? skillQuery: skillCityQuery;
+
+    const bindingsStream = await engine.queryBindings(query, {
+      sources: getSources(),
     });
 
     let r: string[] = [];
@@ -39,43 +73,23 @@ function App() {
     });
   };
 
-  const skillTraversalQuery = `SELECT DISTINCT ?user ?firstName ?lastName WHERE {
-    ?index a <http://example.org#SkillIndex>;
-    <http://example.org#entry> ?user.
-    ?user <http://xmlns.com/foaf/0.1/#firstName> ?firstName;
-    <http://xmlns.com/foaf/0.1/#family_name> ?lastName
-  } LIMIT 100`;
-
-  const skillCityTraversalQuery = `SELECT DISTINCT ?user ?firstName ?lastName WHERE {
-    ?skillIndex a <http://example.org#SkillIndex>;
-    <http://example.org#entry> ?user.
-    ?cityIndex a <http://example.org#CityIndex>;
-    <http://example.org#entry> ?user.
-    ?user <http://xmlns.com/foaf/0.1/#firstName> ?firstName;
-    <http://xmlns.com/foaf/0.1/#family_name> ?lastName
-  } LIMIT 100`;
-
   const queryTraversal = async (update: (result: string[]) => void) => {
     setResults([]);
 
-    let sources: string[] = []
-    skills.forEach(skill => {
-      sources.push("http://localhost:8000/org/indexes/skill/" + skill)
-    });
-
-    sources.push("http://localhost:8000/org/indexes/city/paris")
-
-    const query = skillCityTraversalQuery; //skillTraversalQuery;
+    const query = cities.length === 0? skillTraversalQuery: skillCityTraversalQuery;
 
     const bindingsStream = await engineTraversal.queryBindings(query, {
-      sources: sources,
+      sources: getSources(),
     });
 
     let r: string[] = [];
 
     // Consume results as a stream (best performance)
     bindingsStream.on('data', (binding: any) => {
-      r.push(binding.get('firstName').value + ' ' + binding.get('lastName').value );
+      const firstName = binding.get('firstName').value;
+      const lastName = binding.get('lastName').value;
+      const city = binding.get('city').value;;
+      r.push(`${firstName} ${lastName} (${city})`);
       update(r);
     });
   };

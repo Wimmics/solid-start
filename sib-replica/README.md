@@ -1,8 +1,10 @@
-# Query distributed data using indexes
+# Query multiple Solid PODs using indexes
 
-This project is a demo of a web app able to query distributed instances very fast thanks to indexes.
+This project is a demo of a web app able to find users spread across multiple Solid PODs very fast thanks to indexes queried with Comunica.
 
-It is designed to filter users by a criteria (skill). Every user is indexed by skill in dedicated documents: the `index1.ttl` lists every users who has the skill 1, the `index600.ttl` lists every users who has the skill 600 and so on. The querying app uses these indexes to respond to the query.
+The app can currently find and display users given two criteria: their skills and their location (city). Each skill and city is indexed in dedicated documents hosted on the general POD (the "org" POD used by the application).
+
+The dataset is generated from the `users.csv` file at the root of the project.
 
 ## Get started
 
@@ -24,21 +26,22 @@ npm install && npm start
 
 Go to http://localhost:3000.
 
-In the input field, type a number between 1 and 600 (representing the skill) and click "Add to query". Repeat this step to query more skills.
+In the skill input field, type the number of a skill that exist in the `users.csv` file. This number represents the skill (PHP, Python, Semantic Web, etc). Then click "Add to query". Repeat this step to query more skills.
 
-Then click on "Query" or "Query traversal" to fetch the results.
+You can also add a city as a second criteria to the query using the second input. Type the name of a city that exist in the `users.csv` file that you used to generate the data. Then click "Add to query". Repeat this step to query more locations.
+
+Then click on:
+- "Query" to fetch only the WebID of users;
+- or on "Query traversal" to fetch the name and the city of users.
 
 ## Indexes
 
-The `generateIndexes.py` script will create 600 index files in the *./data/app/app/index/* folder. It will also create the *.acl* file (ACL) to allow the app to query the indexes publicly (simpler).
+The `generateIndexes.py` script will create an index file for each distinct skill and city found in the `users.csv` file.
 
-The script is configured with:
-```py
-skills = 600
-instances = 32 # CSS instances
-usersPerInstance = 40
-skillsPerUser = 5 # number of skills assigned to each user
-```
+- The skill indexes will be created in the *./data/app/org/indexes/skill/* folder.
+- The city indexes will be created in the *./data/app/org/indexes/city/* folder.
+
+It will also create the *.acl* file (ACL) to allow the app to query the indexes publicly (simpler).
 
 ## Info
 
@@ -53,5 +56,3 @@ The `generateSeeds.py` script generate the files which will serve to populate th
 The `generateDockerCompose.py` script will generate the `docker-compose.yml` file containing multiple CSS instances.
 
 The `generateProfiles.py` script will generate the profile document of each user and replace the one created by default by CSS.
-
-The `generateProfiles.py` script will generate the global index owned by the organisation (the app container).
