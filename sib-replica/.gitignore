@@ -1,3 +1,4 @@
 data/app/.internal/
-data/app/app/
+data/app/org/
 data/instances/**
+__pycache__

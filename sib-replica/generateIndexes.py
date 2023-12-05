@@ -1,82 +1,86 @@
 import os
+import users
 
-skills = 600
-instances = 32
-usersPerInstance = 40
-skillsPerUser = 5
+userFile = "./data/users.csv"
+globalCityIndex = {}
+globalSkillIndex = {}
 
-def skillGenerator():
-    i = 1
-    while True:
-        result = i % (skills + 1)
-        if result > 0:
-            yield result
-        i += 1
+def generateIndexHeader(indexType):
+    return f'''@prefix ex: <http://example.org#>.
 
-def generateGlobalIndex(skill, value):
-    filename = f"""./data/app/org/index/index{skill}$.ttl"""
-    print(f"""Generate {filename}""")
+    <> a {indexType};
+    '''
+
+def generateIndexEntry(entry):
+    return f'''index:entry {entry},'''
+
+def generateACL(filename):
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     f = open(filename, "w")
-    f.write("@prefix index: <http://example.org#>.\n\n")
-    f.write("<> a index:Index;\n")
-    f.write("\tindex:entry ")
+    f.write('''
+    # Root ACL resource for the agent account
+    @prefix acl: <http://www.w3.org/ns/auth/acl#>.
+    @prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+    # The homepage is readable by the public
+    <#public>
+        a acl:Authorization;
+        acl:agentClass foaf:Agent;
+        acl:accessTo <./>;
+        acl:default <./>;
+        acl:mode acl:Read.
+    ''')
+    f.close()
+
+def populateGlobalCityIndex(user):
+    if user.city not in globalCityIndex:
+        globalCityIndex[user.city] = []
+    globalCityIndex[user.city].append(user)
+
+def populateGlobalSkillIndex(user):
+    for skill in user.skills:
+        if skill not in globalSkillIndex:
+            globalSkillIndex[skill] = []
+        globalSkillIndex[skill].append(user)
+
+def generateGlobalSkillIndex(skill):
+    filename = f"""./data/app/org/indexes/skill/{skill}$.ttl"""
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    f = open(filename, "w")
+    f.write(generateIndexHeader('ex:SkillIndex'))
+    f.write("\tex:entry ")
+    
     entries = ""
-    for instance, user in value:
-        entries += f"""\t<http://localhost:{8000 + instance}/user{user}/profile/card#me>,\n"""
-    entries = entries[:-2] + ".\n"
+    for user in globalSkillIndex[skill]:
+        entries += f"""<{user.webId}>,\n\t\t"""
+    entries = entries[:-4] + ".\n"
     f.write(entries)
     f.close()
 
-def generateInstanceIndex(instance, skill, users):
-    filename = f"""./data/instances/{instance}/org/index$.ttl"""
-    print(f"""Generate {filename}""")
+def generateGlobalCityIndex(city):
+    filename = f"""./data/app/org/indexes/city/{city}$.ttl"""
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
     f = open(filename, "w")
-    f.write("@prefix index: <http://example.org#>.\n\n")
-    f.write("<> a index:Index;\n")
-    f.write("\tindex:entry ")
+    f.write(generateIndexHeader('ex:CityIndex'))
+    f.write("\tex:entry ")
+    
+    entries = ""
+    for user in globalCityIndex[city]:
+        entries += f"""<{user.webId}>,\n\t\t"""
+    entries = entries[:-4] + ".\n"
+    f.write(entries)
+    f.close()
 
-skillGenerator = skillGenerator()
+for user in users.all():
+    populateGlobalCityIndex(user)
+    populateGlobalSkillIndex(user)
 
-index = {} # [skill] => [ (instance, user), ... ]
-indexByInstance = {} # [instance] => { skill => [ user, ... ] }
+print("Generate city indexes")
+for city in globalCityIndex:
+    generateGlobalCityIndex(city)
+generateACL("./data/app/org/indexes/city/.acl")
 
-for instance in range(1, instances + 1):
-    for user in range(1, usersPerInstance + 1):
-        for skill in range(0, skillsPerUser):
-            userSkill = next(skillGenerator)
-            if userSkill not in index:
-                index[userSkill] = []
-            if instance not in indexByInstance:
-                indexByInstance[instance] = {}
-            if userSkill not in indexByInstance[instance]:
-                indexByInstance[instance][userSkill] = []
-            index[userSkill].append((instance, user))
-            indexByInstance[instance][userSkill].append(user)
-
-os.makedirs(os.path.dirname("./data/app/org/index/"), exist_ok=True)
-
-for skill, value in index.items():
-    generateGlobalIndex(skill, value)
-
-#for i, value in indexByInstance.items():
-#for skill, user in indexByInstance[3].items():
-#    print(f'''<http://example.org/skill#{skill}> <http://localhost:8001/user{user[0]}/card#me>''')
-
-#print(indexByInstance)
-
-# Generate ACL
-f = open("./data/app/org/index/.acl", "w")
-f.write('''
-# Root ACL resource for the agent account
-@prefix acl: <http://www.w3.org/ns/auth/acl#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
-
-# The homepage is readable by the public
-<#public>
-    a acl:Authorization;
-    acl:agentClass foaf:Agent;
-    acl:accessTo <./>;
-    acl:default <./>;
-    acl:mode acl:Read.
-''')
-f.close()
+print("Generate skill indexes")
+for skill in globalSkillIndex:
+    generateGlobalSkillIndex(skill)
+generateACL("./data/app/org/indexes/skill/.acl")

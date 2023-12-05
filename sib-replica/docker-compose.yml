@@ -17,6 +17,7 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib1
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8001
@@ -31,6 +32,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib2
+    depends_on:
+      - sib1
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8002
@@ -45,6 +49,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib3
+    depends_on:
+      - sib2
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8003
@@ -59,6 +66,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib4
+    depends_on:
+      - sib3
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8004
@@ -73,6 +83,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib5
+    depends_on:
+      - sib4
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8005
@@ -87,6 +100,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib6
+    depends_on:
+      - sib5
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8006
@@ -101,6 +117,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib7
+    depends_on:
+      - sib6
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8007
@@ -115,6 +134,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib8
+    depends_on:
+      - sib7
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8008
@@ -129,6 +151,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib9
+    depends_on:
+      - sib8
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8009
@@ -143,6 +168,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib10
+    depends_on:
+      - sib9
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8010
@@ -157,6 +185,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib11
+    depends_on:
+      - sib10
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8011
@@ -171,6 +202,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib12
+    depends_on:
+      - sib11
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8012
@@ -185,6 +219,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib13
+    depends_on:
+      - sib12
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8013
@@ -199,6 +236,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib14
+    depends_on:
+      - sib13
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8014
@@ -213,6 +253,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib15
+    depends_on:
+      - sib14
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8015
@@ -227,6 +270,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib16
+    depends_on:
+      - sib15
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8016
@@ -241,6 +287,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib17
+    depends_on:
+      - sib16
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8017
@@ -255,6 +304,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib18
+    depends_on:
+      - sib17
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8018
@@ -269,6 +321,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib19
+    depends_on:
+      - sib18
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8019
@@ -283,6 +338,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib20
+    depends_on:
+      - sib19
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8020
@@ -297,6 +355,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib21
+    depends_on:
+      - sib20
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8021
@@ -311,6 +372,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib22
+    depends_on:
+      - sib21
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8022
@@ -325,6 +389,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib23
+    depends_on:
+      - sib22
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8023
@@ -339,6 +406,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib24
+    depends_on:
+      - sib23
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8024
@@ -353,6 +423,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib25
+    depends_on:
+      - sib24
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8025
@@ -367,6 +440,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib26
+    depends_on:
+      - sib25
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8026
@@ -381,6 +457,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib27
+    depends_on:
+      - sib26
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8027
@@ -395,6 +474,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib28
+    depends_on:
+      - sib27
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8028
@@ -409,6 +491,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib29
+    depends_on:
+      - sib28
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8029
@@ -423,6 +508,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib30
+    depends_on:
+      - sib29
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8030
@@ -437,6 +525,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib31
+    depends_on:
+      - sib30
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8031
@@ -451,6 +542,9 @@ services:
     image: solidproject/community-server:7.0.2
     #restart: always
     container_name: sib32
+    depends_on:
+      - sib31
+    
     environment:
       - CSS_SEED_CONFIG=/data/seeds.json
       - CSS_BASE_URL=http://localhost:8032

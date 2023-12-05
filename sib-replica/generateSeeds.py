@@ -1,27 +1,28 @@
-import csv
 import os
+import users
 
-instances = 32
-usersPerInstance = 40
+instances = {} # instance => [users]
 
-def generateSeeds():
+def generateInstanceSeeds(instance):
     result = "["
-    for user in range(1, usersPerInstance + 1):
-        result += generateSeed(f'''user{str(user)}''') + ","
-    result = result[:-1]
-    result += "]"
-    return result
+    for user in instances[instance]:
+        result += user.generateSeed() + ","
+    return result[:-1] + "]"
 
-def generateSeed(userString):
-    return f'''{{"email":"{userString}@example.org", \
-        "password":"123456", \
-        "pods":[{{"name":"{userString}"}}]}}'''
+def populateInstances(user):
+    if user.instance not in instances:
+        instances[user.instance] = []
+    instances[user.instance].append(user)
 
-for instance in range(1, instances + 1):
-    filename = f'''./data/instances/{instance}/seeds.json'''
+for user in users.all():
+    populateInstances(user)
+
+# Generate users account + POD
+for instance in instances:
+    filename = f'''./data/instances/{str(instance)}/seeds.json'''
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     f = open(filename, "w")
-    f.write(generateSeeds())
+    f.write(generateInstanceSeeds(instance))
     f.close()
 
 # generate organization account + POD
@@ -29,7 +30,9 @@ filename = f'''./data/app/seeds.json'''
 os.makedirs(os.path.dirname(filename), exist_ok=True)
 f = open(filename, "w")
 result = "["
-result += generateSeed("org")
+result += f'''{{"email":"org@example.org", \
+        "password":"123456", \
+        "pods":[{{"name":"org"}}]}}'''
 result += "]"
 f.write(result)
 f.close()
