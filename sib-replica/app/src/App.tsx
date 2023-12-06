@@ -6,6 +6,8 @@ const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').Qu
 const engine = new QueryEngine();
 const engineTraversal = new QueryEngineTraversal();
 
+type Mode = 'local' | 'global';
+
 function App() {
 
   const [cityInput, setCityInput] = useState<string>("");
@@ -14,6 +16,8 @@ function App() {
   const [cities, setCities] = useState<string[]>([]);
   const [results, setResults] = useState<string[]>([]);
 
+  const update = (results: string[]) => setResults([...results]);
+  
   const skillQuery = `SELECT DISTINCT ?user WHERE {
     ?index a <http://example.org#SkillIndex>;
     <http://example.org#entry> ?user
@@ -44,24 +48,39 @@ function App() {
     <http://example.org/#city> ?city.
   } LIMIT 100`;
 
-  const getSources = () => {
+  const getSources = (mode: Mode) => {
     let sources: string[] = []
+
     skills.forEach(skill => {
-      sources.push("http://localhost:8000/org/indexes/skill/" + skill)
+      if (mode === 'local') {
+        for (let i = 1; i <= 32; i++) { 
+          sources.push(`http://localhost:${8000 + i}/indexes/skill/${skill}`)
+        }
+      }
+      else sources.push("http://localhost:8000/org/indexes/skill/" + skill)
     });
+
     cities.forEach(city => {
+      if (mode === 'local') {
+        for (let i = 1; i <= 32; i++) { 
+          sources.push(`http://localhost:${8000 + i}/indexes/city/${city}`)
+        }
+      }
+      else 
       sources.push("http://localhost:8000/org/indexes/city/" + city)
     });
+
     return sources;
   }
 
-  const query = async (update: (result: string[]) => void) => {
+  const query = async (mode: Mode) => {
     setResults([]);
 
     const query = cities.length === 0? skillQuery: skillCityQuery;
 
     const bindingsStream = await engine.queryBindings(query, {
-      sources: getSources(),
+      lenient: true,
+      sources: getSources(mode),
     });
 
     let r: string[] = [];
@@ -73,14 +92,15 @@ function App() {
     });
   };
 
-  const queryTraversal = async (update: (result: string[]) => void) => {
+  const queryTraversal = async (mode: Mode) => {
     setResults([]);
 
     const query = cities.length === 0? skillTraversalQuery: skillCityTraversalQuery;
 
     console.log("Start querty traversal")
     const bindingsStream = await engineTraversal.queryBindings(query, {
-      sources: getSources(),
+      lenient: true,
+      sources: getSources(mode),
     });
 
     let r: string[] = [];
@@ -134,8 +154,10 @@ function App() {
       <p><strong>Queried cities:</strong> {cities.map(city => city + ', ')}</p>
 
       <h3>Results</h3>
-      <button onClick={() => query((results: string[]) => setResults([...results]))}>Query</button>
-      <button onClick={() => queryTraversal((results: string[]) => setResults([...results]))}>Query traversal</button>
+      <button onClick={() => query('global')}>Query federated indexes</button>
+      <button onClick={() => queryTraversal('global')}>Query federated indexes with traversal</button>
+      <button onClick={() => query('local')}>Query local indexes</button>
+      <button onClick={() => queryTraversal('local')}>Query local indexes with traversal</button>
       <ol>
         {results.map((r: string, i: number) => <li key={i}>{r}</li>)}
       </ol>

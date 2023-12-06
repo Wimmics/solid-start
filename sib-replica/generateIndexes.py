@@ -107,7 +107,7 @@ def generateLocalSkillIndex(instance):
         filename = f"""./data/instances/{str(instance)}/indexes/skill/{skill}$.ttl"""
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         f = open(filename, "w")
-        f.write(generateIndexHeader('ex:CityIndex'))
+        f.write(generateIndexHeader('ex:SkillIndex'))
         f.write("\tex:entry ")
         
         entries = ""

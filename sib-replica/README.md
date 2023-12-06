@@ -2,6 +2,8 @@
 
 This project is a demo of a web app able to find users spread across multiple Solid PODs very fast thanks to indexes queried with Comunica.
 
+Indexes can be federated (merged into the  POD of the federation) or local (on each federation POD).
+
 The app can currently find and display users given two criteria: their skills and their location (city). Each skill and city is indexed in dedicated documents hosted on the general POD (the "org" POD used by the application).
 
 The dataset is generated from the `users.csv` file at the root of the project.
