@@ -78,6 +78,7 @@ function App() {
 
     const query = cities.length === 0? skillTraversalQuery: skillCityTraversalQuery;
 
+    console.log("Start querty traversal")
     const bindingsStream = await engineTraversal.queryBindings(query, {
       sources: getSources(),
     });
@@ -88,10 +89,13 @@ function App() {
     bindingsStream.on('data', (binding: any) => {
       const firstName = binding.get('firstName').value;
       const lastName = binding.get('lastName').value;
-      const city = binding.get('city').value;;
+      const city = binding.get('city').value;
+      console.log(`Get result: ${firstName} ${lastName} (${city})`);
       r.push(`${firstName} ${lastName} (${city})`);
       update(r);
     });
+
+    bindingsStream.on('data', () => console.log("Terminated query traversal"));
   };
 
   const addSkill = () => {
