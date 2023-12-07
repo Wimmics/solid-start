@@ -1,28 +1,30 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { Strategy, Mode } from './Strategy';
-import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery } from './queries';
-const QueryEngine = require('@comunica/query-sparql').QueryEngine;
-const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').QueryEngine;
+import { StrategyCard, Mode } from './StrategyCard';
+import { Status } from './lib/Status';
+import { Strategy } from './lib/strategy/Strategy';
+import { strategies } from './strategies';
+//import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery } from './queries';
+//const QueryEngine = require('@comunica/query-sparql').QueryEngine;
+//const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').QueryEngine;
 
-const engine = new QueryEngine();
-const engineTraversal = new QueryEngineTraversal();
+//const engine = new QueryEngine();
+//const engineTraversal = new QueryEngineTraversal();
 
 function App() {
 
-  const [strategy, setStrategy] = useState<string>("");
+  const [selectedStrategies, setSelectedStrategies] = useState<string[]>([]);
   const [cityInput, setCityInput] = useState<string>("");
   const [skillInput, setSkillInput] = useState<string>("");
-  const [skills, setSkills] = useState<string[]>([]);
-  const [cities, setCities] = useState<string[]>([]);
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
+  const [selectedCities, setSelectedCities] = useState<string[]>([]);
   const [results, setResults] = useState<string[]>([]); // Result[]
 
-  const strategies = [
-    {name: "Query federated indexes", description: "Query federated indexes with traversal"},
+  useEffect(() => {
+    console.log(selectedStrategies)
+  }, [selectedStrategies])
 
-  ]
-
-  const update = (results: string[]) => setResults([...results]);
+  /*const update = (results: string[]) => setResults([...results]);
 
   const getSources = (mode: Mode) => {
     let sources: string[] = []
@@ -92,16 +94,33 @@ function App() {
     });
 
     bindingsStream.on('end', () => console.log("Terminated query traversal"));
-  };
+  };*/
 
   const addSkill = () => {
-    setSkills([...skills, skillInput]);
+    setSelectedSkills([...selectedSkills, skillInput]);
     setSkillInput("");
   }
 
   const addCity = () => {
-    setCities([...cities, cityInput]);
+    setSelectedCities([...selectedCities, cityInput]);
     setCityInput("");
+  }
+
+  const handleStrategy = (s: Strategy, checked: boolean) => {
+    if (checked)
+      setSelectedStrategies([...selectedStrategies, s.getName()])
+    else setSelectedStrategies(selectedStrategies.filter(ts => ts != s.getName()))
+  }
+
+  const handleLaunch = () => {
+    selectedStrategies.forEach(async (name) => {
+      const strategy = strategies.find(s => s.getName() === name);
+
+      if (strategy) {
+        await strategy.execute({skills: selectedSkills, cities: selectedCities});
+        setResults(strategy.getResult().getMatches().map(m => m.toString()));
+      }
+    })
   }
 
   return (
@@ -128,19 +147,34 @@ function App() {
         <button onClick={() => addCity()}>Add to query</button>
       </p>
 
-      <p>Current skills: {skills.map(skill => skill + ', ')}</p>
-      <p>Current cities: {cities.map(city => city + ', ')}</p>
+      <p>
+        Select only instances: ...
+      </p>
 
-      <h3>2. Choose an indexing strategy</h3>
-      <p>Current strategy: </p>
+      <p>Current skills: {selectedSkills.map(skill => skill + ', ')}</p>
+      <p>Current cities: {selectedCities.map(city => city + ', ')}</p>
 
+      <h3>2. Select indexing stretegies</h3>
+      <p>Select the strategies you want to compare.</p>
+
+{/*
       <p><button onClick={() => query('global')}>Query federated indexes</button></p>
       <p><button onClick={() => queryTraversal('global')}>Query federated indexes with traversal</button></p>
       <p><button onClick={() => query('local')}>Query local indexes</button></p>
       <p><button onClick={() => queryTraversal('local')}>Query local indexes with traversal</button></p>
+*/}
+      {strategies.map((s: Strategy) => 
+        <StrategyCard 
+          name={s.getName()} 
+          description={s.getDescription()} 
+          sparqlQuery={s.getSparqlQuery()}
+          onChanged={(checked: boolean) => handleStrategy(s, checked)}
+        />
+      )}
 
-      <Strategy name="Query federated indexes" description="desc" />
-      <Strategy name="Query 2" description="desc 2" />
+      <p>
+        <button onClick={handleLaunch}>Launch!</button>
+      </p>
 
       <h3>3. Get results</h3>
       <ol>
