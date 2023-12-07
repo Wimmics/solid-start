@@ -14,8 +14,11 @@ Before to run the app, execute the following commands in the *sib-replica* folde
 ```sh
 python generateDockerCompose.py > docker-compose.yml
 python generateSeeds.py
-# You may have to execute the following instructions in root mode
+
+# You may have to execute the following instruction in root mode
 docker compose up -d # this could take a while as it will start 32 CSS instances
+chown -R <user>:<user> ./data/ # replace <user> with your account
+
 python generateProfiles.py # be sure to wait for the PODs to be created (docker logs -f sib1)
 python generateIndexes.py
 ```

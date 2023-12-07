@@ -8,14 +8,6 @@ const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').Qu
 const engine = new QueryEngine();
 const engineTraversal = new QueryEngineTraversal();
 
-interface Result {
-  strategy: undefined;
-  firstResult: number;
-  requestsNumber: number;
-  totalTime: number;
-  results: string[];
-}
-
 function App() {
 
   const [strategy, setStrategy] = useState<string>("");
@@ -99,7 +91,7 @@ function App() {
       update(r);
     });
 
-    bindingsStream.on('data', () => console.log("Terminated query traversal"));
+    bindingsStream.on('end', () => console.log("Terminated query traversal"));
   };
 
   const addSkill = () => {
