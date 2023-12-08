@@ -2,7 +2,7 @@ import { Status } from "../Status";
 import { Strategy, Targets } from "../strategy/Strategy";
 import { ExecutionBase } from "./ExecutionBase";
 
-export class SequentialExecution extends ExecutionBase {
+export class ParralelExecution extends ExecutionBase {
 
     private status: Status;
 
@@ -11,12 +11,11 @@ export class SequentialExecution extends ExecutionBase {
         this.status = Status.READY;
     }
 
+    // TO BE TESTED
     public async run(targets: Targets): Promise<void> {
         this.status = Status.RUNNING;
-        for await (const strategy of this.getStrategies())
-            await strategy.execute(targets);
-        this.status = Status.TERMINATED
-        return Promise.resolve();
+        const promises = this.getStrategies().map(async (strategy) => await strategy.execute(targets));
+        return Promise.all(promises).then(() => { this.status = Status.TERMINATED });
     }
 
     public getStatus(): Status {

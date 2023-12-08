@@ -11,9 +11,14 @@ export function StrategyResult(props: {strategy: Strategy}) {
     const [status, setStatus] = useState<Status>(Status.READY);
 
     useEffect(() => {
-        strategy.getResult().registerCallbackForStatus((status) => setStatus(status));
-        strategy.getResult().registerCallbackForNewMatch((match) => setMatches(strategy.getResult().getMatches()));
-      }, []);
+        strategy.registerCallbackForStatusChange((status) => setStatus(status));
+        strategy.registerCallbackForMatchesChange((match) => setMatches(strategy.getResult().getMatches()));
+    }, []);
+
+    /*useEffect(() => {
+        if (status === Status.READY)
+            setMatches([]);
+    }, [status]);*/
 
     return (
         <table>
@@ -29,8 +34,8 @@ export function StrategyResult(props: {strategy: Strategy}) {
                 </tr>
 
                 <tr>
-                    <th>Time</th>
-                    <td>{strategy.getResult().getTotalTime()}s</td>
+                    <th>Time (sec)</th>
+                    <td>{strategy.getResult().getTotalTime()}</td>
                 </tr>
 
                 <tr>

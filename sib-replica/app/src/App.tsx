@@ -63,7 +63,7 @@ function App() {
       </p>
 
       <p>
-        Select only instances: ...
+        TODO: Select only some instances: ...
       </p>
 
       <p>Current skills: {targets.skills.map(skill => skill + ', ')}</p>
@@ -72,14 +72,16 @@ function App() {
       <h3>2. Select indexing strategies</h3>
       <p>Select the strategies you want to compare for the query.</p>
 
-      {strategies.map((s: Strategy) => 
-        <StrategyCard 
-          name={s.getName()} 
-          description={s.getDescription()} 
-          sparqlQuery={s.getSparqlQuery()}
-          onChanged={(checked: boolean) => handleStrategy(s, checked)}
-          key={s.getName()}
-        />
+      {strategies.map((strategy: Strategy) => 
+        <>
+          <StrategyCard 
+            strategy={strategy} 
+            targets={targets}
+            onChanged={(checked: boolean) => handleStrategy(strategy, checked)}
+            key={strategy.getName()}
+          />
+          <hr />
+        </>
       )}
 
       <p>
@@ -88,8 +90,6 @@ function App() {
 
       <h3>3. Get results</h3>
       
-      <p>Time ellapsed: </p>
-
       {execution.getStrategies().map((s: Strategy) => <StrategyResult strategy={s} />)}
     </div>
   );

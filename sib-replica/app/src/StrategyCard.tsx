@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
+import { Accordion } from './Accordion';
+import { Strategy, Targets } from './lib/strategy/Strategy';
 
 export type Mode = 'local' | 'global';
 
-export function StrategyCard(props: {name: string, description: string, sparqlQuery: string, onChanged?: (checked: boolean) => void}) {
+export function StrategyCard(props: {strategy: Strategy, targets: Targets, onChanged?: (checked: boolean) => void}) {
 
-  const { name, description, sparqlQuery, onChanged } = props;
+  const { strategy, targets, onChanged } = props;
 
   const [checked, setChecked] = useState<boolean>(false);
 
-  const id = `strat-${name}`;
+  const id = `strat-${strategy.getName()}`;
 
   const handleChecked = () => {
     const newState = !checked;
@@ -29,11 +31,22 @@ export function StrategyCard(props: {name: string, description: string, sparqlQu
             htmlFor={id}
             style={{cursor: "pointer"}}
         >
-            {name} - {description}
+            {strategy.getName()} <br /> <i>{strategy.getDescription()}</i>
         </label>
-        <pre>{sparqlQuery}</pre>
+        
+        <Accordion 
+          title="See/hide SPARQL query"
+          content={<pre>{strategy.getSparqlQuery()}</pre>}
+        />
 
-        <p>See targeted sources</p>
+        <Accordion 
+          title={`See/hide targeted sources (${strategy.getTargetedSources(targets).length})`}
+          content={
+            <pre>
+              {strategy.getTargetedSources(targets).map((source: string) => `${source}\n`)}
+            </pre>
+          }
+        />
     </div>
   )
 }
