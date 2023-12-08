@@ -10,8 +10,9 @@ export class StrategyBase implements Strategy {
     private result: ResultBase;
     private sourceProvider: (targets: Targets) => SourceProvider;
     private sources: string[];
+    private matchDisplay?: (binding: any) => string;
 
-    constructor(name: string, description: string, sparqlQuery: string, engine: any, sourceProvider: (targets: Targets) => SourceProvider) {
+    constructor(name: string, description: string, sparqlQuery: string, engine: any, sourceProvider: (targets: Targets) => SourceProvider, matchDisplay?: (binding: any) => string) {
         this.name = name;
         this.description = description;
         this.sparqlQuery = sparqlQuery;
@@ -19,6 +20,7 @@ export class StrategyBase implements Strategy {
         this.result = new ResultBase;
         this.sources = [];
         this.sourceProvider = sourceProvider;
+        this.matchDisplay = matchDisplay;
     }
 
     private setSources(targets: Targets): void {
@@ -62,11 +64,8 @@ export class StrategyBase implements Strategy {
 
         bindingsStream.on('data', (binding: any) => {
             const user = binding.get('user').value;
-            const displayString = this.getBindingResult(binding);
-            this.getResult().addMatch(user, displayString)
-            // console.log(`Get result: ${firstName} ${lastName} (${city})`);
-            //r.push();
-            //update(r);
+            const displayString = this.matchDisplay? this.matchDisplay(binding): user;
+            this.getResult().addMatch(user, displayString);
           });
       
         return new Promise<void>((resolve, reject) => {

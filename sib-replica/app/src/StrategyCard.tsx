@@ -23,7 +23,7 @@ export function StrategyCard(props: {name: string, description: string, sparqlQu
             id={id} 
             type="checkbox" 
             checked={checked} 
-            onClick={handleChecked} 
+            onChange={handleChecked} 
         /> 
         <label 
             htmlFor={id}

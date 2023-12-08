@@ -7,4 +7,6 @@ export interface Result {
     getTotalTime(): number;
     getStatus(): Status;
     getMatches(): Match[];
+    registerCallbackForStatus(callback: (status: Status) => void): void;
+    registerCallbackForNewMatch(callback: (match: Match) => void): void;
 }

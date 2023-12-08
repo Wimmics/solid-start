@@ -1,126 +1,41 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { StrategyCard, Mode } from './StrategyCard';
-import { Status } from './lib/Status';
-import { Strategy } from './lib/strategy/Strategy';
+import { StrategyCard } from './StrategyCard';
+import { StrategyResult } from './StrategyResult';
+import { Strategy, Targets } from './lib/strategy/Strategy';
 import { strategies } from './strategies';
-//import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery } from './queries';
-//const QueryEngine = require('@comunica/query-sparql').QueryEngine;
-//const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').QueryEngine;
-
-//const engine = new QueryEngine();
-//const engineTraversal = new QueryEngineTraversal();
+import { Execution } from './lib/execution/Execution';
+import { SequentialExecution } from './lib/execution/SequentialExecution';
 
 function App() {
 
-  const [selectedStrategies, setSelectedStrategies] = useState<string[]>([]);
+  const [execution, setExecution] = useState<Execution>(new SequentialExecution([]));
+  const [targets, setTargets] = useState<Targets>({skills: [], cities: []});
   const [cityInput, setCityInput] = useState<string>("");
   const [skillInput, setSkillInput] = useState<string>("");
-  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
-  const [selectedCities, setSelectedCities] = useState<string[]>([]);
-  const [results, setResults] = useState<string[]>([]); // Result[]
-
-  useEffect(() => {
-    console.log(selectedStrategies)
-  }, [selectedStrategies])
-
-  /*const update = (results: string[]) => setResults([...results]);
-
-  const getSources = (mode: Mode) => {
-    let sources: string[] = []
-
-    skills.forEach(skill => {
-      if (mode === 'local') {
-        for (let i = 1; i <= 32; i++) { 
-          sources.push(`http://localhost:${8000 + i}/indexes/skill/${skill}`)
-        }
-      }
-      else sources.push("http://localhost:8000/org/indexes/skill/" + skill)
-    });
-
-    cities.forEach(city => {
-      if (mode === 'local') {
-        for (let i = 1; i <= 32; i++) { 
-          sources.push(`http://localhost:${8000 + i}/indexes/city/${city}`)
-        }
-      }
-      else 
-      sources.push("http://localhost:8000/org/indexes/city/" + city)
-    });
-
-    return sources;
-  }
-
-  const query = async (mode: Mode) => {
-    setResults([]);
-
-    const query = cities.length === 0? skillQuery: skillCityQuery;
-
-    const bindingsStream = await engine.queryBindings(query, {
-      lenient: true,
-      sources: getSources(mode),
-    });
-
-    let r: string[] = [];
-
-    // Consume results as a stream (best performance)
-    bindingsStream.on('data', (binding: any) => {
-      r.push(binding.get('user').value);
-      update(r);
-    });
-  };
-
-  const queryTraversal = async (mode: Mode) => {
-    setResults([]);
-
-    const query = cities.length === 0? skillTraversalQuery: skillCityTraversalQuery;
-
-    console.log("Start querty traversal")
-    const bindingsStream = await engineTraversal.queryBindings(query, {
-      lenient: true,
-      sources: getSources(mode),
-    });
-
-    let r: string[] = [];
-
-    // Consume results as a stream (best performance)
-    bindingsStream.on('data', (binding: any) => {
-      const firstName = binding.get('firstName').value;
-      const lastName = binding.get('lastName').value;
-      const city = binding.get('city').value;
-      console.log(`Get result: ${firstName} ${lastName} (${city})`);
-      r.push(`${firstName} ${lastName} (${city})`);
-      update(r);
-    });
-
-    bindingsStream.on('end', () => console.log("Terminated query traversal"));
-  };*/
 
   const addSkill = () => {
-    setSelectedSkills([...selectedSkills, skillInput]);
+    setTargets({skills: [...targets.skills, skillInput], cities: targets.cities});
     setSkillInput("");
   }
 
   const addCity = () => {
-    setSelectedCities([...selectedCities, cityInput]);
+    setTargets({skills: targets.skills, cities: [...targets.cities, cityInput]});
     setCityInput("");
   }
 
-  const handleStrategy = (s: Strategy, checked: boolean) => {
+  const handleStrategy = (strategy: Strategy, checked: boolean) => {
+    let strategies = [];
+
     if (checked)
-      setSelectedStrategies([...selectedStrategies, s.getName()])
-    else setSelectedStrategies(selectedStrategies.filter(ts => ts != s.getName()))
+      strategies = [...execution.getStrategies(), strategy]
+    else strategies = execution.getStrategies().filter(s => s != strategy);
+
+    setExecution(new SequentialExecution(strategies));
   }
 
-  const handleLaunch = () => {
-    selectedStrategies.forEach(async (name) => {
-      const strategy = strategies.find(s => s.getName() === name);
-
-      if (strategy) {
-        await strategy.execute({skills: selectedSkills, cities: selectedCities});
-        setResults(strategy.getResult().getMatches().map(m => m.toString()));
-      }
-    })
+  const handleLaunch = async () => {
+    execution.run(targets);
   }
 
   return (
@@ -151,24 +66,19 @@ function App() {
         Select only instances: ...
       </p>
 
-      <p>Current skills: {selectedSkills.map(skill => skill + ', ')}</p>
-      <p>Current cities: {selectedCities.map(city => city + ', ')}</p>
+      <p>Current skills: {targets.skills.map(skill => skill + ', ')}</p>
+      <p>Current cities: {targets.cities.map(city => city + ', ')}</p>
 
-      <h3>2. Select indexing stretegies</h3>
-      <p>Select the strategies you want to compare.</p>
+      <h3>2. Select indexing strategies</h3>
+      <p>Select the strategies you want to compare for the query.</p>
 
-{/*
-      <p><button onClick={() => query('global')}>Query federated indexes</button></p>
-      <p><button onClick={() => queryTraversal('global')}>Query federated indexes with traversal</button></p>
-      <p><button onClick={() => query('local')}>Query local indexes</button></p>
-      <p><button onClick={() => queryTraversal('local')}>Query local indexes with traversal</button></p>
-*/}
       {strategies.map((s: Strategy) => 
         <StrategyCard 
           name={s.getName()} 
           description={s.getDescription()} 
           sparqlQuery={s.getSparqlQuery()}
           onChanged={(checked: boolean) => handleStrategy(s, checked)}
+          key={s.getName()}
         />
       )}
 
@@ -177,9 +87,10 @@ function App() {
       </p>
 
       <h3>3. Get results</h3>
-      <ol>
-        {results.map((r: string, i: number) => <li key={i}>{r}</li>)}
-      </ol>
+      
+      <p>Time ellapsed: </p>
+
+      {execution.getStrategies().map((s: Strategy) => <StrategyResult strategy={s} />)}
     </div>
   );
 }

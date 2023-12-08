@@ -4,9 +4,8 @@ export interface Strategy {
     getName(): string;
     getDescription(): string;
     getSparqlQuery(): string;
-    execute(targets: Targets): void;
+    execute(targets: Targets): Promise<void>;
     getResult(): Result;
-    //setSources(sources: string[]): void;
 }
 
 export interface Targets {

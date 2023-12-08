@@ -10,11 +10,15 @@ export class ResultBase implements Result {
     private totalTime: number;
     private status: Status;
     private matches: Match[];
+    private callbackNewMatch: ((match: Match) => void)[];
+    private callbackStatus: ((status: Status) => void)[];
 
     constructor() {
         this.totalTime = 0.0;
         this.status = Status.READY;
         this.matches = [];
+        this.callbackNewMatch = [];
+        this.callbackStatus = [];
     }
 
     protected computeEllapsedTime(startTime: Date, endTime: Date): number {
@@ -54,22 +58,37 @@ export class ResultBase implements Result {
             throw new Error("Unable to add match.");
 
         const matchingTime = this.computeEllapsedTime(startTime, new Date());
-        this.matches.push(new MatchBase(user, displayString, matchingTime));
+        const match = new MatchBase(user, displayString, matchingTime);
+        this.matches.push(match);
+        this.callbackNewMatch.forEach(callback => callback(match))
+    }
+
+    public registerCallbackForNewMatch(callback: (match: Match) => void): void {
+        this.callbackNewMatch.push(callback);
+    }
+
+    public registerCallbackForStatus(callback: (status: Status) => void): void {
+        this.callbackStatus.push(callback);
     }
 
     public getMatches(): Match[] {
         return this.matches;
     }
 
+    private setStatus(status: Status): void {
+        this.status = status;
+        this.callbackStatus.forEach(callback => callback(status));
+    }
+
     public setRunning(): void {
         this.startTime = new Date();
-        this.status = Status.RUNNING;
+        this.setStatus(Status.RUNNING);
     }
 
     public setTerminated(): void {
         this.endTime = new Date();
         this.setTotalTime();
-        this.status = Status.TERMINATED;
+        this.setStatus(Status.TERMINATED);
     }
 
     private setTotalTime(): void {

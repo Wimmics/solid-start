@@ -1,12 +1,10 @@
 import { Status } from "../Status";
-import { Result } from "../result/Result";
+import { Strategy, Targets } from "../strategy/Strategy";
 
 export interface Execution {
-    getStrategyName(): string;
-    getSparqlQuery(): string;
-    getQueriedSkills(): number[];
-    getQueriedCities(): string[];
+    getStrategies(): Strategy[];
+    run(targets: Targets): Promise<void>;
+    isRunning(): boolean;
+    isTerminated(): boolean;
     getStatus(): Status;
-    getResult(): Result;
-    launch(): void;
 }

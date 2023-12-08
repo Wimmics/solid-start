@@ -1,32 +1,29 @@
 import { Execution } from "./Execution";
-import { Strategy } from "../strategy/Strategy";
+import { Strategy, Targets } from "../strategy/Strategy";
 import { Status } from "../Status";
-import { Result } from "../result/Result";
 
-export class ExecutionBase implements Execution {
-    protected strategy: Strategy;
-    protected queriedSkills: number[];
+export abstract class ExecutionBase implements Execution {
+    protected strategies: Strategy[];
+    protected queriedSkills: string[];
     protected queriedCities: string[];
 
-    constructor(strategy: Strategy, queriedSkills: number[], queriedCities: string[]) {
-        this.strategy = strategy;
-        this.queriedSkills = queriedSkills;
-        this.queriedCities = queriedCities;
+    constructor(strategies: Strategy[]) {
+        this.strategies = strategies;
+        this.queriedSkills = [];
+        this.queriedCities = [];
     }
 
-    public launch(): void {
-        //this.getStrategy().execute();
+    public isRunning(): boolean {
+        return this.getStatus() === Status.RUNNING
     }
 
-    public getStrategyName(): string {
-        return this.getStrategy().getName();
-    }
-    
-    public getSparqlQuery(): string {
-        return this.getStrategy().getSparqlQuery();
+    public isTerminated(): boolean {
+        return this.getStatus() === Status.TERMINATED
     }
 
-    public getQueriedSkills(): number[] {
+    public abstract run(targets: Targets): Promise<void>;
+
+    public getQueriedSkills(): string[] {
         return this.queriedSkills;
     }
 
@@ -34,15 +31,9 @@ export class ExecutionBase implements Execution {
         return this.queriedCities;
     }
 
-    public getStatus(): Status {
-        return this.getStrategy().getResult().getStatus();
-    }
+    public abstract getStatus(): Status;
 
-    public getResult(): Result {
-        return this.getStrategy().getResult();
-    }
-
-    protected getStrategy(): Strategy {
-        return this.strategy;
+    public getStrategies(): Strategy[] {
+        return this.strategies;
     }
 }
