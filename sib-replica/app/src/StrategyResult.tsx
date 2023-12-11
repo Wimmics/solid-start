@@ -15,11 +15,6 @@ export function StrategyResult(props: {strategy: Strategy}) {
         strategy.registerCallbackForMatchesChange((match) => setMatches(strategy.getResult().getMatches()));
     }, []);
 
-    /*useEffect(() => {
-        if (status === Status.READY)
-            setMatches([]);
-    }, [status]);*/
-
     return (
         <table>
             <tbody>
@@ -38,10 +33,10 @@ export function StrategyResult(props: {strategy: Strategy}) {
                     <td>{strategy.getResult().getTotalTime()}</td>
                 </tr>
 
-                <tr>
+                {/*<tr>
                     <th>Queried sources</th>
                     <td>?</td>
-                </tr>
+                </tr>*/}
 
                 <tr>
                     <th>Results</th>

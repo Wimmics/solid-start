@@ -84,11 +84,11 @@ function App() {
         </>
       )}
 
+      <h3>3. Get results</h3>
+
       <p>
         <button onClick={handleLaunch}>Launch!</button>
       </p>
-
-      <h3>3. Get results</h3>
       
       {execution.getStrategies().map((s: Strategy) => <StrategyResult strategy={s} />)}
     </div>

@@ -4,43 +4,92 @@ import { ResultBase } from "../result/ResultBase";
 import { Status } from "../Status";
 import { Match } from "../match/Match";
 
+export type SourceProviderFactory = (targets: Targets) => SourceProvider;
+
+/**
+ * An indexing strategy that does nothing.
+ * It should be inherited to implement concreate strategies.
+ * Subclasses must override the `execute` method after calling the one from super.
+ * 
+ * This class provides somes callbacks to get notified when some values change (status, matches).
+ */
 export class StrategyBase implements Strategy {
     private name: string;
     private description: string;
     private sparqlQuery: string;
-    private engine: any;
-    private result: ResultBase;
+    private result?: ResultBase;
     private status: Status;
-    private sourceProvider: (targets: Targets) => SourceProvider;
+    private sourceProviderFactory: SourceProviderFactory;
     private sources: string[];
-    private matchDisplay?: (binding: any) => string;
     private callbackMatches: ((match: Match[]) => void)[];
     private callbackStatus: ((status: Status) => void)[];
 
-    constructor(name: string, description: string, sparqlQuery: string, engine: any, sourceProvider: (targets: Targets) => SourceProvider, matchDisplay?: (binding: any) => string) {
+    /**
+     * Constructs a new `StrategyBase`.
+     * @param name The name of the strategy.
+     * @param description The description of the strategy.
+     * @param sparqlQuery The SPARQL query that the strategy will process.
+     * @param sourceProviderFactory A function to get a `SourceProvider` given some targets.
+     */
+    constructor(name: string, description: string, sparqlQuery: string, sourceProviderFactory: SourceProviderFactory) {
         this.name = name;
         this.description = description;
         this.sparqlQuery = sparqlQuery;
-        this.engine = engine;
-        this.result = new ResultBase;
         this.status = Status.READY;
         this.sources = [];
-        this.sourceProvider = sourceProvider;
-        this.matchDisplay = matchDisplay;
+        this.sourceProviderFactory = sourceProviderFactory;
         this.callbackMatches = [];
         this.callbackStatus = [];
+        this.result = new ResultBase();
     }
 
-    private reset(): void {
-        this.result = new ResultBase;
-        this.callbackMatches.forEach(callback => callback([]))
+    protected reset(): void {
+        this.result = new ResultBase();
+        this.notifyMatchesChange([]);
     }
 
-    private setSources(targets: Targets): void {
-        this.sources = this.sourceProvider(targets).getSources();
+    public isReady(): boolean {
+        return this.getStatus() === Status.READY;
     }
 
-    public getStatus(): Status {
+    public isRunning(): boolean {
+        return this.getStatus() === Status.RUNNING;
+    }
+
+    public isTerminated(): boolean {
+        return this.getStatus() === Status.TERMINATED;
+    }
+
+    protected addMatchToResults(user: string, displayString: string): void {
+        this.getResult().addMatch(user, displayString);
+        this.notifyMatchesChange(this.getResult().getMatches());
+    }
+
+    protected notifyMatchesChange(matches: Match[]): void {
+        this.callbackMatches.forEach(callback => callback(matches))
+    }
+
+    protected notifyStatusChange(status: Status): void {
+        this.callbackStatus.forEach(callback => callback(status));
+    }
+
+    protected startTotalTimeTimer(): void {
+        this.getResult().startTotalTimeTimer();
+    }
+
+    protected stopTotalTimeTimer(): void {
+        this.getResult().stopTotalTimeTimer();
+    }
+
+    protected getSourceProvider(targets: Targets): SourceProvider {
+        return this.sourceProviderFactory(targets);
+    }
+
+    protected setSources(targets: Targets): void {
+        this.sources = this.getSourceProvider(targets).getSources();
+    }
+
+    protected getStatus(): Status {
         return this.status;
     }
 
@@ -49,7 +98,7 @@ export class StrategyBase implements Strategy {
     }
 
     public getTargetedSources(targets: Targets): string[] {
-        return this.sourceProvider(targets).getSources();
+        return this.getSourceProvider(targets).getSources();
     }
 
     public getName(): string {
@@ -62,74 +111,44 @@ export class StrategyBase implements Strategy {
 
     private setStatus(status: Status): void {
         this.status = status;
-        this.callbackStatus.forEach(callback => callback(status));
+        this.notifyStatusChange(status);
     }
 
-    private setRunning(): void {
+    protected setRunning(): void {
+        this.startTotalTimeTimer();
         this.setStatus(Status.RUNNING);
         console.log(`Strategy ${this.getName()} started.`);
-        this.getResult().setRunning();
     }
 
-    private setTerminated(): void {
+    protected setTerminated(): void {
+        this.stopTotalTimeTimer();
         this.setStatus(Status.TERMINATED);
-        this.getResult().setTerminated();
         console.log(`Strategy ${this.getName()} terminated in ${this.getResult().getTotalTime()}s.`);
-    }
-
-    protected getBindingResult(binding: any): string {
-        return binding.get('user').value;
-    }
-
-    private addMatch(user: string, displayString: string): void {
-        this.getResult().addMatch(user, displayString);
-        this.callbackMatches.forEach(callback => callback(this.getResult().getMatches()))
     }
 
     public async execute(targets: Targets): Promise<void> {
         this.reset();
         this.setSources(targets);
-        this.setRunning();
-
-        const bindingsStream = await this.getEngine().queryBindings(this.getSparqlQuery(), {
-            lenient: true, // ignore HTTP fails
-            sources: this.getSources(),
-          });
-
-        bindingsStream.on('data', (binding: any) => {
-            const user = binding.get('user').value;
-            const displayString = this.matchDisplay? this.matchDisplay(binding): user;
-            this.addMatch(user, displayString);
-          });
-      
-        return new Promise<void>((resolve, reject) => {
-            bindingsStream.on('end', () => {
-                this.setTerminated();
-                resolve();
-            });
-            bindingsStream.on('error', (error: Error) => {
-                reject(error);
-            });
-        });
+        return Promise.resolve();
     }
 
     public getResult(): ResultBase {
-        return this.result;
+        return this.result!;
     }
 
     public getSparqlQuery(): string {
         return this.sparqlQuery;
     }
 
-    protected getEngine(): any {
-        return this.engine;
+    public registerCallbackForMatchesChange(callback: (match: Match[]) => void, priority: number = 100): void {
+        if (priority === 0)
+            this.callbackMatches = [callback, ...this.callbackMatches];
+        else this.callbackMatches.push(callback);
     }
 
-    public registerCallbackForMatchesChange(callback: (match: Match[]) => void): void {
-        this.callbackMatches.push(callback);
-    }
-
-    public registerCallbackForStatusChange(callback: (status: Status) => void): void {
-        this.callbackStatus.push(callback);
+    public registerCallbackForStatusChange(callback: (status: Status) => void, priority: number = 100): void {
+        if (priority === 0)
+            this.callbackStatus = [callback, ...this.callbackStatus];
+        else this.callbackStatus.push(callback);
     }
 }

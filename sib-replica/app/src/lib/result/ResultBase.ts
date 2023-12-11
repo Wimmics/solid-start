@@ -1,32 +1,38 @@
 import { Result } from "./Result";
 import { Match } from "../match/Match";
 import { MatchBase } from "../match/MatchBase";
+import Timer from "../timer/Timer";
+import TimerBase from "../timer/TimerBase";
+import Utils from "../timer/Utils";
 
 export class ResultBase implements Result {
 
-    private startTime?: Date;
-    private endTime?: Date;
-    private totalTime: number;
+    private timerTotalTime: Timer;
     private matches: Match[];
     
     constructor() {
-        this.totalTime = 0.0;
+        this.timerTotalTime = new TimerBase();
         this.matches = [];
     }
 
-    protected computeEllapsedTime(startTime: Date, endTime: Date): number {
-        let timeDiff: number = endTime.getTime() - startTime.getTime(); //in ms
-        timeDiff /= 1000; // strip the ms
-        //return Math.round(timeDiff); // get seconds 
-        return timeDiff;
+    public startTotalTimeTimer(): void {
+        this.getTimerTotalTime().start();
+    }
+
+    public stopTotalTimeTimer(): void {
+        this.getTimerTotalTime().stop();
+    }
+
+    private getTimerTotalTime(): Timer {
+        return this.timerTotalTime;
     }
 
     public getStartTime(): Date | undefined {
-        return this.startTime;
+        return this.getTimerTotalTime().getStartTime();
     }
 
     public getEndTime(): Date | undefined {
-        return this.endTime;
+        return this.getTimerTotalTime().getStartTime();
     }
 
     public getFirstResult(): number {
@@ -38,7 +44,7 @@ export class ResultBase implements Result {
     }
     
     public getTotalTime(): number {
-        return this.totalTime;
+        return this.getTimerTotalTime().getEllapsedTime();
     }
 
     public addMatch(user: string, displayString: string): Match {
@@ -47,7 +53,7 @@ export class ResultBase implements Result {
         if (!startTime)
             throw new Error("Unable to add match.");
 
-        const matchingTime = this.computeEllapsedTime(startTime, new Date());
+        const matchingTime = Utils.computeEllapsedTime(startTime, new Date());
         const match = new MatchBase(user, displayString, matchingTime);
         this.matches.push(match);
         return match;
@@ -55,25 +61,6 @@ export class ResultBase implements Result {
 
     public getMatches(): Match[] {
         return this.matches;
-    }
-
-    public setRunning(): void {
-        this.startTime = new Date();
-    }
-
-    public setTerminated(): void {
-        this.endTime = new Date();
-        this.setTotalTime();
-    }
-
-    private setTotalTime(): void {
-        const startTime = this.getStartTime();
-        const endTime = this.getEndTime();
-
-        if (!startTime || !endTime)
-            throw new Error("Can't compute the total time of the strategy.");
-
-        this.totalTime = this.computeEllapsedTime(startTime, endTime);
     }
 
 }
