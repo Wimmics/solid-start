@@ -16,11 +16,10 @@ export type SourceProviderFactory = (targets: Targets) => SourceProvider;
 export class StrategyBase implements Strategy {
     private name: string;
     private description: string;
-    private sparqlQuery: string;
     private result?: ResultBase;
     private status: Status;
-    private sourceProviderFactory: SourceProviderFactory;
-    private sources: string[];
+    //private sourceProviderFactory: SourceProviderFactory;
+    //private sources: string[];
     private callbackMatches: ((match: Match[]) => void)[];
     private callbackStatus: ((status: Status) => void)[];
 
@@ -31,13 +30,12 @@ export class StrategyBase implements Strategy {
      * @param sparqlQuery The SPARQL query that the strategy will process.
      * @param sourceProviderFactory A function to get a `SourceProvider` given some targets.
      */
-    constructor(name: string, description: string, sparqlQuery: string, sourceProviderFactory: SourceProviderFactory) {
+    constructor(name: string, description: string, /*sourceProviderFactory: SourceProviderFactory*/) {
         this.name = name;
         this.description = description;
-        this.sparqlQuery = sparqlQuery;
         this.status = Status.READY;
-        this.sources = [];
-        this.sourceProviderFactory = sourceProviderFactory;
+        //this.sources = [];
+        //this.sourceProviderFactory = sourceProviderFactory;
         this.callbackMatches = [];
         this.callbackStatus = [];
         this.result = new ResultBase();
@@ -81,24 +79,24 @@ export class StrategyBase implements Strategy {
         this.getResult().stopTotalTimeTimer();
     }
 
-    protected getSourceProvider(targets: Targets): SourceProvider {
+    /*protected getSourceProvider(targets: Targets): SourceProvider {
         return this.sourceProviderFactory(targets);
-    }
+    }*/
 
-    protected setSources(targets: Targets): void {
+    /*protected setSources(targets: Targets): void {
         this.sources = this.getSourceProvider(targets).getSources();
-    }
+    }*/
 
     protected getStatus(): Status {
         return this.status;
     }
 
-    public getSources(): string[] {
+    /*public getSources(): string[] {
         return this.sources;
-    }
+    }*/
 
     public getTargetedSources(targets: Targets): string[] {
-        return this.getSourceProvider(targets).getSources();
+        return [];
     }
 
     public getName(): string {
@@ -128,7 +126,7 @@ export class StrategyBase implements Strategy {
 
     public async execute(targets: Targets): Promise<void> {
         this.reset();
-        this.setSources(targets);
+        //this.setSources(targets);
         return Promise.resolve();
     }
 
@@ -137,7 +135,7 @@ export class StrategyBase implements Strategy {
     }
 
     public getSparqlQuery(): string {
-        return this.sparqlQuery;
+        return "";
     }
 
     public registerCallbackForMatchesChange(callback: (match: Match[]) => void, priority: number = 100): void {

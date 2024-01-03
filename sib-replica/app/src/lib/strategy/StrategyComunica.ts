@@ -1,6 +1,6 @@
 import { SourceProvider } from "../sourceProvider/SourceProvider";
 import { Targets } from "./Strategy";
-import { StrategyBase } from "./StrategyBase";
+import { StrategyBaseSparql } from "./StrategyBaseSparql";
 
 /**
  * A function that takes a Comunica binding result and returns
@@ -11,7 +11,7 @@ export type MatchDisplay = (binding: any) => string;
 /**
  * A `StrategyBase` that uses Comunica to find results.
  */
-export default class StrategyComunica extends StrategyBase {
+export default class StrategyComunica extends StrategyBaseSparql {
     private engine: any;
     private matchDisplay?: MatchDisplay;
 
@@ -34,7 +34,7 @@ export default class StrategyComunica extends StrategyBase {
     }
 
     public async execute(targets: Targets): Promise<void> {
-        super.execute(targets);
+        await super.execute(targets);
         this.setRunning();
         
         const bindingsStream = await this.getEngine().queryBindings(this.getSparqlQuery(), {

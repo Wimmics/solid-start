@@ -1,11 +1,18 @@
 import { Targets } from "./lib/strategy/Strategy";
-import { LocalSourceProvider } from "./lib/sourceProvider/LocalSourceProvider";
-import { GlobalSourceProvider } from "./lib/sourceProvider/GlobalSourceProvider";
+import { DistributedSourceProvider } from "./lib/sourceProvider/DistributedSourceProvider";
+import { CentralizedSourceProvider } from "./lib/sourceProvider/CentralizedSourceProvider";
 import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery } from "./queries";
 import StrategyComunica from "./lib/strategy/StrategyComunica";
+import StrategyFilter from "./lib/strategy/StrategyFilter";
+import { Match } from "./lib/match/Match";
 
 const QueryEngine = require('@comunica/query-sparql').QueryEngine;
 const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').QueryEngine;
+
+const displayCity = (binding: any) => {
+    const city = binding.get('city').value;
+    return `${city}`;
+}
 
 const displayFirstNameLastNameAndCity = (binding: any) => {
     const firstName = binding.get('firstName').value;
@@ -16,63 +23,99 @@ const displayFirstNameLastNameAndCity = (binding: any) => {
 
 export const strategies = [
     new StrategyComunica(
-        "Global-Skill",
+        "Skill (centralized)",
         "Query the global indexes to find users with the given skills (cities are ignored).",
         skillQuery, 
         new QueryEngine(),
-        (t: Targets) => new GlobalSourceProvider().addSkills(t.skills)
+        (t: Targets) => new CentralizedSourceProvider().addSkills(t.skills)
     ),
     new StrategyComunica(
-        "Local-Skill",
+        "Skill (distributed)",
         "Query the local indexes to find users with the given skills (cities are ignored).",
         skillQuery, 
         new QueryEngine(),
-        (t: Targets) => new LocalSourceProvider(32).addSkills(t.skills)
+        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills)
     ),
     new StrategyComunica(
-        "Global-Skill-Traversal",
+        "Skill with traversal (centralized)",
         "Query the global indexes to find users with the given skills (cities are ignored).",
         skillTraversalQuery, 
         new QueryEngineTraversal(),
-        (t: Targets) => new GlobalSourceProvider().addSkills(t.skills),
+        (t: Targets) => new CentralizedSourceProvider().addSkills(t.skills),
         displayFirstNameLastNameAndCity
     ),
     new StrategyComunica(
-        "Local-Skill-Traversal",
+        "Skill with traversal (distributed)",
         "Query the local indexes to find users with the given skills (cities are ignored).",
         skillTraversalQuery, 
         new QueryEngineTraversal(),
-        (t: Targets) => new LocalSourceProvider(32).addSkills(t.skills),
+        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills),
         displayFirstNameLastNameAndCity
     ),
     new StrategyComunica(
-        "Global-Skill-City",
+        "Skill and city (centralized)",
         "Query the global indexes to find users with the given skills and cities.",
         skillCityQuery, 
         new QueryEngine(),
-        (t: Targets) => new GlobalSourceProvider().addSkills(t.skills).addCities(t.cities)
+        (t: Targets) => new CentralizedSourceProvider().addSkills(t.skills).addCities(t.cities)
     ),
     new StrategyComunica(
-        "Local-Skill-City",
+        "Skill and city (distributed)",
         "Query the local indexes to find users with the given skills and cities.",
         skillCityQuery, 
         new QueryEngine(),
-        (t: Targets) => new LocalSourceProvider(32).addSkills(t.skills).addCities(t.cities)
+        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills).addCities(t.cities)
     ),
     new StrategyComunica(
-        "Global-Skill-City-Traversal",
+        "Skill and city with traversal (centralized)",
         "Query the global indexes to find users with the given skills and cities.",
         skillCityTraversalQuery, 
         new QueryEngineTraversal(),
-        (t: Targets) => new GlobalSourceProvider().addSkills(t.skills).addCities(t.cities),
+        (t: Targets) => new CentralizedSourceProvider().addSkills(t.skills).addCities(t.cities),
         displayFirstNameLastNameAndCity
     ),
     new StrategyComunica(
-        "Local-Skill-City-Traversal",
+        "Skill and city with traversal (distributed)",
         "Query the local indexes to find users with the given skills and cities.",
         skillCityTraversalQuery, 
         new QueryEngineTraversal(),
-        (t: Targets) => new LocalSourceProvider(32).addSkills(t.skills).addCities(t.cities),
+        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills).addCities(t.cities),
         displayFirstNameLastNameAndCity
     ),
+    new StrategyFilter(
+        "Skill with traversal filtered by city (centralized)",
+        "This strategy is a two steps strategy: 1) fetch all the users with a certain skill. 2) Filter these users by the queried cities.",
+        new StrategyComunica(
+            "Skill with traversal (centralized)",
+            "Query the global indexes to find users with the given skills (cities are ignored).",
+            skillTraversalQuery, 
+            new QueryEngineTraversal(),
+            (t: Targets) => new CentralizedSourceProvider().addSkills(t.skills),
+            displayFirstNameLastNameAndCity
+        ),
+        (targets: Targets, match: Match) => {
+            const matches = match.toString().match(/\((.+)\)/);
+            if (!matches || matches.length === 0)
+                return false;
+            return targets.cities.includes(matches[1]);
+        }
+    ),
+    new StrategyFilter(
+        "Skill with traversal filtered by city (distributed)",
+        "This strategy is a two steps strategy: 1) fetch all the users with a certain skill. 2) Filter these users by the queried cities.",
+        new StrategyComunica(
+            "Skill with traversal (distributed)",
+            "Query the local indexes to find users with the given skills (cities are ignored).",
+            skillTraversalQuery, 
+            new QueryEngineTraversal(),
+            (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills),
+            displayFirstNameLastNameAndCity
+        ),
+        (targets: Targets, match: Match) => {
+            const matches = match.toString().match(/\((.+)\)/);
+            if (!matches || matches.length === 0)
+                return false;
+            return targets.cities.includes(matches[1]);
+        }
+    )
 ]

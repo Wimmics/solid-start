@@ -1,6 +1,6 @@
 import { SourceProviderBase } from "./SourceProviderBase";
 
-export class LocalSourceProvider extends SourceProviderBase {
+export class DistributedSourceProvider extends SourceProviderBase {
 
     private instanceNumber: number;
 
@@ -9,7 +9,7 @@ export class LocalSourceProvider extends SourceProviderBase {
         this.instanceNumber = instanceNumber;
     }
 
-    public addSkills(skills: string[]): LocalSourceProvider {
+    public addSkills(skills: string[]): DistributedSourceProvider {
         skills.forEach(skill => {
             for (let i = 1; i <= this.instanceNumber; i++) { 
                 this.addSource(`http://localhost:${8000 + i}/indexes/skill/${skill}`)
@@ -18,7 +18,7 @@ export class LocalSourceProvider extends SourceProviderBase {
         return this;
     }
 
-    public addCities(cities: string[]): LocalSourceProvider {
+    public addCities(cities: string[]): DistributedSourceProvider {
         cities.forEach(city => {
             for (let i = 1; i <= this.instanceNumber; i++) { 
                 this.addSource(`http://localhost:${8000 + i}/indexes/city/${city}`)
