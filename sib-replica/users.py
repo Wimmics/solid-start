@@ -28,6 +28,7 @@ class User:
         foaf:firstName "{self.firstName}";
         foaf:family_name "{self.lastName}";
         ex:city "{self.city}";
+        ex:skills {', '.join(self.skills)};
         solid:oidcIssuer <http://localhost:8000/>;
         a foaf:Person.'''
 
