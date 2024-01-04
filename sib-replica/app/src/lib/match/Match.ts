@@ -1,5 +1,6 @@
+import User from "../user/User";
+
 export interface Match {
-    getUser(): string;
-    toString(): string;
+    getUser(): User;
     getMatchingTime(): number;
 }

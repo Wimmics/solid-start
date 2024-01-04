@@ -1,23 +1,22 @@
+import User from "../user/User";
 import { Match } from "./Match";
 
 export class MatchBase implements Match {
 
-    private user: string;
-    private displayString: string;
+    private user: User;
     private matchingTime: number;
 
-    constructor(user: string, displayString: string, matchingTime: number) {
+    constructor(user: User, matchingTime: number) {
         this.user = user;
-        this.displayString = displayString;
         this.matchingTime = matchingTime;
     }
 
-    public getUser(): string {
+    public getUser(): User {
         return this.user;
     }
 
     public toString(): string {
-        return this.displayString;
+        return this.getUser().toString();
     }
 
     public getMatchingTime(): number {

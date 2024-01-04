@@ -4,6 +4,7 @@ import { MatchBase } from "../match/MatchBase";
 import Timer from "../timer/Timer";
 import TimerBase from "../timer/TimerBase";
 import Utils from "../timer/Utils";
+import User from "../user/User";
 
 export class ResultBase implements Result {
 
@@ -47,14 +48,14 @@ export class ResultBase implements Result {
         return this.getTimerTotalTime().getEllapsedTime();
     }
 
-    public addMatch(user: string, displayString: string): Match {
+    public addMatch(user: User): Match {
         const startTime = this.getStartTime();
 
         if (!startTime)
             throw new Error("Unable to add match.");
 
         const matchingTime = Utils.computeEllapsedTime(startTime, new Date());
-        const match = new MatchBase(user, displayString, matchingTime);
+        const match = new MatchBase(user, matchingTime);
         this.matches.push(match);
         return match;
     }

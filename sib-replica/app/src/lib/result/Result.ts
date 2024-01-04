@@ -1,4 +1,3 @@
-import { Status } from "../Status";
 import { Match } from "../match/Match";
 
 export interface Result {

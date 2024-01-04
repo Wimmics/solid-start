@@ -3,6 +3,7 @@ import { SourceProvider } from "../sourceProvider/SourceProvider";
 import { ResultBase } from "../result/ResultBase";
 import { Status } from "../Status";
 import { Match } from "../match/Match";
+import User from "../user/User";
 
 export type SourceProviderFactory = (targets: Targets) => SourceProvider;
 
@@ -18,8 +19,6 @@ export class StrategyBase implements Strategy {
     private description: string;
     private result?: ResultBase;
     private status: Status;
-    //private sourceProviderFactory: SourceProviderFactory;
-    //private sources: string[];
     private callbackMatches: ((match: Match[]) => void)[];
     private callbackStatus: ((status: Status) => void)[];
 
@@ -28,14 +27,11 @@ export class StrategyBase implements Strategy {
      * @param name The name of the strategy.
      * @param description The description of the strategy.
      * @param sparqlQuery The SPARQL query that the strategy will process.
-     * @param sourceProviderFactory A function to get a `SourceProvider` given some targets.
      */
-    constructor(name: string, description: string, /*sourceProviderFactory: SourceProviderFactory*/) {
+    constructor(name: string, description: string) {
         this.name = name;
         this.description = description;
         this.status = Status.READY;
-        //this.sources = [];
-        //this.sourceProviderFactory = sourceProviderFactory;
         this.callbackMatches = [];
         this.callbackStatus = [];
         this.result = new ResultBase();
@@ -58,8 +54,8 @@ export class StrategyBase implements Strategy {
         return this.getStatus() === Status.TERMINATED;
     }
 
-    protected addMatchToResults(user: string, displayString: string): void {
-        this.getResult().addMatch(user, displayString);
+    protected addMatchToResults(user: User): void {
+        this.getResult().addMatch(user);
         this.notifyMatchesChange(this.getResult().getMatches());
     }
 
@@ -79,21 +75,9 @@ export class StrategyBase implements Strategy {
         this.getResult().stopTotalTimeTimer();
     }
 
-    /*protected getSourceProvider(targets: Targets): SourceProvider {
-        return this.sourceProviderFactory(targets);
-    }*/
-
-    /*protected setSources(targets: Targets): void {
-        this.sources = this.getSourceProvider(targets).getSources();
-    }*/
-
     protected getStatus(): Status {
         return this.status;
     }
-
-    /*public getSources(): string[] {
-        return this.sources;
-    }*/
 
     public getTargetedSources(targets: Targets): string[] {
         return [];
@@ -126,7 +110,6 @@ export class StrategyBase implements Strategy {
 
     public async execute(targets: Targets): Promise<void> {
         this.reset();
-        //this.setSources(targets);
         return Promise.resolve();
     }
 

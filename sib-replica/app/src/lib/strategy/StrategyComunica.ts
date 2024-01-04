@@ -1,32 +1,21 @@
 import { SourceProvider } from "../sourceProvider/SourceProvider";
+import User from "../user/User";
+import UserBase from "../user/UserBase";
 import { Targets } from "./Strategy";
 import { StrategyBaseSparql } from "./StrategyBaseSparql";
-
-/**
- * A function that takes a Comunica binding result and returns
- * a string representing this binding result.
- */
-export type MatchDisplay = (binding: any) => string;
 
 /**
  * A `StrategyBase` that uses Comunica to find results.
  */
 export default class StrategyComunica extends StrategyBaseSparql {
     private engine: any;
-    private matchDisplay?: MatchDisplay;
 
     /**
      * @inheritdoc
-     * @param matchDisplay A function to customize the display of a matched user.
      */
-    constructor(name: string, description: string, sparqlQuery: string, engine: any, sourceProvider: (targets: Targets) => SourceProvider, matchDisplay?: (binding: any) => string) {
+    constructor(name: string, description: string, sparqlQuery: string, engine: any, sourceProvider: (targets: Targets) => SourceProvider) {
         super(name, description, sparqlQuery, sourceProvider);
         this.engine = engine;
-        this.matchDisplay = matchDisplay;
-    }
-
-    protected getMatchDisplay(): MatchDisplay | undefined {
-        return this.matchDisplay;
     }
 
     protected getBindingResult(binding: any): string {
@@ -41,11 +30,30 @@ export default class StrategyComunica extends StrategyBaseSparql {
             lenient: true, // ignore HTTP fails
             sources: this.getSources(),
         });
+
+        let foundUsers: User[] = [];
         
         bindingsStream.on('data', (binding: any) => {
-            const user = binding.get('user').value;
-            const displayString = this.getMatchDisplay()? (this.getMatchDisplay()!)(binding): user;
-            this.addMatchToResults(user, displayString);
+            const userUri: string = binding.get('user').value;
+            const skill: string = binding.get('skills').value;
+
+            const foundUser = foundUsers.find((user: User) => user.getUri() === userUri);
+
+            if (foundUser) {
+                (foundUser as UserBase).addSkill(skill);
+            }
+
+            else {
+                const user = new UserBase(
+                    userUri,
+                    binding.get('firstName').value ?? "",
+                    binding.get('lastName').value ?? "",
+                    binding.get('city').value ?? "",
+                    skill ? [skill]: []
+                );
+                this.addMatchToResults(user);
+                foundUsers.push(user);
+            }
           });
       
         return new Promise<void>((resolve, reject) => {

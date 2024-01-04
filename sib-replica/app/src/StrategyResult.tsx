@@ -42,7 +42,7 @@ export function StrategyResult(props: {strategy: Strategy}) {
                     <th>Results</th>
                     <td>
                         <ol>
-                        {matches.map((match: Match, i: number) => <li key={i}>{match.toString()}</li>)}
+                        {matches.map((match: Match, i: number) => <li key={i}><a href={match.getUser().getUri()} title={`${match.toString()}\nskills: ${match.getUser().getSkills()}`}>{match.toString()}</a></li>)}
                         </ol>
                     </td>
                 </tr>
