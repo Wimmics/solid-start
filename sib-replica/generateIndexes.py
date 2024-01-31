@@ -14,7 +14,7 @@ localCityIndex = {} # { instance => { city => [users] } }
 def generateIndexHeader(indexType):
     return f'''@prefix ex: <http://example.org#>.
 
-    <> a {indexType};
+<> a {indexType};
     '''
 
 def generateIndexEntry(entry):
@@ -87,6 +87,50 @@ def generateGlobalCityIndex(city):
     f.write(entries)
     f.close()
 
+def generateRootIndex(filename, indexesUrl):
+    skills = f"""{indexesUrl}skills"""
+    cities = f"""{indexesUrl}cities"""
+
+    index = f"""@prefix ex: <http://example.org#>.
+    
+<> a ex:Index.
+
+<#1> a ex:PropertyIndexRegistration;
+  ex:inIndex <>;
+  ex:forProperty ex:forProperty;
+  ex:forValue ex:hasSkill;
+  ex:instancesIn <{skills}>.
+
+<#2> a ex:PropertyIndexRegistration;
+  ex:inIndex <>;
+  ex:forProperty ex:forProperty;
+  ex:forValue ex:hasCity;
+  ex:instancesIn <{cities}>."""
+
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    f = open(filename, "w")
+    f.write(index)
+    f.close()
+
+def generateRootSkillIndex():
+    index = '''@prefix ex: <http://example.org#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+    
+<> a ex:Index.\n'''
+
+    for i in range(1, 601):
+        index += f"""\n<#skill{i}> a ex:PropertyIndexRegistration;
+  \tex:inIndex <http://localhost:8000/org/indexes/skills>;
+  \tex:forProperty ex:hasSkill;
+  \tex:forValue "{i}";
+  \trdfs:seeAlso <http://localhost:8000/org/indexes/skill/{i}>.\n"""
+    
+    filename = "./data/app/org/indexes/skills$.ttl"
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    f = open(filename, "w")
+    f.write(index)
+    f.close()
+
 def generateLocalCityIndex(instance):
     for city in localCityIndex[instance]:
         filename = f"""./data/instances/{str(instance)}/indexes/city/{city}$.ttl"""
@@ -126,7 +170,7 @@ for city in globalCityIndex:
     generateGlobalCityIndex(city)
 generateACL("./data/app/org/indexes/city/.acl")
 
-print("Generate local city indexes")
+print("Generate distributed city indexes")
 for instance in localCityIndex:
     generateLocalCityIndex(instance)
     generateACL(f'''./data/instances/{instance}/indexes/city/.acl''')
@@ -136,7 +180,14 @@ for skill in globalSkillIndex:
     generateGlobalSkillIndex(skill)
 generateACL("./data/app/org/indexes/skill/.acl")
 
-print("Generate local skill indexes")
+print("Generate distributed skill indexes")
 for instance in localSkillIndex:
     generateLocalSkillIndex(instance)
     generateACL(f'''./data/instances/{instance}/indexes/skill/.acl''')
+
+print("Generate federated root index")
+generateRootIndex("./data/app/org/indexes/root$.ttl", "http://localhost:8000/org/indexes/")
+generateACL('./data/app/org/indexes/.acl')
+
+print("Generate federated root skill index")
+generateRootSkillIndex()

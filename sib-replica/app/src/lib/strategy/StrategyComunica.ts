@@ -34,8 +34,10 @@ export default class StrategyComunica extends StrategyBaseSparql {
         let foundUsers: User[] = [];
         
         bindingsStream.on('data', (binding: any) => {
-            const userUri: string = binding.get('user').value;
-            const skill: string = binding.get('skills').value;
+            //console.log(binding.toString());
+
+            const userUri: string = binding.has("user")? binding.get('user').value: "unknown";
+            const skill: string = binding.has("skills")? binding.get('skills').value: "unknown";
 
             const foundUser = foundUsers.find((user: User) => user.getUri() === userUri);
 
@@ -46,9 +48,9 @@ export default class StrategyComunica extends StrategyBaseSparql {
             else {
                 const user = new UserBase(
                     userUri,
-                    binding.get('firstName').value ?? "",
-                    binding.get('lastName').value ?? "",
-                    binding.get('city').value ?? "",
+                    binding.has("firstName")? binding.get('firstName').value: "unknown",
+                    binding.has("lastName")? binding.get('lastName').value : "unknown",
+                    binding.has("city")? binding.get('city').value: "unknown",
                     skill ? [skill]: []
                 );
                 this.addMatchToResults(user);

@@ -8,8 +8,9 @@ export class SourceProviderBase implements SourceProvider {
         this.sources = [];
     }
 
-    public addSource(source: string): void {
+    public addSource(source: string): SourceProviderBase {
         this.sources.push(source);
+        return this;
     }
 
     public getSources(): string[] {
