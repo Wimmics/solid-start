@@ -1,12 +1,17 @@
 import csv
+import json
 
 userFile = "./data/users.csv"
 
+CONFIG = json.load(open("config.json"))
+INSTANCES = CONFIG['instances']
+MAX_USERS = CONFIG['maxUsers']
+
 class User:
 
-    def __init__(self, userInfo):
-        self.instance = int(userInfo[0])
-        self.number = int(userInfo[1])
+    def __init__(self, position, userInfo):
+        self.instance = int(position % INSTANCES) + 1
+        self.number = int(position) + 1
         self.webId = f'''http://localhost:{8000 + self.instance}/user{str(self.number)}/profile/card#me'''
         self.firstName = userInfo[2]
         self.lastName = userInfo[3]
@@ -50,5 +55,7 @@ def all():
         # Skip header
         next(reader)
 
-        for userInfo in reader:
-            yield User(userInfo)
+        for position, userInfo in enumerate(reader):
+            if position >= MAX_USERS:
+                break
+            yield User(position, userInfo)

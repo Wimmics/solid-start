@@ -9,6 +9,8 @@ import { Match } from "./lib/match/Match";
 const QueryEngine = require('@comunica/query-sparql').QueryEngine;
 const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').QueryEngine;
 
+const NB_INSTANCES = 32;
+
 export const strategies = [
     new StrategyComunica(
         "Skill (centralized)",
@@ -22,7 +24,7 @@ export const strategies = [
         "Query the local indexes to find users with the given skills (cities are ignored).",
         skillQuery, 
         new QueryEngine(),
-        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills)
+        (t: Targets) => new DistributedSourceProvider(NB_INSTANCES).addSkills(t.skills)
     ),
     new StrategyComunica(
         "Skill with traversal (centralized)",
@@ -36,7 +38,7 @@ export const strategies = [
         "Query the local indexes to find users with the given skills (cities are ignored).",
         skillTraversalQuery, 
         new QueryEngineTraversal(),
-        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills),
+        (t: Targets) => new DistributedSourceProvider(NB_INSTANCES).addSkills(t.skills),
     ),
     new StrategyComunica(
         "City with traversal (centralized)",
@@ -50,7 +52,7 @@ export const strategies = [
         "Query the local indexes to find users with the given city (skills are ignored).",
         cityTraversalQuery, 
         new QueryEngineTraversal(),
-        (t: Targets) => new DistributedSourceProvider(32).addCities(t.cities),
+        (t: Targets) => new DistributedSourceProvider(NB_INSTANCES).addCities(t.cities),
     ),
     new StrategyComunica(
         "Skill and city (centralized)",
@@ -64,7 +66,7 @@ export const strategies = [
         "Query the local indexes to find users with the given skills and cities.",
         skillCityQuery, 
         new QueryEngine(),
-        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills).addCities(t.cities)
+        (t: Targets) => new DistributedSourceProvider(NB_INSTANCES).addSkills(t.skills).addCities(t.cities)
     ),
     new StrategyComunica(
         "Skill and city with traversal (centralized)",
@@ -78,7 +80,7 @@ export const strategies = [
         "Query the local indexes to find users with the given skills and cities.",
         skillCityTraversalQuery, 
         new QueryEngineTraversal(),
-        (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills).addCities(t.cities),
+        (t: Targets) => new DistributedSourceProvider(NB_INSTANCES).addSkills(t.skills).addCities(t.cities),
     ),
     new StrategyFilter(
         "Skill with traversal filtered by city (centralized)",
@@ -100,7 +102,7 @@ export const strategies = [
             "Query the local indexes to find users with the given skills (cities are ignored).",
             skillTraversalQuery, 
             new QueryEngineTraversal(),
-            (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills),
+            (t: Targets) => new DistributedSourceProvider(NB_INSTANCES).addSkills(t.skills),
         ),
         (targets: Targets, match: Match) => targets.cities.includes(match.getUser().getCity())
     ),
@@ -124,7 +126,7 @@ export const strategies = [
             "Query the local indexes to find users with the given city (skills are ignored).",
             cityTraversalQuery, 
             new QueryEngineTraversal(),
-            (t: Targets) => new DistributedSourceProvider(32).addCities(t.cities),
+            (t: Targets) => new DistributedSourceProvider(NB_INSTANCES).addCities(t.cities),
         ),
         (targets: Targets, match: Match) => match.getUser().getSkills().some((skill: string) =>  targets.skills.includes(skill))
     )

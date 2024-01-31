@@ -12,6 +12,8 @@ The querying app is using React and Comunica and is written in TypeScript.
 
 Before to run the app, execute the following commands in the *sib-replica* folder:
 ```sh
+# Adapt the content of config.json to your needs
+
 # Generate a docker compose file that will let you run multiple CSS instances
 python generateDockerCompose.py > docker-compose.yml 
 
@@ -29,6 +31,9 @@ sudo chown -R <user>:<user> ./data/ # replace <user> with your account
 # Scripts to populate PODs
 python generateProfiles.py # generate the WebID profile documents
 python generateIndexes.py # generate the different kinds of indexes
+
+# Scripts to adapt the testing application
+python adaptApp.py # adapts the application to the content of config.json
 ```
 
 Then to run the querying app do:

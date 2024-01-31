@@ -1,6 +1,8 @@
 import csv
+import json
 
-instances = 32
+CONFIG = json.load(open("config.json"))
+INSTANCES = CONFIG['instances']
 
 def generateStatic():
     return """services:
@@ -45,5 +47,5 @@ def generateInstance(i):
     """
 
 print(generateStatic())
-for i in range(1, instances + 1):
+for i in range(1, INSTANCES + 1):
     print(generateInstance(i))

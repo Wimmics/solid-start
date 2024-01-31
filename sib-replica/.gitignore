@@ -1,4 +1,5 @@
 data/app/.internal/
 data/app/org/
 data/instances/**
+docker-compose.yml
 __pycache__
