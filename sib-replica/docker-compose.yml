@@ -9,7 +9,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/app/:/data
-      - ./data/app/seeds.json:/data
     ports:
       - 8000:8000      
     
@@ -24,7 +23,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/1/:/data
-      - ./data/instances/1/seeds.json:/data
     ports:
       - 8001:8000        
     
@@ -41,7 +39,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/2/:/data
-      - ./data/instances/2/seeds.json:/data
     ports:
       - 8002:8000        
     
@@ -58,7 +55,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/3/:/data
-      - ./data/instances/3/seeds.json:/data
     ports:
       - 8003:8000        
     
@@ -75,7 +71,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/4/:/data
-      - ./data/instances/4/seeds.json:/data
     ports:
       - 8004:8000        
     
@@ -92,7 +87,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/5/:/data
-      - ./data/instances/5/seeds.json:/data
     ports:
       - 8005:8000        
     
@@ -109,7 +103,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/6/:/data
-      - ./data/instances/6/seeds.json:/data
     ports:
       - 8006:8000        
     
@@ -126,7 +119,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/7/:/data
-      - ./data/instances/7/seeds.json:/data
     ports:
       - 8007:8000        
     
@@ -143,7 +135,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/8/:/data
-      - ./data/instances/8/seeds.json:/data
     ports:
       - 8008:8000        
     
@@ -160,7 +151,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/9/:/data
-      - ./data/instances/9/seeds.json:/data
     ports:
       - 8009:8000        
     
@@ -177,7 +167,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/10/:/data
-      - ./data/instances/10/seeds.json:/data
     ports:
       - 8010:8000        
     
@@ -194,7 +183,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/11/:/data
-      - ./data/instances/11/seeds.json:/data
     ports:
       - 8011:8000        
     
@@ -211,7 +199,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/12/:/data
-      - ./data/instances/12/seeds.json:/data
     ports:
       - 8012:8000        
     
@@ -228,7 +215,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/13/:/data
-      - ./data/instances/13/seeds.json:/data
     ports:
       - 8013:8000        
     
@@ -245,7 +231,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/14/:/data
-      - ./data/instances/14/seeds.json:/data
     ports:
       - 8014:8000        
     
@@ -262,7 +247,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/15/:/data
-      - ./data/instances/15/seeds.json:/data
     ports:
       - 8015:8000        
     
@@ -279,7 +263,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/16/:/data
-      - ./data/instances/16/seeds.json:/data
     ports:
       - 8016:8000        
     
@@ -296,7 +279,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/17/:/data
-      - ./data/instances/17/seeds.json:/data
     ports:
       - 8017:8000        
     
@@ -313,7 +295,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/18/:/data
-      - ./data/instances/18/seeds.json:/data
     ports:
       - 8018:8000        
     
@@ -330,7 +311,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/19/:/data
-      - ./data/instances/19/seeds.json:/data
     ports:
       - 8019:8000        
     
@@ -347,7 +327,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/20/:/data
-      - ./data/instances/20/seeds.json:/data
     ports:
       - 8020:8000        
     
@@ -364,7 +343,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/21/:/data
-      - ./data/instances/21/seeds.json:/data
     ports:
       - 8021:8000        
     
@@ -381,7 +359,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/22/:/data
-      - ./data/instances/22/seeds.json:/data
     ports:
       - 8022:8000        
     
@@ -398,7 +375,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/23/:/data
-      - ./data/instances/23/seeds.json:/data
     ports:
       - 8023:8000        
     
@@ -415,7 +391,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/24/:/data
-      - ./data/instances/24/seeds.json:/data
     ports:
       - 8024:8000        
     
@@ -432,7 +407,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/25/:/data
-      - ./data/instances/25/seeds.json:/data
     ports:
       - 8025:8000        
     
@@ -449,7 +423,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/26/:/data
-      - ./data/instances/26/seeds.json:/data
     ports:
       - 8026:8000        
     
@@ -466,7 +439,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/27/:/data
-      - ./data/instances/27/seeds.json:/data
     ports:
       - 8027:8000        
     
@@ -483,7 +455,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/28/:/data
-      - ./data/instances/28/seeds.json:/data
     ports:
       - 8028:8000        
     
@@ -500,7 +471,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/29/:/data
-      - ./data/instances/29/seeds.json:/data
     ports:
       - 8029:8000        
     
@@ -517,7 +487,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/30/:/data
-      - ./data/instances/30/seeds.json:/data
     ports:
       - 8030:8000        
     
@@ -534,7 +503,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/31/:/data
-      - ./data/instances/31/seeds.json:/data
     ports:
       - 8031:8000        
     
@@ -551,7 +519,6 @@ services:
       - CSS_PORT=8000
     volumes:
       - ./data/instances/32/:/data
-      - ./data/instances/32/seeds.json:/data
     ports:
       - 8032:8000        
     

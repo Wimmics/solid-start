@@ -14,7 +14,6 @@ def generateStatic():
       - CSS_PORT=8000
     volumes:
       - ./data/app/:/data
-      - ./data/app/seeds.json:/data
     ports:
       - 8000:8000\
       
@@ -40,7 +39,6 @@ def generateInstance(i):
       - CSS_PORT=8000
     volumes:
       - ./data/instances/{str(i)}/:/data
-      - ./data/instances/{str(i)}/seeds.json:/data
     ports:
       - {8000 + i}:8000\
         

@@ -1,13 +1,13 @@
+import json
 import os
 import users
 
 instances = {} # instance => [users]
 
 def generateInstanceSeeds(instance):
-    result = "["
-    for user in instances[instance]:
-        result += user.generateSeed() + ","
-    return result[:-1] + "]"
+    return [
+        user.generateSeed() for user in instances[instance]
+    ]
 
 def populateInstances(user):
     if user.instance not in instances:
@@ -21,18 +21,23 @@ for user in users.all():
 for instance in instances:
     filename = f'''./data/instances/{str(instance)}/seeds.json'''
     os.makedirs(os.path.dirname(filename), exist_ok=True)
-    f = open(filename, "w")
-    f.write(generateInstanceSeeds(instance))
-    f.close()
+    with open(filename, "w") as f:
+        json.dump(generateInstanceSeeds(instance), f, indent="  ")
 
 # generate organization account + POD
 filename = f'''./data/app/seeds.json'''
 os.makedirs(os.path.dirname(filename), exist_ok=True)
-f = open(filename, "w")
-result = "["
-result += f'''{{"email":"org@example.org", \
-        "password":"123456", \
-        "pods":[{{"name":"org"}}]}}'''
-result += "]"
-f.write(result)
-f.close()
+with open(filename, "w") as f:
+    json.dump(
+        [
+            {
+                "email": "org@example.org",
+                "password": "123456",
+                "pods": [
+                    { "name": "org" },
+                ]
+            }
+        ],
+        f,
+        indent="  ",
+    )
