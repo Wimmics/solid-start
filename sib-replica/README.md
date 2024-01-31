@@ -24,7 +24,7 @@ docker compose up -d
 # Be sure to wait for the all the PODs to be created (docker logs -f sib1)
 
 # If you run docker in root, change the owner of the data directory so you can execute the below scripts without sudo privileges.
-chown -R <user>:<user> ./data/ # replace <user> with your account
+sudo chown -R <user>:<user> ./data/ # replace <user> with your account
 
 # Scripts to populate PODs
 python generateProfiles.py # generate the WebID profile documents
