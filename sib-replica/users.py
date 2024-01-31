@@ -33,9 +33,15 @@ class User:
         a foaf:Person.'''
 
     def generateSeed(self):
-        return f'''{{"email":"{self.email}", \
-        "password":"123456", \
-        "pods":[{{"name":"user{self.number}"}}]}}'''
+        return {
+            "email": self.email,
+            "password": "123456",
+            "pods": [
+                {
+                    "name": f"user{self.number}",
+                }
+            ]
+        }
 
 def all():
     with open(userFile, newline='') as users:
