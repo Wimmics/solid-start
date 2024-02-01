@@ -6,6 +6,11 @@ def generateStatic():
     return """services:
   app:
     image: solidproject/community-server:7.0.2
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     restart: always
     container_name: app
     environment:
@@ -32,6 +37,11 @@ def generateInstance(i):
   sib{str(i)}:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib{str(i)}
     {depends}
     environment:

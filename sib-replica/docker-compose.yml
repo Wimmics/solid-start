@@ -1,6 +1,11 @@
 services:
   app:
     image: solidproject/community-server:7.0.2
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     restart: always
     container_name: app
     environment:
@@ -16,6 +21,11 @@ services:
   sib1:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib1
     
     environment:
@@ -31,6 +41,11 @@ services:
   sib2:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib2
     depends_on:
       - sib1
@@ -48,6 +63,11 @@ services:
   sib3:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib3
     depends_on:
       - sib2
@@ -65,6 +85,11 @@ services:
   sib4:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib4
     depends_on:
       - sib3
@@ -82,6 +107,11 @@ services:
   sib5:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib5
     depends_on:
       - sib4
@@ -99,6 +129,11 @@ services:
   sib6:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib6
     depends_on:
       - sib5
@@ -116,6 +151,11 @@ services:
   sib7:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib7
     depends_on:
       - sib6
@@ -133,6 +173,11 @@ services:
   sib8:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib8
     depends_on:
       - sib7
@@ -150,6 +195,11 @@ services:
   sib9:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib9
     depends_on:
       - sib8
@@ -167,6 +217,11 @@ services:
   sib10:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib10
     depends_on:
       - sib9
@@ -184,6 +239,11 @@ services:
   sib11:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib11
     depends_on:
       - sib10
@@ -201,6 +261,11 @@ services:
   sib12:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib12
     depends_on:
       - sib11
@@ -218,6 +283,11 @@ services:
   sib13:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib13
     depends_on:
       - sib12
@@ -235,6 +305,11 @@ services:
   sib14:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib14
     depends_on:
       - sib13
@@ -252,6 +327,11 @@ services:
   sib15:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib15
     depends_on:
       - sib14
@@ -269,6 +349,11 @@ services:
   sib16:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib16
     depends_on:
       - sib15
@@ -286,6 +371,11 @@ services:
   sib17:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib17
     depends_on:
       - sib16
@@ -303,6 +393,11 @@ services:
   sib18:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib18
     depends_on:
       - sib17
@@ -320,6 +415,11 @@ services:
   sib19:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib19
     depends_on:
       - sib18
@@ -337,6 +437,11 @@ services:
   sib20:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib20
     depends_on:
       - sib19
@@ -354,6 +459,11 @@ services:
   sib21:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib21
     depends_on:
       - sib20
@@ -371,6 +481,11 @@ services:
   sib22:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib22
     depends_on:
       - sib21
@@ -388,6 +503,11 @@ services:
   sib23:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib23
     depends_on:
       - sib22
@@ -405,6 +525,11 @@ services:
   sib24:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib24
     depends_on:
       - sib23
@@ -422,6 +547,11 @@ services:
   sib25:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib25
     depends_on:
       - sib24
@@ -439,6 +569,11 @@ services:
   sib26:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib26
     depends_on:
       - sib25
@@ -456,6 +591,11 @@ services:
   sib27:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib27
     depends_on:
       - sib26
@@ -473,6 +613,11 @@ services:
   sib28:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib28
     depends_on:
       - sib27
@@ -490,6 +635,11 @@ services:
   sib29:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib29
     depends_on:
       - sib28
@@ -507,6 +657,11 @@ services:
   sib30:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib30
     depends_on:
       - sib29
@@ -524,6 +679,11 @@ services:
   sib31:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib31
     depends_on:
       - sib30
@@ -541,6 +701,11 @@ services:
   sib32:
     image: solidproject/community-server:7.0.2
     #restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 500M
     container_name: sib32
     depends_on:
       - sib31
