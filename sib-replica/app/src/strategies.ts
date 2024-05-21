@@ -1,7 +1,7 @@
 import { Targets } from "./lib/strategy/Strategy";
 import { DistributedSourceProvider } from "./lib/sourceProvider/DistributedSourceProvider";
 import { FederatedSourceProvider } from "./lib/sourceProvider/FederatedSourceProvider";
-import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery, cityTraversalQuery, skillRootTraversalQuery, skillRootNamedGraphTraversalQuery } from "./queries";
+import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery, cityTraversalQuery, skillRootTraversalQuery, skillRootNamedGraphTraversalQuery, cityQuery } from "./queries";
 import StrategyComunica from "./lib/strategy/StrategyComunica";
 import StrategyFilter from "./lib/strategy/StrategyFilter";
 import { Match } from "./lib/match/Match";
@@ -24,6 +24,20 @@ export const strategies = [
         skillQuery, 
         new QueryEngine(),
         (t: Targets) => new DistributedSourceProvider(32).addSkills(t.skills)
+    ),
+    new StrategyComunica(
+        "City (federated)",
+        "Query the global indexes to find users with the given city (skill are ignored).",
+        cityQuery, 
+        new QueryEngine(),
+        (t: Targets) => new FederatedSourceProvider().addCities(t.cities)
+    ),
+    new StrategyComunica(
+        "City (distributed)",
+        "Query the local indexes to find users with the given cities (skill are ignored).",
+        cityQuery, 
+        new QueryEngine(),
+        (t: Targets) => new DistributedSourceProvider(32).addCities(t.cities)
     ),
     new StrategyComunica(
         "Skill with traversal (federated)",

@@ -1,0 +1,120 @@
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "a";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "b";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "c";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "d";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "e";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "f";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "g";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "h";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "i";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "j";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "k";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "l";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "m";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "n";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "o";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "p";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "r";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "s";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "t";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "v";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "w";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "x";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "y";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+
+a ex:IndexStartsWithRegistration;
+	forProperty ex:firstName;
+	ex:startsWith "z";
+	rdfs:seeAlso <path/to/firstName1.ttl>.
+

@@ -37,7 +37,7 @@ class User:
         "password":"123456", \
         "pods":[{{"name":"user{self.number}"}}]}}'''
 
-def all():
+def all(userFile = "./data/users.csv"):
     with open(userFile, newline='') as users:
         reader = csv.reader(users, delimiter=';', quotechar='"')
 

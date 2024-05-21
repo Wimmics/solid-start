@@ -1,7 +1,12 @@
 export const skillQuery = `SELECT DISTINCT ?user WHERE {
     ?skillIndex a <http://example.org#SkillIndex>;
     <http://example.org#entry> ?user
-  } LIMIT 100`;
+  }`; // LIMIT 100`;
+
+export const cityQuery = `SELECT DISTINCT ?user WHERE {
+  ?cityIndex a <http://example.org#CityIndex>;
+  <http://example.org#entry> ?user
+}`; // LIMIT 100`;
 
 export const skillCityQuery = `SELECT DISTINCT ?user WHERE {
     ?skillIndex a <http://example.org#SkillIndex>;

@@ -1,0 +1,2915 @@
+:aguilar ex:forValue "aguilar";
+	ex:instance <http://example.org/thomas-aguilar.ttl>,
+<http://example.org/gerald-aguilar.ttl>.
+
+:aguirre ex:forValue "aguirre";
+	ex:instance <http://example.org/timothy-aguirre.ttl>.
+
+:alexand ex:forValue "alexand";
+	ex:instance <http://example.org/laurence-alexandre.ttl>,
+<http://example.org/toni-alexander.ttl>,
+<http://example.org/arnaude-alexandre.ttl>,
+<http://example.org/benoît-alexandre.ttl>,
+<http://example.org/marthe-alexandre.ttl>,
+<http://example.org/suzanne-alexandre.ttl>,
+<http://example.org/holly-alexander.ttl>,
+<http://example.org/audrey-alexandre.ttl>,
+<http://example.org/patrick-alexandre.ttl>,
+<http://example.org/matthieu-alexandre.ttl>,
+<http://example.org/denis-alexandre.ttl>,
+<http://example.org/shannon-alexander.ttl>.
+
+:allison ex:forValue "allison";
+	ex:instance <http://example.org/sue-allison.ttl>.
+
+:alvarad ex:forValue "alvarad";
+	ex:instance <http://example.org/heidi-alvarado.ttl>,
+<http://example.org/jerry-alvarado.ttl>,
+<http://example.org/wanda-alvarado.ttl>.
+
+:alvarez ex:forValue "alvarez";
+	ex:instance <http://example.org/stacy-alvarez.ttl>,
+<http://example.org/erika-alvarez.ttl>,
+<http://example.org/joseph-alvarez.ttl>,
+<http://example.org/julia-alvarez.ttl>.
+
+:anderse ex:forValue "anderse";
+	ex:instance <http://example.org/lisa-andersen.ttl>,
+<http://example.org/michelle-andersen.ttl>.
+
+:anderso ex:forValue "anderso";
+	ex:instance <http://example.org/patricia-anderson.ttl>,
+<http://example.org/daniel-anderson.ttl>,
+<http://example.org/richard-anderson.ttl>,
+<http://example.org/cody-anderson.ttl>,
+<http://example.org/david-anderson.ttl>,
+<http://example.org/roy-anderson.ttl>,
+<http://example.org/jamie-anderson.ttl>,
+<http://example.org/raymond-anderson.ttl>,
+<http://example.org/misty-anderson.ttl>,
+<http://example.org/audrey-anderson.ttl>,
+<http://example.org/eric-anderson.ttl>,
+<http://example.org/george-anderson.ttl>,
+<http://example.org/jennifer-anderson.ttl>,
+<http://example.org/ryan-anderson.ttl>,
+<http://example.org/melissa-anderson.ttl>,
+<http://example.org/david-anderson.ttl>.
+
+:andrade ex:forValue "andrade";
+	ex:instance <http://example.org/alejandra-andrade.ttl>.
+
+:anthony ex:forValue "anthony";
+	ex:instance <http://example.org/timothy-anthony.ttl>,
+<http://example.org/dustin-anthony.ttl>.
+
+:antoine ex:forValue "antoine";
+	ex:instance <http://example.org/margaret-antoine.ttl>,
+<http://example.org/gérard-antoine.ttl>,
+<http://example.org/guy-antoine.ttl>,
+<http://example.org/emmanuel-antoine.ttl>,
+<http://example.org/philippe-antoine.ttl>,
+<http://example.org/lucas-antoine.ttl>,
+<http://example.org/olivier-antoine.ttl>,
+<http://example.org/célina-antoine.ttl>,
+<http://example.org/thibault-antoine.ttl>,
+<http://example.org/franck-antoine.ttl>,
+<http://example.org/monique-antoine.ttl>.
+
+:arellan ex:forValue "arellan";
+	ex:instance <http://example.org/sean-arellano.ttl>.
+
+:armstro ex:forValue "armstro";
+	ex:instance <http://example.org/dawn-armstrong.ttl>,
+<http://example.org/karen-armstrong.ttl>.
+
+:atkinso ex:forValue "atkinso";
+	ex:instance <http://example.org/gregory-atkinson.ttl>.
+
+:baldwin ex:forValue "baldwin";
+	ex:instance <http://example.org/shelley-baldwin.ttl>,
+<http://example.org/kayla-baldwin.ttl>.
+
+:ballard ex:forValue "ballard";
+	ex:instance <http://example.org/sonia-ballard.ttl>,
+<http://example.org/jose-ballard.ttl>.
+
+:barbier ex:forValue "barbier";
+	ex:instance <http://example.org/benjamin-barbier.ttl>,
+<http://example.org/cécile-barbier.ttl>,
+<http://example.org/constance-barbier.ttl>,
+<http://example.org/rené-barbier.ttl>.
+
+:barrett ex:forValue "barrett";
+	ex:instance <http://example.org/kimberly-barrett.ttl>,
+<http://example.org/susan-barrett.ttl>,
+<http://example.org/jamie-barrett.ttl>.
+
+:barthel ex:forValue "barthel";
+	ex:instance <http://example.org/maryse-barthelemy.ttl>,
+<http://example.org/martin-barthelemy.ttl>,
+<http://example.org/zoé-barthelemy.ttl>,
+<http://example.org/josette-barthelemy.ttl>,
+<http://example.org/martin-barthelemy.ttl>,
+<http://example.org/anaïs-barthelemy.ttl>.
+
+:beasley ex:forValue "beasley";
+	ex:instance <http://example.org/christopher-beasley.ttl>.
+
+:beltran ex:forValue "beltran";
+	ex:instance <http://example.org/jeremy-beltran.ttl>.
+
+:benitez ex:forValue "benitez";
+	ex:instance <http://example.org/adam-benitez.ttl>.
+
+:benjami ex:forValue "benjami";
+	ex:instance <http://example.org/tracy-benjamin.ttl>.
+
+:bennett ex:forValue "bennett";
+	ex:instance <http://example.org/jason-bennett.ttl>,
+<http://example.org/jessica-bennett.ttl>,
+<http://example.org/carl-bennett.ttl>,
+<http://example.org/kevin-bennett.ttl>,
+<http://example.org/timothy-bennett.ttl>,
+<http://example.org/kimberly-bennett.ttl>,
+<http://example.org/cheryl-bennett.ttl>.
+
+:bernard ex:forValue "bernard";
+	ex:instance <http://example.org/heather-bernard.ttl>,
+<http://example.org/russell-bernard.ttl>,
+<http://example.org/claudine-bernard.ttl>,
+<http://example.org/catherine-bernard.ttl>,
+<http://example.org/margot-bernard.ttl>,
+<http://example.org/margaret-bernard.ttl>,
+<http://example.org/nathalie-bernard.ttl>,
+<http://example.org/inès-bernard.ttl>.
+
+:bernier ex:forValue "bernier";
+	ex:instance <http://example.org/aurélie-bernier.ttl>,
+<http://example.org/brigitte-bernier.ttl>,
+<http://example.org/margot-bernier.ttl>,
+<http://example.org/patricia-bernier.ttl>,
+<http://example.org/monique-bernier.ttl>,
+<http://example.org/denise-bernier.ttl>.
+
+:berthel ex:forValue "berthel";
+	ex:instance <http://example.org/william-berthelot.ttl>,
+<http://example.org/thibault-berthelot.ttl>,
+<http://example.org/bernadette-berthelot.ttl>,
+<http://example.org/adrien-berthelot.ttl>,
+<http://example.org/caroline-berthelot.ttl>,
+<http://example.org/louise-berthelot.ttl>,
+<http://example.org/william-berthelot.ttl>,
+<http://example.org/édouard-berthelot.ttl>.
+
+:bertran ex:forValue "bertran";
+	ex:instance <http://example.org/charles-bertrand.ttl>,
+<http://example.org/roland-bertrand.ttl>,
+<http://example.org/alexandrie-bertrand.ttl>,
+<http://example.org/marcel-bertrand.ttl>,
+<http://example.org/paulette-bertrand.ttl>.
+
+:besnard ex:forValue "besnard";
+	ex:instance <http://example.org/jacques-besnard.ttl>,
+<http://example.org/madeleine-besnard.ttl>,
+<http://example.org/william-besnard.ttl>,
+<http://example.org/aurélie-besnard.ttl>,
+<http://example.org/nath-besnard.ttl>,
+<http://example.org/claudine-besnard.ttl>.
+
+:blackbu ex:forValue "blackbu";
+	ex:instance <http://example.org/brad-blackburn.ttl>,
+<http://example.org/tammy-blackburn.ttl>.
+
+:blackwe ex:forValue "blackwe";
+	ex:instance <http://example.org/paul-blackwell.ttl>,
+<http://example.org/jose-blackwell.ttl>.
+
+:blancha ex:forValue "blancha";
+	ex:instance <http://example.org/isabelle-blanchard.ttl>,
+<http://example.org/alicia-blanchard.ttl>,
+<http://example.org/joséphine-blanchard.ttl>,
+<http://example.org/patricia-blanchard.ttl>,
+<http://example.org/caroline-blanchard.ttl>,
+<http://example.org/thérèse-blanchard.ttl>.
+
+:blanche ex:forValue "blanche";
+	ex:instance <http://example.org/gérard-blanchet.ttl>,
+<http://example.org/grégoire-blanchet.ttl>,
+<http://example.org/noémi-blanchet.ttl>,
+<http://example.org/astrid-blanchet.ttl>,
+<http://example.org/véronique-blanchet.ttl>.
+
+:blanken ex:forValue "blanken";
+	ex:instance <http://example.org/katrina-blankenship.ttl>.
+
+:blondel ex:forValue "blondel";
+	ex:instance <http://example.org/alix-blondel.ttl>,
+<http://example.org/aimée-blondel.ttl>,
+<http://example.org/margot-blondel.ttl>,
+<http://example.org/dorothée-blondel.ttl>,
+<http://example.org/aimée-blondel.ttl>,
+<http://example.org/patrick-blondel.ttl>.
+
+:bonneau ex:forValue "bonneau";
+	ex:instance <http://example.org/martin-bonneau.ttl>,
+<http://example.org/thérèse-bonneau.ttl>,
+<http://example.org/amélie-bonneau.ttl>,
+<http://example.org/célina-bonneau.ttl>,
+<http://example.org/étienne-bonneau.ttl>,
+<http://example.org/josette-bonneau.ttl>,
+<http://example.org/luce-bonneau.ttl>,
+<http://example.org/monique-bonneau.ttl>.
+
+:boucher ex:forValue "boucher";
+	ex:instance <http://example.org/william-boucher.ttl>,
+<http://example.org/aimée-boucher.ttl>,
+<http://example.org/franck-boucher.ttl>,
+<http://example.org/susanne-boucher.ttl>,
+<http://example.org/capucine-boucher.ttl>,
+<http://example.org/georges-boucher.ttl>,
+<http://example.org/catherine-boucher.ttl>,
+<http://example.org/christophe-boucher.ttl>.
+
+:bouchet ex:forValue "bouchet";
+	ex:instance <http://example.org/joséphine-bouchet.ttl>,
+<http://example.org/margaux-bouchet.ttl>.
+
+:boulang ex:forValue "boulang";
+	ex:instance <http://example.org/marcel-boulanger.ttl>,
+<http://example.org/xavier-boulanger.ttl>,
+<http://example.org/margaud-boulanger.ttl>,
+<http://example.org/audrey-boulanger.ttl>,
+<http://example.org/gérard-boulanger.ttl>,
+<http://example.org/guillaume-boulanger.ttl>.
+
+:bourdon ex:forValue "bourdon";
+	ex:instance <http://example.org/manon-bourdon.ttl>,
+<http://example.org/renée-bourdon.ttl>,
+<http://example.org/adélaïde-bourdon.ttl>,
+<http://example.org/margaret-bourdon.ttl>.
+
+:bourgeo ex:forValue "bourgeo";
+	ex:instance <http://example.org/margot-bourgeois.ttl>,
+<http://example.org/alex-bourgeois.ttl>,
+<http://example.org/léon-bourgeois.ttl>,
+<http://example.org/maurice-bourgeois.ttl>,
+<http://example.org/andrée-bourgeois.ttl>,
+<http://example.org/honoré-bourgeois.ttl>.
+
+:bousque ex:forValue "bousque";
+	ex:instance <http://example.org/adèle-bousquet.ttl>,
+<http://example.org/thérèse-bousquet.ttl>,
+<http://example.org/olivie-bousquet.ttl>,
+<http://example.org/maryse-bousquet.ttl>,
+<http://example.org/charlotte-bousquet.ttl>,
+<http://example.org/théophile-bousquet.ttl>,
+<http://example.org/léon-bousquet.ttl>,
+<http://example.org/nicolas-bousquet.ttl>,
+<http://example.org/marcel-bousquet.ttl>,
+<http://example.org/zoé-bousquet.ttl>.
+
+:bouvier ex:forValue "bouvier";
+	ex:instance <http://example.org/victoire-bouvier.ttl>,
+<http://example.org/audrey-bouvier.ttl>,
+<http://example.org/michel-bouvier.ttl>,
+<http://example.org/audrey-bouvier.ttl>,
+<http://example.org/roger-bouvier.ttl>,
+<http://example.org/alain-bouvier.ttl>,
+<http://example.org/alphonse-bouvier.ttl>,
+<http://example.org/caroline-bouvier.ttl>.
+
+:bradfor ex:forValue "bradfor";
+	ex:instance <http://example.org/cindy-bradford.ttl>,
+<http://example.org/kathleen-bradford.ttl>,
+<http://example.org/ashley-bradford.ttl>,
+<http://example.org/alexander-bradford.ttl>.
+
+:bradley ex:forValue "bradley";
+	ex:instance <http://example.org/wendy-bradley.ttl>,
+<http://example.org/jacob-bradley.ttl>,
+<http://example.org/peter-bradley.ttl>,
+<http://example.org/darren-bradley.ttl>.
+
+:brennan ex:forValue "brennan";
+	ex:instance <http://example.org/melissa-brennan.ttl>,
+<http://example.org/manuel-brennan.ttl>.
+
+:bridges ex:forValue "bridges";
+	ex:instance <http://example.org/april-bridges.ttl>.
+
+:brownin ex:forValue "brownin";
+	ex:instance <http://example.org/patrick-browning.ttl>,
+<http://example.org/alicia-browning.ttl>.
+
+:bruneau ex:forValue "bruneau";
+	ex:instance <http://example.org/simone-bruneau.ttl>,
+<http://example.org/édith-bruneau.ttl>,
+<http://example.org/franck-bruneau.ttl>,
+<http://example.org/julien-bruneau.ttl>,
+<http://example.org/vincent-bruneau.ttl>,
+<http://example.org/christophe-bruneau.ttl>,
+<http://example.org/antoine-bruneau.ttl>.
+
+:buisson ex:forValue "buisson";
+	ex:instance <http://example.org/aimée-buisson.ttl>,
+<http://example.org/grégoire-buisson.ttl>,
+<http://example.org/vincent-buisson.ttl>,
+<http://example.org/richard-buisson.ttl>,
+<http://example.org/valérie-buisson.ttl>,
+<http://example.org/michelle-buisson.ttl>.
+
+:burgess ex:forValue "burgess";
+	ex:instance <http://example.org/kim-burgess.ttl>,
+<http://example.org/tony-burgess.ttl>.
+
+:cabrera ex:forValue "cabrera";
+	ex:instance <http://example.org/ashley-cabrera.ttl>.
+
+:caldero ex:forValue "caldero";
+	ex:instance <http://example.org/teresa-calderon.ttl>.
+
+:caldwel ex:forValue "caldwel";
+	ex:instance <http://example.org/christian-caldwell.ttl>,
+<http://example.org/jessica-caldwell.ttl>,
+<http://example.org/renee-caldwell.ttl>,
+<http://example.org/michelle-caldwell.ttl>.
+
+:camacho ex:forValue "camacho";
+	ex:instance <http://example.org/raymond-camacho.ttl>.
+
+:cameron ex:forValue "cameron";
+	ex:instance <http://example.org/jill-cameron.ttl>.
+
+:campbel ex:forValue "campbel";
+	ex:instance <http://example.org/kathy-campbell.ttl>,
+<http://example.org/casey-campbell.ttl>,
+<http://example.org/david-campbell.ttl>,
+<http://example.org/cynthia-campbell.ttl>,
+<http://example.org/ashley-campbell.ttl>,
+<http://example.org/kimberly-campbell.ttl>,
+<http://example.org/edward-campbell.ttl>,
+<http://example.org/denise-campbell.ttl>,
+<http://example.org/david-campbell.ttl>,
+<http://example.org/gary-campbell.ttl>.
+
+:cardena ex:forValue "cardena";
+	ex:instance <http://example.org/jeffery-cardenas.ttl>.
+
+:carlier ex:forValue "carlier";
+	ex:instance <http://example.org/maggie-carlier.ttl>,
+<http://example.org/édith-carlier.ttl>,
+<http://example.org/julien-carlier.ttl>,
+<http://example.org/margot-carlier.ttl>,
+<http://example.org/claire-carlier.ttl>,
+<http://example.org/christiane-carlier.ttl>.
+
+:carlson ex:forValue "carlson";
+	ex:instance <http://example.org/tracy-carlson.ttl>,
+<http://example.org/matthew-carlson.ttl>.
+
+:carpent ex:forValue "carpent";
+	ex:instance <http://example.org/étienne-carpentier.ttl>,
+<http://example.org/elizabeth-carpenter.ttl>,
+<http://example.org/franck-carpentier.ttl>,
+<http://example.org/émilie-carpentier.ttl>,
+<http://example.org/becky-carpenter.ttl>,
+<http://example.org/marcelle-carpentier.ttl>,
+<http://example.org/lauren-carpenter.ttl>,
+<http://example.org/nichole-carpenter.ttl>,
+<http://example.org/katherine-carpenter.ttl>,
+<http://example.org/marcelle-carpentier.ttl>.
+
+:carroll ex:forValue "carroll";
+	ex:instance <http://example.org/lisa-carroll.ttl>,
+<http://example.org/ryan-carroll.ttl>.
+
+:castane ex:forValue "castane";
+	ex:instance <http://example.org/olivia-castaneda.ttl>.
+
+:castill ex:forValue "castill";
+	ex:instance <http://example.org/frank-castillo.ttl>,
+<http://example.org/michael-castillo.ttl>,
+<http://example.org/deanna-castillo.ttl>,
+<http://example.org/rebecca-castillo.ttl>.
+
+:cervant ex:forValue "cervant";
+	ex:instance <http://example.org/craig-cervantes.ttl>.
+
+:chamber ex:forValue "chamber";
+	ex:instance <http://example.org/collin-chambers.ttl>.
+
+:chandle ex:forValue "chandle";
+	ex:instance <http://example.org/stanley-chandler.ttl>,
+<http://example.org/christopher-chandler.ttl>,
+<http://example.org/dennis-chandler.ttl>,
+<http://example.org/brandon-chandler.ttl>.
+
+:chapman ex:forValue "chapman";
+	ex:instance <http://example.org/rachel-chapman.ttl>,
+<http://example.org/amy-chapman.ttl>.
+
+:charles ex:forValue "charles";
+	ex:instance <http://example.org/jacqueline-charles.ttl>,
+<http://example.org/josette-charles.ttl>,
+<http://example.org/rémy-charles.ttl>,
+<http://example.org/agnès-charles.ttl>,
+<http://example.org/bernard-charles.ttl>.
+
+:charpen ex:forValue "charpen";
+	ex:instance <http://example.org/alice-charpentier.ttl>,
+<http://example.org/dominique-charpentier.ttl>,
+<http://example.org/marianne-charpentier.ttl>,
+<http://example.org/arnaude-charpentier.ttl>,
+<http://example.org/victor-charpentier.ttl>,
+<http://example.org/aimée-charpentier.ttl>.
+
+:charrie ex:forValue "charrie";
+	ex:instance <http://example.org/thierry-charrier.ttl>,
+<http://example.org/suzanne-charrier.ttl>,
+<http://example.org/geneviève-charrier.ttl>,
+<http://example.org/alix-charrier.ttl>,
+<http://example.org/élisabeth-charrier.ttl>,
+<http://example.org/victoire-charrier.ttl>,
+<http://example.org/constance-charrier.ttl>.
+
+:chartie ex:forValue "chartie";
+	ex:instance <http://example.org/isabelle-chartier.ttl>,
+<http://example.org/sabine-chartier.ttl>,
+<http://example.org/matthieu-chartier.ttl>,
+<http://example.org/margaud-chartier.ttl>,
+<http://example.org/marine-chartier.ttl>,
+<http://example.org/catherine-chartier.ttl>,
+<http://example.org/émile-chartier.ttl>.
+
+:chauvea ex:forValue "chauvea";
+	ex:instance <http://example.org/alphonse-chauveau.ttl>,
+<http://example.org/agathe-chauveau.ttl>,
+<http://example.org/jérôme-chauveau.ttl>,
+<http://example.org/lorraine-chauveau.ttl>,
+<http://example.org/georges-chauveau.ttl>,
+<http://example.org/gérard-chauveau.ttl>,
+<http://example.org/philippine-chauveau.ttl>,
+<http://example.org/marianne-chauveau.ttl>,
+<http://example.org/audrey-chauveau.ttl>.
+
+:chauvet ex:forValue "chauvet";
+	ex:instance <http://example.org/joseph-chauvet.ttl>,
+<http://example.org/emmanuelle-chauvet.ttl>,
+<http://example.org/céline-chauvet.ttl>,
+<http://example.org/martine-chauvet.ttl>,
+<http://example.org/émilie-chauvet.ttl>,
+<http://example.org/emmanuelle-chauvet.ttl>,
+<http://example.org/pénélope-chauvet.ttl>.
+
+:chauvin ex:forValue "chauvin";
+	ex:instance <http://example.org/sophie-chauvin.ttl>,
+<http://example.org/eugène-chauvin.ttl>,
+<http://example.org/patricia-chauvin.ttl>,
+<http://example.org/adrien-chauvin.ttl>,
+<http://example.org/jeannine-chauvin.ttl>,
+<http://example.org/émilie-chauvin.ttl>,
+<http://example.org/pénélope-chauvin.ttl>,
+<http://example.org/astrid-chauvin.ttl>,
+<http://example.org/michel-chauvin.ttl>.
+
+:chevali ex:forValue "chevali";
+	ex:instance <http://example.org/julien-chevalier.ttl>,
+<http://example.org/éric-chevalier.ttl>,
+<http://example.org/arthur-chevalier.ttl>,
+<http://example.org/geneviève-chevalier.ttl>,
+<http://example.org/émile-chevalier.ttl>,
+<http://example.org/chantal-chevalier.ttl>.
+
+:chevall ex:forValue "chevall";
+	ex:instance <http://example.org/monique-chevallier.ttl>,
+<http://example.org/noémi-chevallier.ttl>,
+<http://example.org/gérard-chevallier.ttl>,
+<http://example.org/olivier-chevallier.ttl>.
+
+:chréti ex:forValue "chréti";
+	ex:instance <http://example.org/arthur-chrétien.ttl>,
+<http://example.org/maryse-chrétien.ttl>,
+<http://example.org/benoît-chrétien.ttl>.
+
+:christe ex:forValue "christe";
+	ex:instance <http://example.org/cesar-christensen.ttl>.
+
+:christi ex:forValue "christi";
+	ex:instance <http://example.org/kristine-christian.ttl>,
+<http://example.org/david-christian.ttl>.
+
+:clayton ex:forValue "clayton";
+	ex:instance <http://example.org/brooke-clayton.ttl>,
+<http://example.org/nancy-clayton.ttl>.
+
+:clement ex:forValue "clement";
+	ex:instance <http://example.org/jonathon-clements.ttl>.
+
+:clémen ex:forValue "clémen";
+	ex:instance <http://example.org/michelle-clément.ttl>,
+<http://example.org/raymond-clément.ttl>,
+<http://example.org/agathe-clément.ttl>,
+<http://example.org/lorraine-clément.ttl>,
+<http://example.org/arnaude-clément.ttl>.
+
+:coleman ex:forValue "coleman";
+	ex:instance <http://example.org/jamie-coleman.ttl>,
+<http://example.org/mackenzie-coleman.ttl>,
+<http://example.org/george-coleman.ttl>,
+<http://example.org/tyler-coleman.ttl>,
+<http://example.org/austin-coleman.ttl>,
+<http://example.org/lisa-coleman.ttl>,
+<http://example.org/billy-coleman.ttl>.
+
+:collier ex:forValue "collier";
+	ex:instance <http://example.org/amy-collier.ttl>.
+
+:collins ex:forValue "collins";
+	ex:instance <http://example.org/gregory-collins.ttl>,
+<http://example.org/rebecca-collins.ttl>,
+<http://example.org/luis-collins.ttl>,
+<http://example.org/douglas-collins.ttl>,
+<http://example.org/margaret-collins.ttl>,
+<http://example.org/melissa-collins.ttl>,
+<http://example.org/timothy-collins.ttl>,
+<http://example.org/selena-collins.ttl>.
+
+:contrer ex:forValue "contrer";
+	ex:instance <http://example.org/courtney-contreras.ttl>,
+<http://example.org/charles-contreras.ttl>,
+<http://example.org/calvin-contreras.ttl>.
+
+:copelan ex:forValue "copelan";
+	ex:instance <http://example.org/maria-copeland.ttl>,
+<http://example.org/gregory-copeland.ttl>.
+
+:cordier ex:forValue "cordier";
+	ex:instance <http://example.org/michèle-cordier.ttl>,
+<http://example.org/christiane-cordier.ttl>,
+<http://example.org/joseph-cordier.ttl>,
+<http://example.org/astrid-cordier.ttl>,
+<http://example.org/philippine-cordier.ttl>.
+
+:courtoi ex:forValue "courtoi";
+	ex:instance <http://example.org/nicolas-courtois.ttl>,
+<http://example.org/charles-courtois.ttl>,
+<http://example.org/sophie-courtois.ttl>,
+<http://example.org/tristan-courtois.ttl>.
+
+:couturi ex:forValue "couturi";
+	ex:instance <http://example.org/adèle-couturier.ttl>,
+<http://example.org/vincent-couturier.ttl>,
+<http://example.org/théodore-couturier.ttl>,
+<http://example.org/claudine-couturier.ttl>,
+<http://example.org/jacques-couturier.ttl>,
+<http://example.org/martine-couturier.ttl>.
+
+:crawfor ex:forValue "crawfor";
+	ex:instance <http://example.org/timothy-crawford.ttl>,
+<http://example.org/paul-crawford.ttl>,
+<http://example.org/peter-crawford.ttl>,
+<http://example.org/gina-crawford.ttl>,
+<http://example.org/jasmine-crawford.ttl>.
+
+:cumming ex:forValue "cumming";
+	ex:instance <http://example.org/matthew-cummings.ttl>.
+
+:cunning ex:forValue "cunning";
+	ex:instance <http://example.org/david-cunningham.ttl>,
+<http://example.org/jody-cunningham.ttl>,
+<http://example.org/william-cunningham.ttl>,
+<http://example.org/emily-cunningham.ttl>,
+<http://example.org/benjamin-cunningham.ttl>.
+
+:da cost ex:forValue "da cost";
+	ex:instance <http://example.org/odette-da-costa.ttl>,
+<http://example.org/agathe-da-costa.ttl>,
+<http://example.org/auguste-da-costa.ttl>,
+<http://example.org/capucine-da-costa.ttl>,
+<http://example.org/marthe-da-costa.ttl>,
+<http://example.org/clémence-da-costa.ttl>,
+<http://example.org/aimée-da-costa.ttl>.
+
+:da silv ex:forValue "da silv";
+	ex:instance <http://example.org/adrienne-da-silva.ttl>,
+<http://example.org/christophe-da-silva.ttl>,
+<http://example.org/céline-da-silva.ttl>,
+<http://example.org/christophe-da-silva.ttl>,
+<http://example.org/patrick-da-silva.ttl>,
+<http://example.org/édith-da-silva.ttl>,
+<http://example.org/alix-da-silva.ttl>,
+<http://example.org/timothée-da-silva.ttl>,
+<http://example.org/lucas-da-silva.ttl>.
+
+:daniels ex:forValue "daniels";
+	ex:instance <http://example.org/john-daniels.ttl>,
+<http://example.org/tiffany-daniels.ttl>,
+<http://example.org/adam-daniels.ttl>.
+
+:daugher ex:forValue "daugher";
+	ex:instance <http://example.org/julie-daugherty.ttl>,
+<http://example.org/andrew-daugherty.ttl>,
+<http://example.org/brendan-daugherty.ttl>.
+
+:davenpo ex:forValue "davenpo";
+	ex:instance <http://example.org/anna-davenport.ttl>.
+
+:davidso ex:forValue "davidso";
+	ex:instance <http://example.org/cynthia-davidson.ttl>.
+
+:de oliv ex:forValue "de oliv";
+	ex:instance <http://example.org/hélène-de-oliveira.ttl>,
+<http://example.org/thérèse-de-oliveira.ttl>,
+<http://example.org/valentine-de-oliveira.ttl>,
+<http://example.org/guy-de-oliveira.ttl>,
+<http://example.org/pénélope-de-oliveira.ttl>,
+<http://example.org/benoît-de-oliveira.ttl>.
+
+:de sous ex:forValue "de sous";
+	ex:instance <http://example.org/adrienne-de-sousa.ttl>,
+<http://example.org/nathalie-de-sousa.ttl>,
+<http://example.org/adrien-de-sousa.ttl>,
+<http://example.org/adèle-de-sousa.ttl>,
+<http://example.org/mathilde-de-sousa.ttl>,
+<http://example.org/jeannine-de-sousa.ttl>,
+<http://example.org/édouard-de-sousa.ttl>,
+<http://example.org/henriette-de-sousa.ttl>,
+<http://example.org/susanne-de-sousa.ttl>,
+<http://example.org/alphonse-de-sousa.ttl>.
+
+:delacru ex:forValue "delacru";
+	ex:instance <http://example.org/emily-delacruz.ttl>.
+
+:delahay ex:forValue "delahay";
+	ex:instance <http://example.org/guillaume-delahaye.ttl>,
+<http://example.org/emmanuel-delahaye.ttl>,
+<http://example.org/éric-delahaye.ttl>,
+<http://example.org/hortense-delahaye.ttl>,
+<http://example.org/denise-delahaye.ttl>,
+<http://example.org/anastasie-delahaye.ttl>,
+<http://example.org/gabriel-delahaye.ttl>,
+<http://example.org/nicolas-delahaye.ttl>,
+<http://example.org/alex-delahaye.ttl>,
+<http://example.org/aimée-delahaye.ttl>,
+<http://example.org/capucine-delahaye.ttl>.
+
+:delanno ex:forValue "delanno";
+	ex:instance <http://example.org/renée-delannoy.ttl>,
+<http://example.org/eugène-delannoy.ttl>,
+<http://example.org/margaux-delannoy.ttl>,
+<http://example.org/patrick-delannoy.ttl>,
+<http://example.org/zacharie-delannoy.ttl>,
+<http://example.org/édouard-delannoy.ttl>,
+<http://example.org/emmanuel-delannoy.ttl>,
+<http://example.org/constance-delannoy.ttl>,
+<http://example.org/hugues-delannoy.ttl>,
+<http://example.org/nathalie-delannoy.ttl>.
+
+:delattr ex:forValue "delattr";
+	ex:instance <http://example.org/adélaïde-delattre.ttl>,
+<http://example.org/suzanne-delattre.ttl>,
+<http://example.org/noël-delattre.ttl>,
+<http://example.org/antoine-delattre.ttl>,
+<http://example.org/andré-delattre.ttl>.
+
+:delauna ex:forValue "delauna";
+	ex:instance <http://example.org/emmanuelle-delaunay.ttl>,
+<http://example.org/michel-delaunay.ttl>,
+<http://example.org/michelle-delaunay.ttl>,
+<http://example.org/louise-delaunay.ttl>,
+<http://example.org/margaret-delaunay.ttl>,
+<http://example.org/susanne-delaunay.ttl>,
+<http://example.org/célina-delaunay.ttl>,
+<http://example.org/alfred-delaunay.ttl>,
+<http://example.org/paulette-delaunay.ttl>,
+<http://example.org/vincent-delaunay.ttl>.
+
+:delgado ex:forValue "delgado";
+	ex:instance <http://example.org/regina-delgado.ttl>,
+<http://example.org/randy-delgado.ttl>.
+
+:delorme ex:forValue "delorme";
+	ex:instance <http://example.org/jules-delorme.ttl>,
+<http://example.org/stéphanie-delorme.ttl>,
+<http://example.org/martin-delorme.ttl>.
+
+:descamp ex:forValue "descamp";
+	ex:instance <http://example.org/martine-descamps.ttl>,
+<http://example.org/alphonse-descamps.ttl>,
+<http://example.org/agnès-descamps.ttl>,
+<http://example.org/zacharie-descamps.ttl>,
+<http://example.org/isaac-descamps.ttl>,
+<http://example.org/charles-descamps.ttl>,
+<http://example.org/michelle-descamps.ttl>,
+<http://example.org/antoine-descamps.ttl>.
+
+:descham ex:forValue "descham";
+	ex:instance <http://example.org/henri-deschamps.ttl>,
+<http://example.org/thérèse-deschamps.ttl>,
+<http://example.org/danielle-deschamps.ttl>,
+<http://example.org/daniel-deschamps.ttl>.
+
+:dickers ex:forValue "dickers";
+	ex:instance <http://example.org/willie-dickerson.ttl>,
+<http://example.org/michael-dickerson.ttl>.
+
+:dickson ex:forValue "dickson";
+	ex:instance <http://example.org/lauren-dickson.ttl>.
+
+:domingu ex:forValue "domingu";
+	ex:instance <http://example.org/monica-dominguez.ttl>,
+<http://example.org/paul-dominguez.ttl>,
+<http://example.org/michaela-dominguez.ttl>.
+
+:donalds ex:forValue "donalds";
+	ex:instance <http://example.org/amber-donaldson.ttl>.
+
+:dos san ex:forValue "dos san";
+	ex:instance <http://example.org/jacques-dos-santos.ttl>,
+<http://example.org/rené-dos-santos.ttl>,
+<http://example.org/timothée-dos-santos.ttl>,
+<http://example.org/laure-dos-santos.ttl>,
+<http://example.org/thomas-dos-santos.ttl>,
+<http://example.org/isaac-dos-santos.ttl>.
+
+:dougher ex:forValue "dougher";
+	ex:instance <http://example.org/misty-dougherty.ttl>,
+<http://example.org/joel-dougherty.ttl>.
+
+:douglas ex:forValue "douglas";
+	ex:instance <http://example.org/cynthia-douglas.ttl>.
+
+:duhamel ex:forValue "duhamel";
+	ex:instance <http://example.org/amélie-duhamel.ttl>,
+<http://example.org/geneviève-duhamel.ttl>,
+<http://example.org/joséphine-duhamel.ttl>.
+
+:edwards ex:forValue "edwards";
+	ex:instance <http://example.org/daniel-edwards.ttl>,
+<http://example.org/barbara-edwards.ttl>,
+<http://example.org/jill-edwards.ttl>,
+<http://example.org/yolanda-edwards.ttl>,
+<http://example.org/amber-edwards.ttl>,
+<http://example.org/christine-edwards.ttl>,
+<http://example.org/jeffery-edwards.ttl>,
+<http://example.org/stephen-edwards.ttl>.
+
+:elliott ex:forValue "elliott";
+	ex:instance <http://example.org/zachary-elliott.ttl>,
+<http://example.org/gabrielle-elliott.ttl>.
+
+:ellison ex:forValue "ellison";
+	ex:instance <http://example.org/melissa-ellison.ttl>,
+<http://example.org/robert-ellison.ttl>.
+
+:english ex:forValue "english";
+	ex:instance <http://example.org/cody-english.ttl>.
+
+:erickso ex:forValue "erickso";
+	ex:instance <http://example.org/amanda-erickson.ttl>,
+<http://example.org/robert-erickson.ttl>.
+
+:esparza ex:forValue "esparza";
+	ex:instance <http://example.org/kristin-esparza.ttl>.
+
+:espinoz ex:forValue "espinoz";
+	ex:instance <http://example.org/shane-espinoza.ttl>,
+<http://example.org/samantha-espinoza.ttl>.
+
+:estrada ex:forValue "estrada";
+	ex:instance <http://example.org/patrick-estrada.ttl>,
+<http://example.org/isaac-estrada.ttl>,
+<http://example.org/casey-estrada.ttl>,
+<http://example.org/nicholas-estrada.ttl>,
+<http://example.org/kari-estrada.ttl>,
+<http://example.org/michael-estrada.ttl>,
+<http://example.org/shawn-estrada.ttl>.
+
+:everett ex:forValue "everett";
+	ex:instance <http://example.org/christine-everett.ttl>.
+
+:étienn ex:forValue "étienn";
+	ex:instance <http://example.org/anastasie-étienne.ttl>,
+<http://example.org/laurent-étienne.ttl>,
+<http://example.org/gabriel-étienne.ttl>,
+<http://example.org/amélie-étienne.ttl>,
+<http://example.org/gilles-étienne.ttl>,
+<http://example.org/bertrand-étienne.ttl>.
+
+:farrell ex:forValue "farrell";
+	ex:instance <http://example.org/andrea-farrell.ttl>.
+
+:ferguso ex:forValue "ferguso";
+	ex:instance <http://example.org/robert-ferguson.ttl>,
+<http://example.org/christina-ferguson.ttl>,
+<http://example.org/meghan-ferguson.ttl>,
+<http://example.org/margaret-ferguson.ttl>,
+<http://example.org/nicole-ferguson.ttl>.
+
+:fernand ex:forValue "fernand";
+	ex:instance <http://example.org/chris-fernandez.ttl>,
+<http://example.org/isabella-fernandez.ttl>,
+<http://example.org/april-fernandez.ttl>,
+<http://example.org/françois-fernandes.ttl>,
+<http://example.org/gabrielle-fernandes.ttl>,
+<http://example.org/frédérique-fernandez.ttl>,
+<http://example.org/brigitte-fernandez.ttl>,
+<http://example.org/virginie-fernandez.ttl>,
+<http://example.org/cécile-fernandez.ttl>,
+<http://example.org/christelle-fernandes.ttl>,
+<http://example.org/colette-fernandez.ttl>.
+
+:ferrand ex:forValue "ferrand";
+	ex:instance <http://example.org/isaac-ferrand.ttl>,
+<http://example.org/théodore-ferrand.ttl>,
+<http://example.org/inès-ferrand.ttl>,
+<http://example.org/colette-ferrand.ttl>,
+<http://example.org/nicolas-ferrand.ttl>,
+<http://example.org/marc-ferrand.ttl>.
+
+:ferreir ex:forValue "ferreir";
+	ex:instance <http://example.org/denis-ferreira.ttl>,
+<http://example.org/josette-ferreira.ttl>,
+<http://example.org/philippine-ferreira.ttl>,
+<http://example.org/marie-ferreira.ttl>,
+<http://example.org/nathalie-ferreira.ttl>,
+<http://example.org/christelle-ferreira.ttl>,
+<http://example.org/alice-ferreira.ttl>.
+
+:ferrell ex:forValue "ferrell";
+	ex:instance <http://example.org/derrick-ferrell.ttl>.
+
+:fischer ex:forValue "fischer";
+	ex:instance <http://example.org/kathryn-fischer.ttl>,
+<http://example.org/raymond-fischer.ttl>,
+<http://example.org/alain-fischer.ttl>,
+<http://example.org/holly-fischer.ttl>,
+<http://example.org/brandon-fischer.ttl>,
+<http://example.org/josette-fischer.ttl>,
+<http://example.org/isabelle-fischer.ttl>.
+
+:fitzger ex:forValue "fitzger";
+	ex:instance <http://example.org/benjamin-fitzgerald.ttl>,
+<http://example.org/sarah-fitzgerald.ttl>.
+
+:fletche ex:forValue "fletche";
+	ex:instance <http://example.org/gloria-fletcher.ttl>,
+<http://example.org/sophia-fletcher.ttl>,
+<http://example.org/william-fletcher.ttl>,
+<http://example.org/marco-fletcher.ttl>.
+
+:flowers ex:forValue "flowers";
+	ex:instance <http://example.org/robert-flowers.ttl>,
+<http://example.org/jose-flowers.ttl>.
+
+:fontain ex:forValue "fontain";
+	ex:instance <http://example.org/michelle-fontaine.ttl>,
+<http://example.org/nathalie-fontaine.ttl>,
+<http://example.org/sébastien-fontaine.ttl>,
+<http://example.org/constance-fontaine.ttl>,
+<http://example.org/vincent-fontaine.ttl>,
+<http://example.org/benoît-fontaine.ttl>.
+
+:foucher ex:forValue "foucher";
+	ex:instance <http://example.org/isabelle-foucher.ttl>,
+<http://example.org/christelle-foucher.ttl>,
+<http://example.org/véronique-foucher.ttl>,
+<http://example.org/élise-foucher.ttl>,
+<http://example.org/laurence-foucher.ttl>,
+<http://example.org/hugues-foucher.ttl>,
+<http://example.org/yves-foucher.ttl>,
+<http://example.org/corinne-foucher.ttl>,
+<http://example.org/daniel-foucher.ttl>,
+<http://example.org/paulette-foucher.ttl>.
+
+:fouquet ex:forValue "fouquet";
+	ex:instance <http://example.org/daniel-fouquet.ttl>,
+<http://example.org/julie-fouquet.ttl>,
+<http://example.org/théodore-fouquet.ttl>,
+<http://example.org/sylvie-fouquet.ttl>,
+<http://example.org/adèle-fouquet.ttl>,
+<http://example.org/diane-fouquet.ttl>,
+<http://example.org/rémy-fouquet.ttl>,
+<http://example.org/emmanuel-fouquet.ttl>.
+
+:fournie ex:forValue "fournie";
+	ex:instance <http://example.org/claudine-fournier.ttl>,
+<http://example.org/caroline-fournier.ttl>,
+<http://example.org/dorothée-fournier.ttl>,
+<http://example.org/inès-fournier.ttl>,
+<http://example.org/henriette-fournier.ttl>.
+
+:francis ex:forValue "francis";
+	ex:instance <http://example.org/stephanie-francis.ttl>,
+<http://example.org/ryan-francis.ttl>.
+
+:franço ex:forValue "franço";
+	ex:instance <http://example.org/sébastien-françois.ttl>,
+<http://example.org/matthieu-françois.ttl>,
+<http://example.org/vincent-françois.ttl>,
+<http://example.org/édith-françois.ttl>,
+<http://example.org/adélaïde-françois.ttl>,
+<http://example.org/louis-françois.ttl>,
+<http://example.org/adèle-françois.ttl>,
+<http://example.org/pénélope-françois.ttl>,
+<http://example.org/roger-françois.ttl>,
+<http://example.org/émilie-françois.ttl>.
+
+:frankli ex:forValue "frankli";
+	ex:instance <http://example.org/lori-franklin.ttl>,
+<http://example.org/lisa-franklin.ttl>,
+<http://example.org/christian-franklin.ttl>,
+<http://example.org/jennifer-franklin.ttl>,
+<http://example.org/roger-franklin.ttl>,
+<http://example.org/justin-franklin.ttl>.
+
+:frazier ex:forValue "frazier";
+	ex:instance <http://example.org/tracy-frazier.ttl>.
+
+:freeman ex:forValue "freeman";
+	ex:instance <http://example.org/amber-freeman.ttl>,
+<http://example.org/teresa-freeman.ttl>,
+<http://example.org/margaret-freeman.ttl>.
+
+:friedma ex:forValue "friedma";
+	ex:instance <http://example.org/calvin-friedman.ttl>.
+
+:gaillar ex:forValue "gaillar";
+	ex:instance <http://example.org/gabriel-gaillard.ttl>,
+<http://example.org/éric-gaillard.ttl>,
+<http://example.org/danielle-gaillard.ttl>,
+<http://example.org/isabelle-gaillard.ttl>,
+<http://example.org/laetitia-gaillard.ttl>,
+<http://example.org/paul-gaillard.ttl>.
+
+:gallagh ex:forValue "gallagh";
+	ex:instance <http://example.org/anthony-gallagher.ttl>,
+<http://example.org/devon-gallagher.ttl>.
+
+:garnier ex:forValue "garnier";
+	ex:instance <http://example.org/laetitia-garnier.ttl>,
+<http://example.org/astrid-garnier.ttl>,
+<http://example.org/maurice-garnier.ttl>,
+<http://example.org/eugène-garnier.ttl>.
+
+:garriso ex:forValue "garriso";
+	ex:instance <http://example.org/susan-garrison.ttl>.
+
+:gauthie ex:forValue "gauthie";
+	ex:instance <http://example.org/anouk-gauthier.ttl>,
+<http://example.org/caroline-gauthier.ttl>,
+<http://example.org/victor-gauthier.ttl>,
+<http://example.org/stéphane-gauthier.ttl>,
+<http://example.org/gabrielle-gauthier.ttl>,
+<http://example.org/eugène-gauthier.ttl>,
+<http://example.org/antoine-gauthier.ttl>,
+<http://example.org/danielle-gauthier.ttl>,
+<http://example.org/timothée-gauthier.ttl>.
+
+:gautier ex:forValue "gautier";
+	ex:instance <http://example.org/benoît-gautier.ttl>,
+<http://example.org/thérèse-gautier.ttl>,
+<http://example.org/joseph-gautier.ttl>.
+
+:georges ex:forValue "georges";
+	ex:instance <http://example.org/véronique-georges.ttl>,
+<http://example.org/christiane-georges.ttl>,
+<http://example.org/laetitia-georges.ttl>,
+<http://example.org/jeanne-georges.ttl>,
+<http://example.org/raymond-georges.ttl>,
+<http://example.org/nathalie-georges.ttl>,
+<http://example.org/suzanne-georges.ttl>,
+<http://example.org/alex-georges.ttl>.
+
+:germain ex:forValue "germain";
+	ex:instance <http://example.org/nathalie-germain.ttl>,
+<http://example.org/thibault-germain.ttl>,
+<http://example.org/sabine-germain.ttl>,
+<http://example.org/nathalie-germain.ttl>,
+<http://example.org/louise-germain.ttl>,
+<http://example.org/élisabeth-germain.ttl>,
+<http://example.org/yves-germain.ttl>,
+<http://example.org/alexandrie-germain.ttl>,
+<http://example.org/henri-germain.ttl>,
+<http://example.org/marc-germain.ttl>,
+<http://example.org/thierry-germain.ttl>,
+<http://example.org/philippine-germain.ttl>.
+
+:gérard ex:forValue "gérard";
+	ex:instance <http://example.org/océane-gérard.ttl>,
+<http://example.org/alfred-gérard.ttl>,
+<http://example.org/diane-gérard.ttl>,
+<http://example.org/paulette-gérard.ttl>,
+<http://example.org/andrée-gérard.ttl>,
+<http://example.org/luc-gérard.ttl>.
+
+:gilbert ex:forValue "gilbert";
+	ex:instance <http://example.org/andré-gilbert.ttl>,
+<http://example.org/maggie-gilbert.ttl>,
+<http://example.org/yves-gilbert.ttl>,
+<http://example.org/steven-gilbert.ttl>,
+<http://example.org/alice-gilbert.ttl>.
+
+:gillesp ex:forValue "gillesp";
+	ex:instance <http://example.org/emily-gillespie.ttl>.
+
+:gilmore ex:forValue "gilmore";
+	ex:instance <http://example.org/ryan-gilmore.ttl>.
+
+:gimenez ex:forValue "gimenez";
+	ex:instance <http://example.org/anaïs-gimenez.ttl>,
+<http://example.org/dominique-gimenez.ttl>,
+<http://example.org/paul-gimenez.ttl>,
+<http://example.org/yves-gimenez.ttl>.
+
+:goncalv ex:forValue "goncalv";
+	ex:instance <http://example.org/josette-goncalves.ttl>,
+<http://example.org/hortense-goncalves.ttl>,
+<http://example.org/valérie-goncalves.ttl>,
+<http://example.org/constance-goncalves.ttl>,
+<http://example.org/raymond-goncalves.ttl>,
+<http://example.org/océane-goncalves.ttl>,
+<http://example.org/louise-goncalves.ttl>,
+<http://example.org/suzanne-goncalves.ttl>.
+
+:gonzale ex:forValue "gonzale";
+	ex:instance <http://example.org/clémence-gonzalez.ttl>,
+<http://example.org/kayla-gonzalez.ttl>,
+<http://example.org/thibaut-gonzalez.ttl>,
+<http://example.org/sarah-gonzalez.ttl>,
+<http://example.org/angela-gonzalez.ttl>,
+<http://example.org/joseph-gonzales.ttl>,
+<http://example.org/melissa-gonzalez.ttl>,
+<http://example.org/tammy-gonzalez.ttl>,
+<http://example.org/anouk-gonzalez.ttl>,
+<http://example.org/roger-gonzalez.ttl>,
+<http://example.org/david-gonzalez.ttl>,
+<http://example.org/james-gonzalez.ttl>,
+<http://example.org/clémence-gonzalez.ttl>,
+<http://example.org/brandi-gonzalez.ttl>,
+<http://example.org/donna-gonzalez.ttl>,
+<http://example.org/céline-gonzalez.ttl>,
+<http://example.org/toni-gonzalez.ttl>,
+<http://example.org/aimée-gonzalez.ttl>,
+<http://example.org/melissa-gonzalez.ttl>,
+<http://example.org/kathleen-gonzalez.ttl>,
+<http://example.org/dawn-gonzalez.ttl>,
+<http://example.org/melinda-gonzalez.ttl>,
+<http://example.org/susan-gonzales.ttl>,
+<http://example.org/virginia-gonzalez.ttl>,
+<http://example.org/kenneth-gonzales.ttl>,
+<http://example.org/wanda-gonzalez.ttl>.
+
+:goodman ex:forValue "goodman";
+	ex:instance <http://example.org/thomas-goodman.ttl>,
+<http://example.org/tyler-goodman.ttl>,
+<http://example.org/trevor-goodman.ttl>,
+<http://example.org/hannah-goodman.ttl>.
+
+:goodwin ex:forValue "goodwin";
+	ex:instance <http://example.org/eric-goodwin.ttl>.
+
+:gosseli ex:forValue "gosseli";
+	ex:instance <http://example.org/sébastien-gosselin.ttl>,
+<http://example.org/suzanne-gosselin.ttl>,
+<http://example.org/marie-gosselin.ttl>,
+<http://example.org/gilbert-gosselin.ttl>,
+<http://example.org/denis-gosselin.ttl>,
+<http://example.org/colette-gosselin.ttl>,
+<http://example.org/michèle-gosselin.ttl>.
+
+:gregory ex:forValue "gregory";
+	ex:instance <http://example.org/david-gregory.ttl>,
+<http://example.org/kristy-gregory.ttl>.
+
+:grenier ex:forValue "grenier";
+	ex:instance <http://example.org/suzanne-grenier.ttl>,
+<http://example.org/antoinette-grenier.ttl>,
+<http://example.org/sylvie-grenier.ttl>,
+<http://example.org/éric-grenier.ttl>,
+<http://example.org/édouard-grenier.ttl>.
+
+:grégoi ex:forValue "grégoi";
+	ex:instance <http://example.org/maurice-grégoire.ttl>,
+<http://example.org/suzanne-grégoire.ttl>,
+<http://example.org/auguste-grégoire.ttl>,
+<http://example.org/marine-grégoire.ttl>.
+
+:griffin ex:forValue "griffin";
+	ex:instance <http://example.org/john-griffin.ttl>,
+<http://example.org/diane-griffin.ttl>,
+<http://example.org/catherine-griffin.ttl>,
+<http://example.org/misty-griffin.ttl>.
+
+:griffit ex:forValue "griffit";
+	ex:instance <http://example.org/ashlee-griffith.ttl>,
+<http://example.org/jennifer-griffith.ttl>,
+<http://example.org/daniel-griffith.ttl>.
+
+:grondin ex:forValue "grondin";
+	ex:instance <http://example.org/capucine-grondin.ttl>,
+<http://example.org/gilles-grondin.ttl>,
+<http://example.org/éric-grondin.ttl>,
+<http://example.org/margaud-grondin.ttl>,
+<http://example.org/susan-grondin.ttl>,
+<http://example.org/david-grondin.ttl>.
+
+:guerrer ex:forValue "guerrer";
+	ex:instance <http://example.org/gregory-guerrero.ttl>,
+<http://example.org/austin-guerrero.ttl>,
+<http://example.org/kristen-guerrero.ttl>.
+
+:guérin ex:forValue "guérin";
+	ex:instance <http://example.org/julie-guérin.ttl>,
+<http://example.org/anne-guérin.ttl>,
+<http://example.org/édith-guérin.ttl>,
+<http://example.org/chantal-guérin.ttl>,
+<http://example.org/émile-guérin.ttl>,
+<http://example.org/josette-guérin.ttl>.
+
+:guibert ex:forValue "guibert";
+	ex:instance <http://example.org/alice-guibert.ttl>,
+<http://example.org/nicolas-guibert.ttl>,
+<http://example.org/célina-guibert.ttl>,
+<http://example.org/arthur-guibert.ttl>,
+<http://example.org/constance-guibert.ttl>,
+<http://example.org/gilbert-guibert.ttl>.
+
+:guichar ex:forValue "guichar";
+	ex:instance <http://example.org/matthieu-guichard.ttl>,
+<http://example.org/rémy-guichard.ttl>,
+<http://example.org/alexandrie-guichard.ttl>,
+<http://example.org/simone-guichard.ttl>,
+<http://example.org/gabriel-guichard.ttl>.
+
+:guilber ex:forValue "guilber";
+	ex:instance <http://example.org/léon-guilbert.ttl>,
+<http://example.org/philippine-guilbert.ttl>,
+<http://example.org/auguste-guilbert.ttl>,
+<http://example.org/thérèse-guilbert.ttl>,
+<http://example.org/sabine-guilbert.ttl>,
+<http://example.org/claire-guilbert.ttl>,
+<http://example.org/bernadette-guilbert.ttl>,
+<http://example.org/marie-guilbert.ttl>.
+
+:guillau ex:forValue "guillau";
+	ex:instance <http://example.org/xavier-guillaume.ttl>,
+<http://example.org/dorothée-guillaume.ttl>,
+<http://example.org/hugues-guillaume.ttl>,
+<http://example.org/maurice-guillaume.ttl>,
+<http://example.org/luc-guillaume.ttl>,
+<http://example.org/frédéric-guillaume.ttl>,
+<http://example.org/hortense-guillaume.ttl>.
+
+:guillet ex:forValue "guillet";
+	ex:instance <http://example.org/grégoire-guillet.ttl>,
+<http://example.org/agathe-guillet.ttl>,
+<http://example.org/mathilde-guillet.ttl>,
+<http://example.org/marcel-guillet.ttl>.
+
+:guillon ex:forValue "guillon";
+	ex:instance <http://example.org/frédéric-guillon.ttl>,
+<http://example.org/noël-guillon.ttl>,
+<http://example.org/théophile-guillon.ttl>,
+<http://example.org/charles-guillon.ttl>,
+<http://example.org/roger-guillon.ttl>,
+<http://example.org/louis-guillon.ttl>.
+
+:guillot ex:forValue "guillot";
+	ex:instance <http://example.org/lorraine-guillot.ttl>,
+<http://example.org/alexandrie-guillot.ttl>,
+<http://example.org/maurice-guillot.ttl>,
+<http://example.org/lucas-guillot.ttl>,
+<http://example.org/roger-guillot.ttl>,
+<http://example.org/henriette-guillot.ttl>,
+<http://example.org/patricia-guillot.ttl>.
+
+:guillou ex:forValue "guillou";
+	ex:instance <http://example.org/noël-guillou.ttl>,
+<http://example.org/michèle-guillou.ttl>,
+<http://example.org/lucie-guillou.ttl>.
+
+:gutierr ex:forValue "gutierr";
+	ex:instance <http://example.org/amanda-gutierrez.ttl>,
+<http://example.org/susan-gutierrez.ttl>,
+<http://example.org/ashley-gutierrez.ttl>,
+<http://example.org/jonathan-gutierrez.ttl>,
+<http://example.org/james-gutierrez.ttl>,
+<http://example.org/vincent-gutierrez.ttl>,
+<http://example.org/megan-gutierrez.ttl>,
+<http://example.org/heather-gutierrez.ttl>,
+<http://example.org/kara-gutierrez.ttl>.
+
+:hamilto ex:forValue "hamilto";
+	ex:instance <http://example.org/meredith-hamilton.ttl>,
+<http://example.org/bryan-hamilton.ttl>,
+<http://example.org/alejandro-hamilton.ttl>,
+<http://example.org/kristin-hamilton.ttl>,
+<http://example.org/lisa-hamilton.ttl>,
+<http://example.org/todd-hamilton.ttl>.
+
+:hammond ex:forValue "hammond";
+	ex:instance <http://example.org/kathryn-hammond.ttl>.
+
+:hampton ex:forValue "hampton";
+	ex:instance <http://example.org/mary-hampton.ttl>.
+
+:hancock ex:forValue "hancock";
+	ex:instance <http://example.org/mary-hancock.ttl>,
+<http://example.org/tracey-hancock.ttl>.
+
+:harding ex:forValue "harding";
+	ex:instance <http://example.org/terri-harding.ttl>.
+
+:harrell ex:forValue "harrell";
+	ex:instance <http://example.org/elizabeth-harrell.ttl>,
+<http://example.org/julie-harrell.ttl>.
+
+:harring ex:forValue "harring";
+	ex:instance <http://example.org/andrea-harrington.ttl>,
+<http://example.org/wanda-harrington.ttl>.
+
+:harriso ex:forValue "harriso";
+	ex:instance <http://example.org/christopher-harrison.ttl>,
+<http://example.org/tammy-harrison.ttl>,
+<http://example.org/jesse-harrison.ttl>,
+<http://example.org/jeffrey-harrison.ttl>.
+
+:hartman ex:forValue "hartman";
+	ex:instance <http://example.org/adam-hartman.ttl>.
+
+:hawkins ex:forValue "hawkins";
+	ex:instance <http://example.org/brandy-hawkins.ttl>,
+<http://example.org/matthew-hawkins.ttl>,
+<http://example.org/jessica-hawkins.ttl>.
+
+:henders ex:forValue "henders";
+	ex:instance <http://example.org/kimberly-henderson.ttl>,
+<http://example.org/james-henderson.ttl>.
+
+:hendric ex:forValue "hendric";
+	ex:instance <http://example.org/janice-hendricks.ttl>,
+<http://example.org/angela-hendricks.ttl>.
+
+:hendrix ex:forValue "hendrix";
+	ex:instance <http://example.org/amanda-hendrix.ttl>,
+<http://example.org/gail-hendrix.ttl>.
+
+:hensley ex:forValue "hensley";
+	ex:instance <http://example.org/juan-hensley.ttl>,
+<http://example.org/alicia-hensley.ttl>,
+<http://example.org/john-hensley.ttl>.
+
+:hernand ex:forValue "hernand";
+	ex:instance <http://example.org/robyn-hernandez.ttl>,
+<http://example.org/aimée-hernandez.ttl>,
+<http://example.org/denis-hernandez.ttl>,
+<http://example.org/émilie-hernandez.ttl>,
+<http://example.org/james-hernandez.ttl>,
+<http://example.org/georges-hernandez.ttl>,
+<http://example.org/elizabeth-hernandez.ttl>,
+<http://example.org/heather-hernandez.ttl>,
+<http://example.org/katherine-hernandez.ttl>,
+<http://example.org/anthony-hernandez.ttl>,
+<http://example.org/arthur-hernandez.ttl>,
+<http://example.org/kimberly-hernandez.ttl>,
+<http://example.org/jeffrey-hernandez.ttl>,
+<http://example.org/david-hernandez.ttl>,
+<http://example.org/nathalie-hernandez.ttl>,
+<http://example.org/courtney-hernandez.ttl>,
+<http://example.org/edward-hernandez.ttl>,
+<http://example.org/emily-hernandez.ttl>,
+<http://example.org/hélène-hernandez.ttl>,
+<http://example.org/marie-hernandez.ttl>,
+<http://example.org/éric-hernandez.ttl>,
+<http://example.org/joseph-hernandez.ttl>,
+<http://example.org/barbara-hernandez.ttl>,
+<http://example.org/julien-hernandez.ttl>.
+
+:herrera ex:forValue "herrera";
+	ex:instance <http://example.org/leslie-herrera.ttl>,
+<http://example.org/john-herrera.ttl>,
+<http://example.org/gabrielle-herrera.ttl>.
+
+:hickman ex:forValue "hickman";
+	ex:instance <http://example.org/eugene-hickman.ttl>,
+<http://example.org/anthony-hickman.ttl>,
+<http://example.org/danny-hickman.ttl>,
+<http://example.org/jeffrey-hickman.ttl>.
+
+:higgins ex:forValue "higgins";
+	ex:instance <http://example.org/alexander-higgins.ttl>,
+<http://example.org/jodi-higgins.ttl>,
+<http://example.org/karen-higgins.ttl>.
+
+:hoareau ex:forValue "hoareau";
+	ex:instance <http://example.org/margaret-hoareau.ttl>,
+<http://example.org/marianne-hoareau.ttl>,
+<http://example.org/laurence-hoareau.ttl>,
+<http://example.org/édith-hoareau.ttl>,
+<http://example.org/virginie-hoareau.ttl>,
+<http://example.org/guillaume-hoareau.ttl>,
+<http://example.org/amélie-hoareau.ttl>,
+<http://example.org/martin-hoareau.ttl>,
+<http://example.org/daniel-hoareau.ttl>.
+
+:hoffman ex:forValue "hoffman";
+	ex:instance <http://example.org/eric-hoffman.ttl>.
+
+:hollowa ex:forValue "hollowa";
+	ex:instance <http://example.org/teresa-holloway.ttl>,
+<http://example.org/michael-holloway.ttl>,
+<http://example.org/dustin-holloway.ttl>,
+<http://example.org/michael-holloway.ttl>.
+
+:humbert ex:forValue "humbert";
+	ex:instance <http://example.org/andré-humbert.ttl>,
+<http://example.org/anastasie-humbert.ttl>,
+<http://example.org/andré-humbert.ttl>,
+<http://example.org/charles-humbert.ttl>,
+<http://example.org/marguerite-humbert.ttl>,
+<http://example.org/agathe-humbert.ttl>,
+<http://example.org/adrien-humbert.ttl>.
+
+:humphre ex:forValue "humphre";
+	ex:instance <http://example.org/alyssa-humphrey.ttl>.
+
+:jackson ex:forValue "jackson";
+	ex:instance <http://example.org/jessica-jackson.ttl>,
+<http://example.org/lisa-jackson.ttl>,
+<http://example.org/kevin-jackson.ttl>,
+<http://example.org/kim-jackson.ttl>,
+<http://example.org/kristina-jackson.ttl>,
+<http://example.org/justin-jackson.ttl>,
+<http://example.org/george-jackson.ttl>,
+<http://example.org/gregory-jackson.ttl>,
+<http://example.org/shawn-jackson.ttl>,
+<http://example.org/maxwell-jackson.ttl>,
+<http://example.org/andrea-jackson.ttl>,
+<http://example.org/amy-jackson.ttl>,
+<http://example.org/dawn-jackson.ttl>,
+<http://example.org/michelle-jackson.ttl>,
+<http://example.org/tara-jackson.ttl>.
+
+:jacques ex:forValue "jacques";
+	ex:instance <http://example.org/lorraine-jacques.ttl>,
+<http://example.org/margot-jacques.ttl>,
+<http://example.org/zoé-jacques.ttl>.
+
+:jacquet ex:forValue "jacquet";
+	ex:instance <http://example.org/geneviève-jacquet.ttl>,
+<http://example.org/adrienne-jacquet.ttl>,
+<http://example.org/lorraine-jacquet.ttl>,
+<http://example.org/maryse-jacquet.ttl>.
+
+:jacquot ex:forValue "jacquot";
+	ex:instance <http://example.org/jules-jacquot.ttl>,
+<http://example.org/valérie-jacquot.ttl>,
+<http://example.org/robert-jacquot.ttl>,
+<http://example.org/arnaude-jacquot.ttl>,
+<http://example.org/cécile-jacquot.ttl>,
+<http://example.org/rené-jacquot.ttl>,
+<http://example.org/alain-jacquot.ttl>,
+<http://example.org/benoît-jacquot.ttl>,
+<http://example.org/christiane-jacquot.ttl>,
+<http://example.org/élisabeth-jacquot.ttl>.
+
+:jenkins ex:forValue "jenkins";
+	ex:instance <http://example.org/trevor-jenkins.ttl>,
+<http://example.org/crystal-jenkins.ttl>,
+<http://example.org/amanda-jenkins.ttl>,
+<http://example.org/virginia-jenkins.ttl>,
+<http://example.org/jeremy-jenkins.ttl>.
+
+:jenning ex:forValue "jenning";
+	ex:instance <http://example.org/kendra-jennings.ttl>,
+<http://example.org/thomas-jennings.ttl>,
+<http://example.org/leah-jennings.ttl>.
+
+:jimenez ex:forValue "jimenez";
+	ex:instance <http://example.org/jamie-jimenez.ttl>,
+<http://example.org/jo-jimenez.ttl>.
+
+:johnson ex:forValue "johnson";
+	ex:instance <http://example.org/zachary-johnson.ttl>,
+<http://example.org/brian-johnson.ttl>,
+<http://example.org/steven-johnson.ttl>,
+<http://example.org/angela-johnson.ttl>,
+<http://example.org/shelley-johnson.ttl>,
+<http://example.org/rachel-johnson.ttl>,
+<http://example.org/gregory-johnson.ttl>,
+<http://example.org/joel-johnson.ttl>,
+<http://example.org/kendra-johnson.ttl>,
+<http://example.org/amy-johnson.ttl>,
+<http://example.org/leah-johnson.ttl>,
+<http://example.org/teresa-johnson.ttl>,
+<http://example.org/billy-johnson.ttl>,
+<http://example.org/andrea-johnson.ttl>,
+<http://example.org/gabriel-johnson.ttl>,
+<http://example.org/kendra-johnson.ttl>,
+<http://example.org/wendy-johnson.ttl>,
+<http://example.org/brian-johnson.ttl>,
+<http://example.org/melissa-johnson.ttl>,
+<http://example.org/deanna-johnson.ttl>,
+<http://example.org/frank-johnson.ttl>,
+<http://example.org/paul-johnson.ttl>,
+<http://example.org/suzanne-johnson.ttl>,
+<http://example.org/philip-johnson.ttl>,
+<http://example.org/anthony-johnson.ttl>,
+<http://example.org/rachel-johnson.ttl>,
+<http://example.org/janet-johnson.ttl>,
+<http://example.org/carolyn-johnson.ttl>,
+<http://example.org/scott-johnson.ttl>,
+<http://example.org/christopher-johnson.ttl>,
+<http://example.org/john-johnson.ttl>,
+<http://example.org/shelby-johnson.ttl>,
+<http://example.org/abigail-johnson.ttl>,
+<http://example.org/jacqueline-johnson.ttl>,
+<http://example.org/richard-johnson.ttl>,
+<http://example.org/james-johnson.ttl>,
+<http://example.org/jennifer-johnson.ttl>,
+<http://example.org/nicholas-johnson.ttl>,
+<http://example.org/brett-johnson.ttl>,
+<http://example.org/megan-johnson.ttl>,
+<http://example.org/lori-johnson.ttl>,
+<http://example.org/christopher-johnson.ttl>,
+<http://example.org/jennifer-johnson.ttl>.
+
+:johnsto ex:forValue "johnsto";
+	ex:instance <http://example.org/gina-johnston.ttl>,
+<http://example.org/stephanie-johnston.ttl>,
+<http://example.org/justin-johnston.ttl>.
+
+:joubert ex:forValue "joubert";
+	ex:instance <http://example.org/pierre-joubert.ttl>,
+<http://example.org/jules-joubert.ttl>,
+<http://example.org/bernard-joubert.ttl>,
+<http://example.org/thierry-joubert.ttl>,
+<http://example.org/maggie-joubert.ttl>,
+<http://example.org/auguste-joubert.ttl>,
+<http://example.org/charles-joubert.ttl>,
+<http://example.org/aurélie-joubert.ttl>.
+
+:jourdan ex:forValue "jourdan";
+	ex:instance <http://example.org/claire-jourdan.ttl>,
+<http://example.org/élisabeth-jourdan.ttl>,
+<http://example.org/édith-jourdan.ttl>,
+<http://example.org/emmanuel-jourdan.ttl>,
+<http://example.org/guy-jourdan.ttl>,
+<http://example.org/alfred-jourdan.ttl>,
+<http://example.org/dominique-jourdan.ttl>,
+<http://example.org/brigitte-jourdan.ttl>.
+
+:kaufman ex:forValue "kaufman";
+	ex:instance <http://example.org/belinda-kaufman.ttl>.
+
+:kennedy ex:forValue "kennedy";
+	ex:instance <http://example.org/brittany-kennedy.ttl>,
+<http://example.org/michael-kennedy.ttl>,
+<http://example.org/lori-kennedy.ttl>,
+<http://example.org/amanda-kennedy.ttl>,
+<http://example.org/mitchell-kennedy.ttl>,
+<http://example.org/cynthia-kennedy.ttl>,
+<http://example.org/ariel-kennedy.ttl>.
+
+:lacombe ex:forValue "lacombe";
+	ex:instance <http://example.org/lucy-lacombe.ttl>,
+<http://example.org/adélaïde-lacombe.ttl>,
+<http://example.org/adrienne-lacombe.ttl>.
+
+:lacroix ex:forValue "lacroix";
+	ex:instance <http://example.org/brigitte-lacroix.ttl>,
+<http://example.org/jeannine-lacroix.ttl>,
+<http://example.org/simone-lacroix.ttl>,
+<http://example.org/geneviève-lacroix.ttl>,
+<http://example.org/christine-lacroix.ttl>,
+<http://example.org/audrey-lacroix.ttl>.
+
+:lagarde ex:forValue "lagarde";
+	ex:instance <http://example.org/bertrand-lagarde.ttl>,
+<http://example.org/andrée-lagarde.ttl>,
+<http://example.org/odette-lagarde.ttl>,
+<http://example.org/pierre-lagarde.ttl>.
+
+:lambert ex:forValue "lambert";
+	ex:instance <http://example.org/maggie-lambert.ttl>,
+<http://example.org/jean-lambert.ttl>,
+<http://example.org/lucy-lambert.ttl>,
+<http://example.org/renée-lambert.ttl>.
+
+:langloi ex:forValue "langloi";
+	ex:instance <http://example.org/patrick-langlois.ttl>,
+<http://example.org/vincent-langlois.ttl>,
+<http://example.org/suzanne-langlois.ttl>,
+<http://example.org/pierre-langlois.ttl>,
+<http://example.org/catherine-langlois.ttl>,
+<http://example.org/philippine-langlois.ttl>,
+<http://example.org/benoît-langlois.ttl>.
+
+:laporte ex:forValue "laporte";
+	ex:instance <http://example.org/thomas-laporte.ttl>,
+<http://example.org/marie-laporte.ttl>,
+<http://example.org/margaud-laporte.ttl>,
+<http://example.org/aimé-laporte.ttl>,
+<http://example.org/astrid-laporte.ttl>.
+
+:laroche ex:forValue "laroche";
+	ex:instance <http://example.org/eugène-laroche.ttl>,
+<http://example.org/maurice-laroche.ttl>,
+<http://example.org/noémi-laroche.ttl>,
+<http://example.org/denis-laroche.ttl>,
+<http://example.org/sylvie-laroche.ttl>,
+<http://example.org/christelle-laroche.ttl>,
+<http://example.org/andrée-laroche.ttl>.
+
+:laurent ex:forValue "laurent";
+	ex:instance <http://example.org/denise-laurent.ttl>.
+
+:lawrenc ex:forValue "lawrenc";
+	ex:instance <http://example.org/ariel-lawrence.ttl>,
+<http://example.org/lori-lawrence.ttl>,
+<http://example.org/dakota-lawrence.ttl>,
+<http://example.org/jonathan-lawrence.ttl>,
+<http://example.org/linda-lawrence.ttl>.
+
+:le gall ex:forValue "le gall";
+	ex:instance <http://example.org/richard-le-gall.ttl>,
+<http://example.org/pénélope-le-gall.ttl>,
+<http://example.org/monique-le-gall.ttl>,
+<http://example.org/margot-le-gall.ttl>,
+<http://example.org/sabine-le-gall.ttl>.
+
+:le goff ex:forValue "le goff";
+	ex:instance <http://example.org/hortense-le-goff.ttl>,
+<http://example.org/susanne-le-goff.ttl>,
+<http://example.org/diane-le-goff.ttl>,
+<http://example.org/michelle-le-goff.ttl>,
+<http://example.org/jacqueline-le-goff.ttl>,
+<http://example.org/martine-le-goff.ttl>.
+
+:le roux ex:forValue "le roux";
+	ex:instance <http://example.org/capucine-le-roux.ttl>,
+<http://example.org/virginie-le-roux.ttl>,
+<http://example.org/léon-le-roux.ttl>,
+<http://example.org/lucy-le-roux.ttl>,
+<http://example.org/pénélope-le-roux.ttl>,
+<http://example.org/astrid-le-roux.ttl>,
+<http://example.org/léon-le-roux.ttl>,
+<http://example.org/jérôme-le-roux.ttl>.
+
+:leblanc ex:forValue "leblanc";
+	ex:instance <http://example.org/arthur-leblanc.ttl>,
+<http://example.org/johnny-leblanc.ttl>,
+<http://example.org/christophe-leblanc.ttl>,
+<http://example.org/luc-leblanc.ttl>,
+<http://example.org/nathalie-leblanc.ttl>,
+<http://example.org/margot-leblanc.ttl>.
+
+:lebreto ex:forValue "lebreto";
+	ex:instance <http://example.org/rené-lebreton.ttl>,
+<http://example.org/stéphane-lebreton.ttl>,
+<http://example.org/susan-lebreton.ttl>.
+
+:leclerc ex:forValue "leclerc";
+	ex:instance <http://example.org/christophe-leclercq.ttl>,
+<http://example.org/olivie-leclerc.ttl>,
+<http://example.org/alex-leclerc.ttl>,
+<http://example.org/aimé-leclerc.ttl>,
+<http://example.org/bernadette-leclercq.ttl>,
+<http://example.org/élise-leclerc.ttl>,
+<http://example.org/philippe-leclercq.ttl>,
+<http://example.org/dorothée-leclerc.ttl>,
+<http://example.org/victor-leclerc.ttl>,
+<http://example.org/aurore-leclercq.ttl>,
+<http://example.org/marthe-leclercq.ttl>,
+<http://example.org/caroline-leclercq.ttl>,
+<http://example.org/alexandria-leclerc.ttl>,
+<http://example.org/christine-leclercq.ttl>,
+<http://example.org/roland-leclercq.ttl>,
+<http://example.org/lucie-leclercq.ttl>,
+<http://example.org/marcel-leclercq.ttl>.
+
+:lecomte ex:forValue "lecomte";
+	ex:instance <http://example.org/grégoire-lecomte.ttl>,
+<http://example.org/denise-lecomte.ttl>,
+<http://example.org/théodore-lecomte.ttl>.
+
+:leconte ex:forValue "leconte";
+	ex:instance <http://example.org/suzanne-leconte.ttl>,
+<http://example.org/inès-leconte.ttl>,
+<http://example.org/jules-leconte.ttl>,
+<http://example.org/thierry-leconte.ttl>,
+<http://example.org/bertrand-leconte.ttl>,
+<http://example.org/cécile-leconte.ttl>,
+<http://example.org/marine-leconte.ttl>,
+<http://example.org/olivie-leconte.ttl>.
+
+:lefebvr ex:forValue "lefebvr";
+	ex:instance <http://example.org/andrée-lefebvre.ttl>,
+<http://example.org/paul-lefebvre.ttl>,
+<http://example.org/mathilde-lefebvre.ttl>,
+<http://example.org/audrey-lefebvre.ttl>,
+<http://example.org/valentine-lefebvre.ttl>,
+<http://example.org/lucy-lefebvre.ttl>,
+<http://example.org/henri-lefebvre.ttl>.
+
+:lefèvr ex:forValue "lefèvr";
+	ex:instance <http://example.org/cécile-lefèvre.ttl>,
+<http://example.org/hélène-lefèvre.ttl>,
+<http://example.org/adélaïde-lefèvre.ttl>,
+<http://example.org/émile-lefèvre.ttl>,
+<http://example.org/christelle-lefèvre.ttl>,
+<http://example.org/jeanne-lefèvre.ttl>,
+<http://example.org/jacqueline-lefèvre.ttl>,
+<http://example.org/aurélie-lefèvre.ttl>.
+
+:legendr ex:forValue "legendr";
+	ex:instance <http://example.org/margaret-legendre.ttl>,
+<http://example.org/aimé-legendre.ttl>,
+<http://example.org/olivier-legendre.ttl>.
+
+:legrand ex:forValue "legrand";
+	ex:instance <http://example.org/guillaume-legrand.ttl>,
+<http://example.org/guy-legrand.ttl>,
+<http://example.org/élodie-legrand.ttl>,
+<http://example.org/philippine-legrand.ttl>,
+<http://example.org/gabrielle-legrand.ttl>,
+<http://example.org/dorothée-legrand.ttl>,
+<http://example.org/stéphane-legrand.ttl>,
+<http://example.org/tristan-legrand.ttl>.
+
+:lejeune ex:forValue "lejeune";
+	ex:instance <http://example.org/juliette-lejeune.ttl>,
+<http://example.org/rémy-lejeune.ttl>,
+<http://example.org/bernadette-lejeune.ttl>,
+<http://example.org/denise-lejeune.ttl>,
+<http://example.org/denise-lejeune.ttl>,
+<http://example.org/clémence-lejeune.ttl>,
+<http://example.org/maryse-lejeune.ttl>,
+<http://example.org/arnaude-lejeune.ttl>,
+<http://example.org/alexandre-lejeune.ttl>,
+<http://example.org/marie-lejeune.ttl>,
+<http://example.org/marguerite-lejeune.ttl>.
+
+:lelièv ex:forValue "lelièv";
+	ex:instance <http://example.org/olivier-lelièvre.ttl>,
+<http://example.org/gilles-lelièvre.ttl>,
+<http://example.org/camille-lelièvre.ttl>,
+<http://example.org/jacqueline-lelièvre.ttl>,
+<http://example.org/valentine-lelièvre.ttl>,
+<http://example.org/amélie-lelièvre.ttl>,
+<http://example.org/guy-lelièvre.ttl>,
+<http://example.org/frédéric-lelièvre.ttl>.
+
+:lemaire ex:forValue "lemaire";
+	ex:instance <http://example.org/timothée-lemaire.ttl>,
+<http://example.org/charlotte-lemaire.ttl>,
+<http://example.org/élisabeth-lemaire.ttl>,
+<http://example.org/mathilde-lemaire.ttl>,
+<http://example.org/yves-lemaire.ttl>,
+<http://example.org/andré-lemaire.ttl>,
+<http://example.org/timothée-lemaire.ttl>.
+
+:lemaît ex:forValue "lemaît";
+	ex:instance <http://example.org/christelle-lemaître.ttl>,
+<http://example.org/marine-lemaître.ttl>,
+<http://example.org/christophe-lemaître.ttl>.
+
+:lemoine ex:forValue "lemoine";
+	ex:instance <http://example.org/stéphanie-lemoine.ttl>,
+<http://example.org/julie-lemoine.ttl>,
+<http://example.org/renée-lemoine.ttl>,
+<http://example.org/étienne-lemoine.ttl>.
+
+:lemonni ex:forValue "lemonni";
+	ex:instance <http://example.org/guillaume-lemonnier.ttl>,
+<http://example.org/jean-lemonnier.ttl>,
+<http://example.org/paul-lemonnier.ttl>,
+<http://example.org/andré-lemonnier.ttl>,
+<http://example.org/emmanuelle-lemonnier.ttl>,
+<http://example.org/raymond-lemonnier.ttl>,
+<http://example.org/richard-lemonnier.ttl>.
+
+:letelli ex:forValue "letelli";
+	ex:instance <http://example.org/jérôme-letellier.ttl>,
+<http://example.org/michèle-letellier.ttl>,
+<http://example.org/adèle-letellier.ttl>,
+<http://example.org/jules-letellier.ttl>,
+<http://example.org/patrick-letellier.ttl>,
+<http://example.org/daniel-letellier.ttl>,
+<http://example.org/jules-letellier.ttl>,
+<http://example.org/aimé-letellier.ttl>,
+<http://example.org/célina-letellier.ttl>.
+
+:lévêq ex:forValue "lévêq";
+	ex:instance <http://example.org/théodore-lévêque.ttl>,
+<http://example.org/josette-lévêque.ttl>,
+<http://example.org/agathe-lévêque.ttl>,
+<http://example.org/zacharie-lévêque.ttl>,
+<http://example.org/benoît-lévêque.ttl>,
+<http://example.org/susanne-lévêque.ttl>,
+<http://example.org/grégoire-lévêque.ttl>,
+<http://example.org/christiane-lévêque.ttl>.
+
+:lindsey ex:forValue "lindsey";
+	ex:instance <http://example.org/jo-lindsey.ttl>,
+<http://example.org/brian-lindsey.ttl>,
+<http://example.org/ralph-lindsey.ttl>.
+
+:loiseau ex:forValue "loiseau";
+	ex:instance <http://example.org/honoré-loiseau.ttl>,
+<http://example.org/philippe-loiseau.ttl>,
+<http://example.org/roland-loiseau.ttl>,
+<http://example.org/louise-loiseau.ttl>,
+<http://example.org/arthur-loiseau.ttl>,
+<http://example.org/édith-loiseau.ttl>,
+<http://example.org/margaret-loiseau.ttl>,
+<http://example.org/aurore-loiseau.ttl>,
+<http://example.org/éléonore-loiseau.ttl>,
+<http://example.org/rémy-loiseau.ttl>.
+
+:lombard ex:forValue "lombard";
+	ex:instance <http://example.org/suzanne-lombard.ttl>,
+<http://example.org/patricia-lombard.ttl>,
+<http://example.org/marc-lombard.ttl>,
+<http://example.org/luce-lombard.ttl>,
+<http://example.org/benjamin-lombard.ttl>.
+
+:macdona ex:forValue "macdona";
+	ex:instance <http://example.org/dillon-macdonald.ttl>.
+
+:mahoney ex:forValue "mahoney";
+	ex:instance <http://example.org/dylan-mahoney.ttl>.
+
+:maillar ex:forValue "maillar";
+	ex:instance <http://example.org/robert-maillard.ttl>,
+<http://example.org/adélaïde-maillard.ttl>.
+
+:maillet ex:forValue "maillet";
+	ex:instance <http://example.org/susan-maillet.ttl>,
+<http://example.org/jacques-maillet.ttl>,
+<http://example.org/élisabeth-maillet.ttl>,
+<http://example.org/marguerite-maillet.ttl>,
+<http://example.org/lorraine-maillet.ttl>,
+<http://example.org/théodore-maillet.ttl>,
+<http://example.org/manon-maillet.ttl>,
+<http://example.org/victoire-maillet.ttl>,
+<http://example.org/jean-maillet.ttl>.
+
+:maillot ex:forValue "maillot";
+	ex:instance <http://example.org/clémence-maillot.ttl>,
+<http://example.org/gérard-maillot.ttl>,
+<http://example.org/maryse-maillot.ttl>,
+<http://example.org/céline-maillot.ttl>,
+<http://example.org/jeanne-maillot.ttl>,
+<http://example.org/bertrand-maillot.ttl>.
+
+:maldona ex:forValue "maldona";
+	ex:instance <http://example.org/janice-maldonado.ttl>,
+<http://example.org/kathleen-maldonado.ttl>.
+
+:manning ex:forValue "manning";
+	ex:instance <http://example.org/amanda-manning.ttl>.
+
+:marchal ex:forValue "marchal";
+	ex:instance <http://example.org/gabriel-marchal.ttl>,
+<http://example.org/josette-marchal.ttl>,
+<http://example.org/jeannine-marchal.ttl>,
+<http://example.org/alexandria-marchal.ttl>,
+<http://example.org/éléonore-marchal.ttl>,
+<http://example.org/audrey-marchal.ttl>.
+
+:marchan ex:forValue "marchan";
+	ex:instance <http://example.org/arnaude-marchand.ttl>,
+<http://example.org/gabriel-marchand.ttl>,
+<http://example.org/suzanne-marchand.ttl>,
+<http://example.org/grégoire-marchand.ttl>,
+<http://example.org/élisabeth-marchand.ttl>,
+<http://example.org/bernadette-marchand.ttl>,
+<http://example.org/susan-marchand.ttl>.
+
+:maréch ex:forValue "maréch";
+	ex:instance <http://example.org/roland-maréchal.ttl>,
+<http://example.org/grégoire-maréchal.ttl>,
+<http://example.org/françois-maréchal.ttl>,
+<http://example.org/zacharie-maréchal.ttl>,
+<http://example.org/chantal-maréchal.ttl>.
+
+:marques ex:forValue "marques";
+	ex:instance <http://example.org/martine-marques.ttl>,
+<http://example.org/claudine-marques.ttl>,
+<http://example.org/georges-marques.ttl>,
+<http://example.org/marie-marques.ttl>,
+<http://example.org/louis-marques.ttl>,
+<http://example.org/anne-marques.ttl>,
+<http://example.org/jacqueline-marques.ttl>,
+<http://example.org/hélène-marques.ttl>.
+
+:marquez ex:forValue "marquez";
+	ex:instance <http://example.org/scott-marquez.ttl>,
+<http://example.org/cody-marquez.ttl>,
+<http://example.org/ryan-marquez.ttl>.
+
+:marshal ex:forValue "marshal";
+	ex:instance <http://example.org/jo-marshall.ttl>,
+<http://example.org/yvette-marshall.ttl>.
+
+:martine ex:forValue "martine";
+	ex:instance <http://example.org/camille-martineau.ttl>,
+<http://example.org/april-martinez.ttl>,
+<http://example.org/leslie-martinez.ttl>,
+<http://example.org/élodie-martineau.ttl>,
+<http://example.org/étienne-martinez.ttl>,
+<http://example.org/kristin-martinez.ttl>,
+<http://example.org/margot-martinez.ttl>,
+<http://example.org/dana-martinez.ttl>,
+<http://example.org/anthony-martinez.ttl>,
+<http://example.org/jenna-martinez.ttl>,
+<http://example.org/alice-martinez.ttl>,
+<http://example.org/john-martinez.ttl>,
+<http://example.org/mason-martinez.ttl>,
+<http://example.org/jennifer-martinez.ttl>,
+<http://example.org/adèle-martineau.ttl>,
+<http://example.org/danielle-martineau.ttl>,
+<http://example.org/katherine-martinez.ttl>,
+<http://example.org/christophe-martineau.ttl>,
+<http://example.org/kyle-martinez.ttl>,
+<http://example.org/brian-martinez.ttl>,
+<http://example.org/hannah-martinez.ttl>,
+<http://example.org/jeffrey-martinez.ttl>,
+<http://example.org/beverly-martinez.ttl>,
+<http://example.org/jesus-martinez.ttl>,
+<http://example.org/brigitte-martineau.ttl>,
+<http://example.org/kelsey-martinez.ttl>,
+<http://example.org/preston-martinez.ttl>,
+<http://example.org/sarah-martinez.ttl>,
+<http://example.org/sophie-martineau.ttl>,
+<http://example.org/rebecca-martinez.ttl>,
+<http://example.org/brandon-martinez.ttl>,
+<http://example.org/stéphanie-martinez.ttl>,
+<http://example.org/cassandra-martinez.ttl>.
+
+:martins ex:forValue "martins";
+	ex:instance <http://example.org/raymond-martins.ttl>,
+<http://example.org/hélène-martins.ttl>,
+<http://example.org/amélie-martins.ttl>,
+<http://example.org/claire-martins.ttl>,
+<http://example.org/thérèse-martins.ttl>.
+
+:mathieu ex:forValue "mathieu";
+	ex:instance <http://example.org/andré-mathieu.ttl>,
+<http://example.org/étienne-mathieu.ttl>,
+<http://example.org/sophie-mathieu.ttl>,
+<http://example.org/édouard-mathieu.ttl>,
+<http://example.org/virginie-mathieu.ttl>,
+<http://example.org/océane-mathieu.ttl>,
+<http://example.org/anne-mathieu.ttl>.
+
+:maurice ex:forValue "maurice";
+	ex:instance <http://example.org/laurence-maurice.ttl>,
+<http://example.org/benjamin-maurice.ttl>,
+<http://example.org/isabelle-maurice.ttl>,
+<http://example.org/thomas-maurice.ttl>,
+<http://example.org/mathilde-maurice.ttl>,
+<http://example.org/xavier-maurice.ttl>,
+<http://example.org/paulette-maurice.ttl>,
+<http://example.org/gabrielle-maurice.ttl>.
+
+:maxwell ex:forValue "maxwell";
+	ex:instance <http://example.org/jonathan-maxwell.ttl>.
+
+:mcbride ex:forValue "mcbride";
+	ex:instance <http://example.org/mary-mcbride.ttl>.
+
+:mccarth ex:forValue "mccarth";
+	ex:instance <http://example.org/adrian-mccarthy.ttl>.
+
+:mccarty ex:forValue "mccarty";
+	ex:instance <http://example.org/jason-mccarty.ttl>.
+
+:mcclain ex:forValue "mcclain";
+	ex:instance <http://example.org/seth-mcclain.ttl>,
+<http://example.org/catherine-mcclain.ttl>.
+
+:mcconne ex:forValue "mcconne";
+	ex:instance <http://example.org/juan-mcconnell.ttl>.
+
+:mccormi ex:forValue "mccormi";
+	ex:instance <http://example.org/jonathan-mccormick.ttl>,
+<http://example.org/lisa-mccormick.ttl>.
+
+:mccullo ex:forValue "mccullo";
+	ex:instance <http://example.org/monica-mccullough.ttl>.
+
+:mcdanie ex:forValue "mcdanie";
+	ex:instance <http://example.org/james-mcdaniel.ttl>,
+<http://example.org/jennifer-mcdaniel.ttl>,
+<http://example.org/robin-mcdaniel.ttl>.
+
+:mcdonal ex:forValue "mcdonal";
+	ex:instance <http://example.org/richard-mcdonald.ttl>.
+
+:mcdowel ex:forValue "mcdowel";
+	ex:instance <http://example.org/linda-mcdowell.ttl>,
+<http://example.org/tracy-mcdowell.ttl>.
+
+:mcfarla ex:forValue "mcfarla";
+	ex:instance <http://example.org/christopher-mcfarland.ttl>.
+
+:mckenzi ex:forValue "mckenzi";
+	ex:instance <http://example.org/courtney-mckenzie.ttl>.
+
+:mckinne ex:forValue "mckinne";
+	ex:instance <http://example.org/garrett-mckinney.ttl>.
+
+:mclaugh ex:forValue "mclaugh";
+	ex:instance <http://example.org/arthur-mclaughlin.ttl>.
+
+:mcmilla ex:forValue "mcmilla";
+	ex:instance <http://example.org/andrew-mcmillan.ttl>.
+
+:mcphers ex:forValue "mcphers";
+	ex:instance <http://example.org/carla-mcpherson.ttl>.
+
+:meadows ex:forValue "meadows";
+	ex:instance <http://example.org/kenneth-meadows.ttl>,
+<http://example.org/ross-meadows.ttl>.
+
+:mendès ex:forValue "mendès";
+	ex:instance <http://example.org/thomas-mendès.ttl>,
+<http://example.org/david-mendès.ttl>,
+<http://example.org/hélène-mendès.ttl>,
+<http://example.org/dominique-mendès.ttl>,
+<http://example.org/dominique-mendès.ttl>,
+<http://example.org/madeleine-mendès.ttl>,
+<http://example.org/laurent-mendès.ttl>.
+
+:mendoza ex:forValue "mendoza";
+	ex:instance <http://example.org/joel-mendoza.ttl>,
+<http://example.org/susan-mendoza.ttl>,
+<http://example.org/darren-mendoza.ttl>.
+
+:mercier ex:forValue "mercier";
+	ex:instance <http://example.org/alice-mercier.ttl>,
+<http://example.org/gabrielle-mercier.ttl>,
+<http://example.org/théophile-mercier.ttl>,
+<http://example.org/margaux-mercier.ttl>,
+<http://example.org/laetitia-mercier.ttl>,
+<http://example.org/franck-mercier.ttl>,
+<http://example.org/paul-mercier.ttl>,
+<http://example.org/robert-mercier.ttl>,
+<http://example.org/nath-mercier.ttl>,
+<http://example.org/marie-mercier.ttl>.
+
+:merritt ex:forValue "merritt";
+	ex:instance <http://example.org/cathy-merritt.ttl>,
+<http://example.org/jeff-merritt.ttl>.
+
+:meunier ex:forValue "meunier";
+	ex:instance <http://example.org/camille-meunier.ttl>,
+<http://example.org/adèle-meunier.ttl>,
+<http://example.org/augustin-meunier.ttl>.
+
+:michael ex:forValue "michael";
+	ex:instance <http://example.org/stephanie-michael.ttl>.
+
+:michaud ex:forValue "michaud";
+	ex:instance <http://example.org/pierre-michaud.ttl>,
+<http://example.org/andré-michaud.ttl>,
+<http://example.org/antoine-michaud.ttl>,
+<http://example.org/daniel-michaud.ttl>,
+<http://example.org/louise-michaud.ttl>,
+<http://example.org/henri-michaud.ttl>,
+<http://example.org/aurélie-michaud.ttl>.
+
+:middlet ex:forValue "middlet";
+	ex:instance <http://example.org/donald-middleton.ttl>.
+
+:miranda ex:forValue "miranda";
+	ex:instance <http://example.org/paige-miranda.ttl>,
+<http://example.org/jason-miranda.ttl>.
+
+:mitchel ex:forValue "mitchel";
+	ex:instance <http://example.org/joshua-mitchell.ttl>,
+<http://example.org/timothy-mitchell.ttl>,
+<http://example.org/rodney-mitchell.ttl>,
+<http://example.org/scott-mitchell.ttl>,
+<http://example.org/kristina-mitchell.ttl>,
+<http://example.org/michelle-mitchell.ttl>,
+<http://example.org/cynthia-mitchell.ttl>,
+<http://example.org/barry-mitchell.ttl>,
+<http://example.org/paul-mitchell.ttl>,
+<http://example.org/breanna-mitchell.ttl>.
+
+:monnier ex:forValue "monnier";
+	ex:instance <http://example.org/joseph-monnier.ttl>,
+<http://example.org/arthur-monnier.ttl>,
+<http://example.org/christelle-monnier.ttl>,
+<http://example.org/édith-monnier.ttl>.
+
+:montgom ex:forValue "montgom";
+	ex:instance <http://example.org/sara-montgomery.ttl>.
+
+:montoya ex:forValue "montoya";
+	ex:instance <http://example.org/ernest-montoya.ttl>,
+<http://example.org/wendy-montoya.ttl>,
+<http://example.org/russell-montoya.ttl>,
+<http://example.org/randy-montoya.ttl>,
+<http://example.org/amber-montoya.ttl>.
+
+:morales ex:forValue "morales";
+	ex:instance <http://example.org/bobby-morales.ttl>,
+<http://example.org/jose-morales.ttl>,
+<http://example.org/jeffrey-morales.ttl>,
+<http://example.org/jennifer-morales.ttl>,
+<http://example.org/gregory-morales.ttl>.
+
+:mueller ex:forValue "mueller";
+	ex:instance <http://example.org/cory-mueller.ttl>.
+
+:mullins ex:forValue "mullins";
+	ex:instance <http://example.org/sarah-mullins.ttl>.
+
+:murillo ex:forValue "murillo";
+	ex:instance <http://example.org/stacey-murillo.ttl>,
+<http://example.org/chris-murillo.ttl>.
+
+:navarro ex:forValue "navarro";
+	ex:instance <http://example.org/arthur-navarro.ttl>,
+<http://example.org/antoine-navarro.ttl>,
+<http://example.org/simone-navarro.ttl>,
+<http://example.org/michael-navarro.ttl>,
+<http://example.org/henriette-navarro.ttl>,
+<http://example.org/tristan-navarro.ttl>,
+<http://example.org/matthieu-navarro.ttl>,
+<http://example.org/keith-navarro.ttl>,
+<http://example.org/virginie-navarro.ttl>.
+
+:nichols ex:forValue "nichols";
+	ex:instance <http://example.org/brooke-nichols.ttl>,
+<http://example.org/karl-nichols.ttl>,
+<http://example.org/eric-nichols.ttl>,
+<http://example.org/wesley-nichols.ttl>.
+
+:nicolas ex:forValue "nicolas";
+	ex:instance <http://example.org/cécile-nicolas.ttl>,
+<http://example.org/charles-nicolas.ttl>.
+
+:normand ex:forValue "normand";
+	ex:instance <http://example.org/agathe-normand.ttl>,
+<http://example.org/thomas-normand.ttl>,
+<http://example.org/olivie-normand.ttl>,
+<http://example.org/édith-normand.ttl>,
+<http://example.org/bertrand-normand.ttl>,
+<http://example.org/inès-normand.ttl>.
+
+:oconnel ex:forValue "oconnel";
+	ex:instance <http://example.org/daniel-oconnell.ttl>,
+<http://example.org/gregory-oconnell.ttl>.
+
+:oconnor ex:forValue "oconnor";
+	ex:instance <http://example.org/jeffrey-oconnor.ttl>,
+<http://example.org/andrea-oconnor.ttl>,
+<http://example.org/william-oconnor.ttl>.
+
+:odonnel ex:forValue "odonnel";
+	ex:instance <http://example.org/laura-odonnell.ttl>.
+
+:olivier ex:forValue "olivier";
+	ex:instance <http://example.org/alain-olivier.ttl>,
+<http://example.org/clémence-olivier.ttl>,
+<http://example.org/yves-olivier.ttl>.
+
+:ollivie ex:forValue "ollivie";
+	ex:instance <http://example.org/jacques-ollivier.ttl>,
+<http://example.org/dominique-ollivier.ttl>,
+<http://example.org/yves-ollivier.ttl>,
+<http://example.org/laurent-ollivier.ttl>.
+
+:osborne ex:forValue "osborne";
+	ex:instance <http://example.org/tony-osborne.ttl>.
+
+:padilla ex:forValue "padilla";
+	ex:instance <http://example.org/christopher-padilla.ttl>,
+<http://example.org/jennifer-padilla.ttl>,
+<http://example.org/kayla-padilla.ttl>.
+
+:parrish ex:forValue "parrish";
+	ex:instance <http://example.org/kimberly-parrish.ttl>.
+
+:parsons ex:forValue "parsons";
+	ex:instance <http://example.org/james-parsons.ttl>.
+
+:pasquie ex:forValue "pasquie";
+	ex:instance <http://example.org/william-pasquier.ttl>,
+<http://example.org/marianne-pasquier.ttl>,
+<http://example.org/pénélope-pasquier.ttl>,
+<http://example.org/martine-pasquier.ttl>,
+<http://example.org/laetitia-pasquier.ttl>.
+
+:patrick ex:forValue "patrick";
+	ex:instance <http://example.org/matthew-patrick.ttl>.
+
+:patters ex:forValue "patters";
+	ex:instance <http://example.org/marissa-patterson.ttl>,
+<http://example.org/brad-patterson.ttl>,
+<http://example.org/johnny-patterson.ttl>,
+<http://example.org/nathaniel-patterson.ttl>.
+
+:pearson ex:forValue "pearson";
+	ex:instance <http://example.org/diane-pearson.ttl>,
+<http://example.org/sandra-pearson.ttl>,
+<http://example.org/david-pearson.ttl>.
+
+:pelleti ex:forValue "pelleti";
+	ex:instance <http://example.org/laure-pelletier.ttl>,
+<http://example.org/madeleine-pelletier.ttl>,
+<http://example.org/henriette-pelletier.ttl>,
+<http://example.org/camille-pelletier.ttl>,
+<http://example.org/margot-pelletier.ttl>,
+<http://example.org/émile-pelletier.ttl>,
+<http://example.org/raymond-pelletier.ttl>,
+<http://example.org/éric-pelletier.ttl>,
+<http://example.org/manon-pelletier.ttl>.
+
+:peltier ex:forValue "peltier";
+	ex:instance <http://example.org/nath-peltier.ttl>,
+<http://example.org/denise-peltier.ttl>,
+<http://example.org/anaïs-peltier.ttl>,
+<http://example.org/lucy-peltier.ttl>.
+
+:penning ex:forValue "penning";
+	ex:instance <http://example.org/kristina-pennington.ttl>.
+
+:pereira ex:forValue "pereira";
+	ex:instance <http://example.org/émile-pereira.ttl>,
+<http://example.org/émile-pereira.ttl>,
+<http://example.org/lorraine-pereira.ttl>,
+<http://example.org/simone-pereira.ttl>.
+
+:perkins ex:forValue "perkins";
+	ex:instance <http://example.org/danielle-perkins.ttl>,
+<http://example.org/jeffrey-perkins.ttl>.
+
+:perrier ex:forValue "perrier";
+	ex:instance <http://example.org/noël-perrier.ttl>,
+<http://example.org/monique-perrier.ttl>,
+<http://example.org/chantal-perrier.ttl>,
+<http://example.org/corinne-perrier.ttl>.
+
+:peterso ex:forValue "peterso";
+	ex:instance <http://example.org/edwin-peterson.ttl>,
+<http://example.org/trevor-peterson.ttl>,
+<http://example.org/matthew-peterson.ttl>,
+<http://example.org/amanda-peterson.ttl>,
+<http://example.org/wanda-peterson.ttl>,
+<http://example.org/erika-peterson.ttl>,
+<http://example.org/katherine-peterson.ttl>,
+<http://example.org/jason-peterson.ttl>,
+<http://example.org/brittany-peterson.ttl>,
+<http://example.org/robert-peterson.ttl>,
+<http://example.org/christopher-peterson.ttl>.
+
+:petitje ex:forValue "petitje";
+	ex:instance <http://example.org/jean-petitjean.ttl>,
+<http://example.org/louis-petitjean.ttl>,
+<http://example.org/emmanuel-petitjean.ttl>,
+<http://example.org/cécile-petitjean.ttl>,
+<http://example.org/nath-petitjean.ttl>,
+<http://example.org/robert-petitjean.ttl>.
+
+:philipp ex:forValue "philipp";
+	ex:instance <http://example.org/michel-philippe.ttl>,
+<http://example.org/luc-philippe.ttl>,
+<http://example.org/julie-philippe.ttl>,
+<http://example.org/alice-philippe.ttl>,
+<http://example.org/adrienne-philippe.ttl>,
+<http://example.org/thibaut-philippe.ttl>,
+<http://example.org/astrid-philippe.ttl>.
+
+:phillip ex:forValue "phillip";
+	ex:instance <http://example.org/laura-phillips.ttl>,
+<http://example.org/rachel-phillips.ttl>,
+<http://example.org/samantha-phillips.ttl>,
+<http://example.org/christopher-phillips.ttl>,
+<http://example.org/virginia-phillips.ttl>,
+<http://example.org/michele-phillips.ttl>,
+<http://example.org/lisa-phillips.ttl>,
+<http://example.org/rachel-phillips.ttl>.
+
+:pittman ex:forValue "pittman";
+	ex:instance <http://example.org/isaac-pittman.ttl>,
+<http://example.org/michael-pittman.ttl>.
+
+:poirier ex:forValue "poirier";
+	ex:instance <http://example.org/lucie-poirier.ttl>,
+<http://example.org/tristan-poirier.ttl>,
+<http://example.org/clémence-poirier.ttl>,
+<http://example.org/édith-poirier.ttl>.
+
+:pollard ex:forValue "pollard";
+	ex:instance <http://example.org/daniel-pollard.ttl>.
+
+:pottier ex:forValue "pottier";
+	ex:instance <http://example.org/michel-pottier.ttl>,
+<http://example.org/pierre-pottier.ttl>,
+<http://example.org/thierry-pottier.ttl>,
+<http://example.org/roger-pottier.ttl>,
+<http://example.org/marianne-pottier.ttl>,
+<http://example.org/claire-pottier.ttl>,
+<http://example.org/honoré-pottier.ttl>,
+<http://example.org/monique-pottier.ttl>,
+<http://example.org/éléonore-pottier.ttl>.
+
+:poulain ex:forValue "poulain";
+	ex:instance <http://example.org/jérôme-poulain.ttl>,
+<http://example.org/brigitte-poulain.ttl>,
+<http://example.org/jeanne-poulain.ttl>,
+<http://example.org/sabine-poulain.ttl>,
+<http://example.org/margaret-poulain.ttl>.
+
+:prévos ex:forValue "prévos";
+	ex:instance <http://example.org/élise-prévost.ttl>,
+<http://example.org/isabelle-prévost.ttl>,
+<http://example.org/édith-prévost.ttl>.
+
+:proctor ex:forValue "proctor";
+	ex:instance <http://example.org/keith-proctor.ttl>.
+
+:pruvost ex:forValue "pruvost";
+	ex:instance <http://example.org/olivie-pruvost.ttl>,
+<http://example.org/nathalie-pruvost.ttl>,
+<http://example.org/agathe-pruvost.ttl>,
+<http://example.org/émilie-pruvost.ttl>,
+<http://example.org/thierry-pruvost.ttl>,
+<http://example.org/camille-pruvost.ttl>.
+
+:ramirez ex:forValue "ramirez";
+	ex:instance <http://example.org/joseph-ramirez.ttl>,
+<http://example.org/charles-ramirez.ttl>,
+<http://example.org/bobby-ramirez.ttl>,
+<http://example.org/jerry-ramirez.ttl>,
+<http://example.org/amanda-ramirez.ttl>,
+<http://example.org/ryan-ramirez.ttl>,
+<http://example.org/karen-ramirez.ttl>,
+<http://example.org/haley-ramirez.ttl>,
+<http://example.org/miranda-ramirez.ttl>.
+
+:randolp ex:forValue "randolp";
+	ex:instance <http://example.org/alison-randolph.ttl>,
+<http://example.org/karen-randolph.ttl>.
+
+:raymond ex:forValue "raymond";
+	ex:instance <http://example.org/pénélope-raymond.ttl>,
+<http://example.org/pauline-raymond.ttl>,
+<http://example.org/suzanne-raymond.ttl>,
+<http://example.org/thibault-raymond.ttl>,
+<http://example.org/anastasie-raymond.ttl>,
+<http://example.org/thérèse-raymond.ttl>,
+<http://example.org/thomas-raymond.ttl>,
+<http://example.org/roland-raymond.ttl>,
+<http://example.org/raymond-raymond.ttl>,
+<http://example.org/jacqueline-raymond.ttl>,
+<http://example.org/patrick-raymond.ttl>,
+<http://example.org/louis-raymond.ttl>.
+
+:raynaud ex:forValue "raynaud";
+	ex:instance <http://example.org/yves-raynaud.ttl>,
+<http://example.org/isabelle-raynaud.ttl>,
+<http://example.org/eugène-raynaud.ttl>,
+<http://example.org/anouk-raynaud.ttl>,
+<http://example.org/alexandre-raynaud.ttl>,
+<http://example.org/émile-raynaud.ttl>,
+<http://example.org/thibault-raynaud.ttl>,
+<http://example.org/margaret-raynaud.ttl>.
+
+:regnier ex:forValue "regnier";
+	ex:instance <http://example.org/élodie-regnier.ttl>,
+<http://example.org/jules-regnier.ttl>,
+<http://example.org/adrienne-regnier.ttl>,
+<http://example.org/aimé-regnier.ttl>,
+<http://example.org/christophe-regnier.ttl>,
+<http://example.org/laurence-regnier.ttl>.
+
+:renault ex:forValue "renault";
+	ex:instance <http://example.org/suzanne-renault.ttl>,
+<http://example.org/dominique-renault.ttl>,
+<http://example.org/élodie-renault.ttl>,
+<http://example.org/victor-renault.ttl>,
+<http://example.org/frédéric-renault.ttl>,
+<http://example.org/hugues-renault.ttl>,
+<http://example.org/benoît-renault.ttl>,
+<http://example.org/sophie-renault.ttl>.
+
+:reynaud ex:forValue "reynaud";
+	ex:instance <http://example.org/christiane-reynaud.ttl>,
+<http://example.org/théophile-reynaud.ttl>,
+<http://example.org/brigitte-reynaud.ttl>,
+<http://example.org/éric-reynaud.ttl>,
+<http://example.org/françois-reynaud.ttl>,
+<http://example.org/véronique-reynaud.ttl>.
+
+:reynold ex:forValue "reynold";
+	ex:instance <http://example.org/heather-reynolds.ttl>,
+<http://example.org/ashley-reynolds.ttl>,
+<http://example.org/julie-reynolds.ttl>,
+<http://example.org/david-reynolds.ttl>,
+<http://example.org/thomas-reynolds.ttl>.
+
+:ribeiro ex:forValue "ribeiro";
+	ex:instance <http://example.org/éric-ribeiro.ttl>,
+<http://example.org/corinne-ribeiro.ttl>,
+<http://example.org/caroline-ribeiro.ttl>,
+<http://example.org/stéphane-ribeiro.ttl>,
+<http://example.org/aimé-ribeiro.ttl>,
+<http://example.org/cécile-ribeiro.ttl>.
+
+:richard ex:forValue "richard";
+	ex:instance <http://example.org/kimberly-richards.ttl>,
+<http://example.org/joseph-richardson.ttl>,
+<http://example.org/gary-richard.ttl>,
+<http://example.org/élodie-richard.ttl>,
+<http://example.org/clayton-richard.ttl>,
+<http://example.org/maria-richardson.ttl>,
+<http://example.org/alan-richardson.ttl>,
+<http://example.org/monique-richardson.ttl>,
+<http://example.org/paulette-richard.ttl>,
+<http://example.org/joséphine-richard.ttl>,
+<http://example.org/benoît-richard.ttl>,
+<http://example.org/christina-richards.ttl>,
+<http://example.org/samuel-richards.ttl>,
+<http://example.org/toni-richardson.ttl>,
+<http://example.org/sarah-richards.ttl>,
+<http://example.org/michael-richardson.ttl>,
+<http://example.org/andrew-richardson.ttl>,
+<http://example.org/michael-richardson.ttl>,
+<http://example.org/candace-richardson.ttl>,
+<http://example.org/nicole-richardson.ttl>,
+<http://example.org/marisa-richardson.ttl>,
+<http://example.org/gina-richardson.ttl>,
+<http://example.org/brent-richardson.ttl>.
+
+:rivièr ex:forValue "rivièr";
+	ex:instance <http://example.org/pierre-rivière.ttl>,
+<http://example.org/christophe-rivière.ttl>,
+<http://example.org/benjamin-rivière.ttl>,
+<http://example.org/danielle-rivière.ttl>,
+<http://example.org/margaud-rivière.ttl>,
+<http://example.org/denis-rivière.ttl>.
+
+:robbins ex:forValue "robbins";
+	ex:instance <http://example.org/jenna-robbins.ttl>,
+<http://example.org/andrew-robbins.ttl>.
+
+:roberso ex:forValue "roberso";
+	ex:instance <http://example.org/angelica-roberson.ttl>.
+
+:roberts ex:forValue "roberts";
+	ex:instance <http://example.org/lisa-roberts.ttl>,
+<http://example.org/jason-robertson.ttl>,
+<http://example.org/jason-robertson.ttl>,
+<http://example.org/rebecca-roberts.ttl>,
+<http://example.org/valerie-roberts.ttl>,
+<http://example.org/brianna-roberts.ttl>,
+<http://example.org/william-roberts.ttl>,
+<http://example.org/eddie-robertson.ttl>,
+<http://example.org/william-roberts.ttl>.
+
+:robinso ex:forValue "robinso";
+	ex:instance <http://example.org/amy-robinson.ttl>,
+<http://example.org/kathy-robinson.ttl>,
+<http://example.org/james-robinson.ttl>,
+<http://example.org/tara-robinson.ttl>,
+<http://example.org/william-robinson.ttl>,
+<http://example.org/terri-robinson.ttl>,
+<http://example.org/nicole-robinson.ttl>.
+
+:rodgers ex:forValue "rodgers";
+	ex:instance <http://example.org/timothy-rodgers.ttl>,
+<http://example.org/melanie-rodgers.ttl>,
+<http://example.org/billy-rodgers.ttl>.
+
+:rodrigu ex:forValue "rodrigu";
+	ex:instance <http://example.org/phillip-rodriguez.ttl>,
+<http://example.org/bryan-rodriguez.ttl>,
+<http://example.org/auguste-rodrigues.ttl>,
+<http://example.org/brooke-rodriguez.ttl>,
+<http://example.org/théodore-rodrigues.ttl>,
+<http://example.org/william-rodriguez.ttl>,
+<http://example.org/sarah-rodriguez.ttl>,
+<http://example.org/chelsea-rodriguez.ttl>,
+<http://example.org/hortense-rodriguez.ttl>,
+<http://example.org/rémy-rodrigues.ttl>,
+<http://example.org/timothy-rodriguez.ttl>,
+<http://example.org/becky-rodriguez.ttl>,
+<http://example.org/michael-rodriguez.ttl>,
+<http://example.org/todd-rodriguez.ttl>,
+<http://example.org/thomas-rodrigues.ttl>,
+<http://example.org/alfred-rodriguez.ttl>,
+<http://example.org/sabine-rodrigues.ttl>,
+<http://example.org/joanna-rodriguez.ttl>,
+<http://example.org/christopher-rodriguez.ttl>,
+<http://example.org/elizabeth-rodriguez.ttl>,
+<http://example.org/david-rodriguez.ttl>,
+<http://example.org/marine-rodriguez.ttl>,
+<http://example.org/tabitha-rodriguez.ttl>,
+<http://example.org/margot-rodrigues.ttl>,
+<http://example.org/sylvie-rodriguez.ttl>,
+<http://example.org/jessica-rodriguez.ttl>,
+<http://example.org/noël-rodriguez.ttl>.
+
+:rolland ex:forValue "rolland";
+	ex:instance <http://example.org/suzanne-rolland.ttl>,
+<http://example.org/alexandre-rolland.ttl>,
+<http://example.org/isaac-rolland.ttl>,
+<http://example.org/adèle-rolland.ttl>,
+<http://example.org/patricia-rolland.ttl>.
+
+:rosales ex:forValue "rosales";
+	ex:instance <http://example.org/matthew-rosales.ttl>.
+
+:roussea ex:forValue "roussea";
+	ex:instance <http://example.org/gabriel-rousseau.ttl>,
+<http://example.org/benoît-rousseau.ttl>,
+<http://example.org/alexandria-rousseau.ttl>,
+<http://example.org/claude-rousseau.ttl>,
+<http://example.org/jules-rousseau.ttl>.
+
+:roussel ex:forValue "roussel";
+	ex:instance <http://example.org/thérèse-roussel.ttl>,
+<http://example.org/victoire-roussel.ttl>,
+<http://example.org/margaux-roussel.ttl>,
+<http://example.org/augustin-roussel.ttl>,
+<http://example.org/margaux-roussel.ttl>,
+<http://example.org/thérèse-roussel.ttl>,
+<http://example.org/laurence-roussel.ttl>.
+
+:rousset ex:forValue "rousset";
+	ex:instance <http://example.org/amélie-rousset.ttl>,
+<http://example.org/louise-rousset.ttl>,
+<http://example.org/manon-rousset.ttl>,
+<http://example.org/marine-rousset.ttl>,
+<http://example.org/rené-rousset.ttl>,
+<http://example.org/lucie-rousset.ttl>,
+<http://example.org/louis-rousset.ttl>,
+<http://example.org/alexandria-rousset.ttl>.
+
+:rowland ex:forValue "rowland";
+	ex:instance <http://example.org/luke-rowland.ttl>,
+<http://example.org/janet-rowland.ttl>.
+
+:russell ex:forValue "russell";
+	ex:instance <http://example.org/marvin-russell.ttl>.
+
+:salazar ex:forValue "salazar";
+	ex:instance <http://example.org/laura-salazar.ttl>.
+
+:salinas ex:forValue "salinas";
+	ex:instance <http://example.org/carmen-salinas.ttl>,
+<http://example.org/daniel-salinas.ttl>.
+
+:sampson ex:forValue "sampson";
+	ex:instance <http://example.org/patrick-sampson.ttl>,
+<http://example.org/mary-sampson.ttl>,
+<http://example.org/sonya-sampson.ttl>.
+
+:sanchez ex:forValue "sanchez";
+	ex:instance <http://example.org/joshua-sanchez.ttl>,
+<http://example.org/anastasie-sanchez.ttl>,
+<http://example.org/michelle-sanchez.ttl>,
+<http://example.org/laurent-sanchez.ttl>,
+<http://example.org/tasha-sanchez.ttl>,
+<http://example.org/laetitia-sanchez.ttl>,
+<http://example.org/kyle-sanchez.ttl>,
+<http://example.org/sharon-sanchez.ttl>,
+<http://example.org/pauline-sanchez.ttl>,
+<http://example.org/rené-sanchez.ttl>,
+<http://example.org/adam-sanchez.ttl>,
+<http://example.org/matthieu-sanchez.ttl>,
+<http://example.org/carrie-sanchez.ttl>,
+<http://example.org/raymond-sanchez.ttl>,
+<http://example.org/david-sanchez.ttl>,
+<http://example.org/aaron-sanchez.ttl>.
+
+:sanders ex:forValue "sanders";
+	ex:instance <http://example.org/william-sanders.ttl>,
+<http://example.org/anthony-sanders.ttl>,
+<http://example.org/stephanie-sanders.ttl>,
+<http://example.org/stacey-sanders.ttl>,
+<http://example.org/steven-sanders.ttl>.
+
+:sandova ex:forValue "sandova";
+	ex:instance <http://example.org/elizabeth-sandoval.ttl>,
+<http://example.org/michael-sandoval.ttl>.
+
+:santana ex:forValue "santana";
+	ex:instance <http://example.org/derrick-santana.ttl>,
+<http://example.org/lauren-santana.ttl>.
+
+:santiag ex:forValue "santiag";
+	ex:instance <http://example.org/michelle-santiago.ttl>.
+
+:saunder ex:forValue "saunder";
+	ex:instance <http://example.org/corey-saunders.ttl>,
+<http://example.org/jeffery-saunders.ttl>.
+
+:sauvage ex:forValue "sauvage";
+	ex:instance <http://example.org/anne-sauvage.ttl>,
+<http://example.org/alphonse-sauvage.ttl>,
+<http://example.org/christine-sauvage.ttl>,
+<http://example.org/chantal-sauvage.ttl>,
+<http://example.org/luc-sauvage.ttl>,
+<http://example.org/stéphanie-sauvage.ttl>,
+<http://example.org/christiane-sauvage.ttl>.
+
+:schaefe ex:forValue "schaefe";
+	ex:instance <http://example.org/felicia-schaefer.ttl>,
+<http://example.org/kathleen-schaefer.ttl>.
+
+:schmidt ex:forValue "schmidt";
+	ex:instance <http://example.org/jennifer-schmidt.ttl>,
+<http://example.org/samuel-schmidt.ttl>.
+
+:schmitt ex:forValue "schmitt";
+	ex:instance <http://example.org/michael-schmitt.ttl>,
+<http://example.org/tristan-schmitt.ttl>,
+<http://example.org/margot-schmitt.ttl>,
+<http://example.org/bernard-schmitt.ttl>,
+<http://example.org/gérard-schmitt.ttl>,
+<http://example.org/raymond-schmitt.ttl>.
+
+:schneid ex:forValue "schneid";
+	ex:instance <http://example.org/joseph-schneider.ttl>,
+<http://example.org/antoinette-schneider.ttl>,
+<http://example.org/matthieu-schneider.ttl>,
+<http://example.org/audrey-schneider.ttl>,
+<http://example.org/bertrand-schneider.ttl>,
+<http://example.org/louis-schneider.ttl>.
+
+:schroed ex:forValue "schroed";
+	ex:instance <http://example.org/michael-schroeder.ttl>,
+<http://example.org/maria-schroeder.ttl>.
+
+:schultz ex:forValue "schultz";
+	ex:instance <http://example.org/richard-schultz.ttl>.
+
+:schwart ex:forValue "schwart";
+	ex:instance <http://example.org/deborah-schwartz.ttl>.
+
+:serrano ex:forValue "serrano";
+	ex:instance <http://example.org/edward-serrano.ttl>,
+<http://example.org/amy-serrano.ttl>.
+
+:shaffer ex:forValue "shaffer";
+	ex:instance <http://example.org/brandon-shaffer.ttl>,
+<http://example.org/aaron-shaffer.ttl>,
+<http://example.org/jason-shaffer.ttl>,
+<http://example.org/larry-shaffer.ttl>.
+
+:shelton ex:forValue "shelton";
+	ex:instance <http://example.org/julie-shelton.ttl>,
+<http://example.org/shawn-shelton.ttl>,
+<http://example.org/carl-shelton.ttl>.
+
+:shepher ex:forValue "shepher";
+	ex:instance <http://example.org/sherry-shepherd.ttl>,
+<http://example.org/christopher-shepherd.ttl>,
+<http://example.org/tracy-shepherd.ttl>.
+
+:sherman ex:forValue "sherman";
+	ex:instance <http://example.org/brandon-sherman.ttl>.
+
+:simmons ex:forValue "simmons";
+	ex:instance <http://example.org/elizabeth-simmons.ttl>,
+<http://example.org/douglas-simmons.ttl>,
+<http://example.org/derrick-simmons.ttl>,
+<http://example.org/susan-simmons.ttl>,
+<http://example.org/brian-simmons.ttl>.
+
+:simpson ex:forValue "simpson";
+	ex:instance <http://example.org/jose-simpson.ttl>,
+<http://example.org/savannah-simpson.ttl>,
+<http://example.org/jonathan-simpson.ttl>.
+
+:singlet ex:forValue "singlet";
+	ex:instance <http://example.org/jonathan-singleton.ttl>,
+<http://example.org/stacey-singleton.ttl>.
+
+:skinner ex:forValue "skinner";
+	ex:instance <http://example.org/emily-skinner.ttl>,
+<http://example.org/kevin-skinner.ttl>,
+<http://example.org/melinda-skinner.ttl>.
+
+:spencer ex:forValue "spencer";
+	ex:instance <http://example.org/william-spencer.ttl>.
+
+:stanton ex:forValue "stanton";
+	ex:instance <http://example.org/nancy-stanton.ttl>.
+
+:stephen ex:forValue "stephen";
+	ex:instance <http://example.org/colleen-stephens.ttl>,
+<http://example.org/lisa-stephens.ttl>,
+<http://example.org/michael-stephens.ttl>,
+<http://example.org/erin-stephenson.ttl>,
+<http://example.org/carolyn-stephenson.ttl>.
+
+:stevens ex:forValue "stevens";
+	ex:instance <http://example.org/crystal-stevens.ttl>,
+<http://example.org/chris-stevens.ttl>,
+<http://example.org/gary-stevens.ttl>,
+<http://example.org/jaime-stevens.ttl>,
+<http://example.org/ryan-stevens.ttl>,
+<http://example.org/alexander-stevenson.ttl>,
+<http://example.org/edward-stevens.ttl>.
+
+:stewart ex:forValue "stewart";
+	ex:instance <http://example.org/michelle-stewart.ttl>,
+<http://example.org/paula-stewart.ttl>,
+<http://example.org/melissa-stewart.ttl>,
+<http://example.org/lindsay-stewart.ttl>,
+<http://example.org/michael-stewart.ttl>,
+<http://example.org/stephanie-stewart.ttl>,
+<http://example.org/thomas-stewart.ttl>,
+<http://example.org/david-stewart.ttl>,
+<http://example.org/jennifer-stewart.ttl>,
+<http://example.org/michael-stewart.ttl>,
+<http://example.org/courtney-stewart.ttl>,
+<http://example.org/steven-stewart.ttl>.
+
+:strickl ex:forValue "strickl";
+	ex:instance <http://example.org/jonathan-strickland.ttl>.
+
+:sulliva ex:forValue "sulliva";
+	ex:instance <http://example.org/debbie-sullivan.ttl>,
+<http://example.org/marc-sullivan.ttl>,
+<http://example.org/jennifer-sullivan.ttl>,
+<http://example.org/travis-sullivan.ttl>,
+<http://example.org/christopher-sullivan.ttl>,
+<http://example.org/jeffrey-sullivan.ttl>,
+<http://example.org/joshua-sullivan.ttl>,
+<http://example.org/scott-sullivan.ttl>.
+
+:summers ex:forValue "summers";
+	ex:instance <http://example.org/garrett-summers.ttl>,
+<http://example.org/william-summers.ttl>,
+<http://example.org/tiffany-summers.ttl>.
+
+:swanson ex:forValue "swanson";
+	ex:instance <http://example.org/david-swanson.ttl>,
+<http://example.org/allen-swanson.ttl>.
+
+:sweeney ex:forValue "sweeney";
+	ex:instance <http://example.org/jesse-sweeney.ttl>,
+<http://example.org/andrew-sweeney.ttl>.
+
+:teixeir ex:forValue "teixeir";
+	ex:instance <http://example.org/lucie-teixeira.ttl>,
+<http://example.org/patricia-teixeira.ttl>,
+<http://example.org/lucy-teixeira.ttl>,
+<http://example.org/roger-teixeira.ttl>,
+<http://example.org/virginie-teixeira.ttl>,
+<http://example.org/henriette-teixeira.ttl>,
+<http://example.org/margaret-teixeira.ttl>,
+<http://example.org/josette-teixeira.ttl>.
+
+:terrell ex:forValue "terrell";
+	ex:instance <http://example.org/kathleen-terrell.ttl>,
+<http://example.org/tonya-terrell.ttl>.
+
+:tessier ex:forValue "tessier";
+	ex:instance <http://example.org/véronique-tessier.ttl>,
+<http://example.org/thibault-tessier.ttl>,
+<http://example.org/luc-tessier.ttl>,
+<http://example.org/alice-tessier.ttl>,
+<http://example.org/maryse-tessier.ttl>,
+<http://example.org/catherine-tessier.ttl>,
+<http://example.org/victoire-tessier.ttl>.
+
+:thibaul ex:forValue "thibaul";
+	ex:instance <http://example.org/daniel-thibault.ttl>,
+<http://example.org/pauline-thibault.ttl>,
+<http://example.org/jeanne-thibault.ttl>,
+<http://example.org/dorothée-thibault.ttl>,
+<http://example.org/marcelle-thibault.ttl>,
+<http://example.org/emmanuelle-thibault.ttl>,
+<http://example.org/corinne-thibault.ttl>.
+
+:thierry ex:forValue "thierry";
+	ex:instance <http://example.org/laurence-thierry.ttl>,
+<http://example.org/matthieu-thierry.ttl>,
+<http://example.org/alphonse-thierry.ttl>,
+<http://example.org/zacharie-thierry.ttl>,
+<http://example.org/daniel-thierry.ttl>,
+<http://example.org/jean-thierry.ttl>.
+
+:thompso ex:forValue "thompso";
+	ex:instance <http://example.org/trevor-thompson.ttl>,
+<http://example.org/james-thompson.ttl>,
+<http://example.org/brenda-thompson.ttl>,
+<http://example.org/vanessa-thompson.ttl>,
+<http://example.org/matthew-thompson.ttl>,
+<http://example.org/connie-thompson.ttl>,
+<http://example.org/ashley-thompson.ttl>,
+<http://example.org/douglas-thompson.ttl>,
+<http://example.org/michael-thompson.ttl>,
+<http://example.org/joseph-thompson.ttl>,
+<http://example.org/jennifer-thompson.ttl>,
+<http://example.org/michelle-thompson.ttl>,
+<http://example.org/brenda-thompson.ttl>.
+
+:thornto ex:forValue "thornto";
+	ex:instance <http://example.org/renee-thornton.ttl>.
+
+:toussai ex:forValue "toussai";
+	ex:instance <http://example.org/capucine-toussaint.ttl>,
+<http://example.org/margaud-toussaint.ttl>,
+<http://example.org/michèle-toussaint.ttl>,
+<http://example.org/martine-toussaint.ttl>,
+<http://example.org/adrien-toussaint.ttl>.
+
+:trevino ex:forValue "trevino";
+	ex:instance <http://example.org/donald-trevino.ttl>,
+<http://example.org/william-trevino.ttl>.
+
+:trujill ex:forValue "trujill";
+	ex:instance <http://example.org/stacey-trujillo.ttl>.
+
+:underwo ex:forValue "underwo";
+	ex:instance <http://example.org/ellen-underwood.ttl>.
+
+:vaillan ex:forValue "vaillan";
+	ex:instance <http://example.org/thibault-vaillant.ttl>,
+<http://example.org/marc-vaillant.ttl>,
+<http://example.org/alain-vaillant.ttl>,
+<http://example.org/jeanne-vaillant.ttl>,
+<http://example.org/diane-vaillant.ttl>,
+<http://example.org/laurent-vaillant.ttl>,
+<http://example.org/chantal-vaillant.ttl>,
+<http://example.org/gilbert-vaillant.ttl>,
+<http://example.org/louise-vaillant.ttl>.
+
+:valenci ex:forValue "valenci";
+	ex:instance <http://example.org/taylor-valencia.ttl>,
+<http://example.org/thomas-valencia.ttl>.
+
+:valenti ex:forValue "valenti";
+	ex:instance <http://example.org/hugues-valentin.ttl>,
+<http://example.org/lucas-valentin.ttl>,
+<http://example.org/suzanne-valentin.ttl>,
+<http://example.org/amélie-valentin.ttl>.
+
+:valenzu ex:forValue "valenzu";
+	ex:instance <http://example.org/connor-valenzuela.ttl>.
+
+:valette ex:forValue "valette";
+	ex:instance <http://example.org/denis-valette.ttl>,
+<http://example.org/philippine-valette.ttl>,
+<http://example.org/gilbert-valette.ttl>,
+<http://example.org/gilbert-valette.ttl>,
+<http://example.org/antoinette-valette.ttl>,
+<http://example.org/alex-valette.ttl>.
+
+:vallée ex:forValue "vallée";
+	ex:instance <http://example.org/amélie-vallée.ttl>,
+<http://example.org/clémence-vallée.ttl>,
+<http://example.org/margot-vallée.ttl>,
+<http://example.org/éric-vallée.ttl>.
+
+:vasquez ex:forValue "vasquez";
+	ex:instance <http://example.org/lauren-vasquez.ttl>,
+<http://example.org/tracy-vasquez.ttl>,
+<http://example.org/joseph-vasquez.ttl>.
+
+:vasseur ex:forValue "vasseur";
+	ex:instance <http://example.org/denis-vasseur.ttl>,
+<http://example.org/laurent-vasseur.ttl>,
+<http://example.org/isabelle-vasseur.ttl>,
+<http://example.org/maryse-vasseur.ttl>,
+<http://example.org/sébastien-vasseur.ttl>,
+<http://example.org/olivier-vasseur.ttl>,
+<http://example.org/frédéric-vasseur.ttl>.
+
+:vazquez ex:forValue "vazquez";
+	ex:instance <http://example.org/jacob-vazquez.ttl>.
+
+:velasqu ex:forValue "velasqu";
+	ex:instance <http://example.org/michelle-velasquez.ttl>.
+
+:velazqu ex:forValue "velazqu";
+	ex:instance <http://example.org/evelyn-velazquez.ttl>,
+<http://example.org/claire-velazquez.ttl>.
+
+:verdier ex:forValue "verdier";
+	ex:instance <http://example.org/élodie-verdier.ttl>,
+<http://example.org/marguerite-verdier.ttl>,
+<http://example.org/stéphane-verdier.ttl>,
+<http://example.org/océane-verdier.ttl>,
+<http://example.org/denis-verdier.ttl>,
+<http://example.org/maurice-verdier.ttl>.
+
+:villarr ex:forValue "villarr";
+	ex:instance <http://example.org/kevin-villarreal.ttl>,
+<http://example.org/sean-villarreal.ttl>,
+<http://example.org/mason-villarreal.ttl>.
+
+:vincent ex:forValue "vincent";
+	ex:instance <http://example.org/brenda-vincent.ttl>,
+<http://example.org/christopher-vincent.ttl>,
+<http://example.org/andrew-vincent.ttl>,
+<http://example.org/théophile-vincent.ttl>,
+<http://example.org/simone-vincent.ttl>,
+<http://example.org/théodore-vincent.ttl>.
+
+:wallace ex:forValue "wallace";
+	ex:instance <http://example.org/bobby-wallace.ttl>,
+<http://example.org/megan-wallace.ttl>,
+<http://example.org/brandon-wallace.ttl>,
+<http://example.org/cynthia-wallace.ttl>.
+
+:walters ex:forValue "walters";
+	ex:instance <http://example.org/richard-walters.ttl>,
+<http://example.org/william-walters.ttl>,
+<http://example.org/zachary-walters.ttl>.
+
+:washing ex:forValue "washing";
+	ex:instance <http://example.org/angela-washington.ttl>,
+<http://example.org/samantha-washington.ttl>,
+<http://example.org/jessica-washington.ttl>.
+
+:watkins ex:forValue "watkins";
+	ex:instance <http://example.org/amber-watkins.ttl>,
+<http://example.org/robert-watkins.ttl>,
+<http://example.org/lauren-watkins.ttl>,
+<http://example.org/william-watkins.ttl>,
+<http://example.org/sean-watkins.ttl>,
+<http://example.org/shawn-watkins.ttl>.
+
+:wheeler ex:forValue "wheeler";
+	ex:instance <http://example.org/laura-wheeler.ttl>,
+<http://example.org/nicole-wheeler.ttl>.
+
+:whitney ex:forValue "whitney";
+	ex:instance <http://example.org/breanna-whitney.ttl>.
+
+:wiggins ex:forValue "wiggins";
+	ex:instance <http://example.org/william-wiggins.ttl>.
+
+:wilkers ex:forValue "wilkers";
+	ex:instance <http://example.org/tonya-wilkerson.ttl>.
+
+:wilkins ex:forValue "wilkins";
+	ex:instance <http://example.org/mark-wilkinson.ttl>,
+<http://example.org/christian-wilkinson.ttl>.
+
+:william ex:forValue "william";
+	ex:instance <http://example.org/roy-williams.ttl>,
+<http://example.org/william-williams.ttl>,
+<http://example.org/sherry-williams.ttl>,
+<http://example.org/dana-williams.ttl>,
+<http://example.org/joyce-williams.ttl>,
+<http://example.org/dillon-williamson.ttl>,
+<http://example.org/heather-williams.ttl>,
+<http://example.org/michael-williams.ttl>,
+<http://example.org/michael-williams.ttl>,
+<http://example.org/michael-williams.ttl>,
+<http://example.org/david-williams.ttl>,
+<http://example.org/julia-williams.ttl>,
+<http://example.org/regina-williams.ttl>,
+<http://example.org/shelley-williams.ttl>,
+<http://example.org/jessica-williams.ttl>,
+<http://example.org/stacy-williams.ttl>,
+<http://example.org/michael-williams.ttl>,
+<http://example.org/tammy-williams.ttl>,
+<http://example.org/carol-williams.ttl>,
+<http://example.org/mary-williams.ttl>,
+<http://example.org/jake-williams.ttl>,
+<http://example.org/hector-williams.ttl>,
+<http://example.org/jorge-williams.ttl>,
+<http://example.org/vincent-williams.ttl>,
+<http://example.org/april-williams.ttl>,
+<http://example.org/ryan-williams.ttl>,
+<http://example.org/joseph-williams.ttl>,
+<http://example.org/ann-williams.ttl>,
+<http://example.org/ana-williams.ttl>,
+<http://example.org/april-williams.ttl>,
+<http://example.org/jennifer-williams.ttl>,
+<http://example.org/sarah-williams.ttl>,
+<http://example.org/kristy-williams.ttl>,
+<http://example.org/margaret-williams.ttl>,
+<http://example.org/christopher-williams.ttl>,
+<http://example.org/william-williams.ttl>.
+
+:winters ex:forValue "winters";
+	ex:instance <http://example.org/steven-winters.ttl>.
+
+:woodard ex:forValue "woodard";
+	ex:instance <http://example.org/david-woodard.ttl>.
+
+:woodwar ex:forValue "woodwar";
+	ex:instance <http://example.org/timothy-woodward.ttl>.
+
+:zimmerm ex:forValue "zimmerm";
+	ex:instance <http://example.org/erika-zimmerman.ttl>,
+<http://example.org/catherine-zimmerman.ttl>,
+<http://example.org/susan-zimmerman.ttl>.
+
