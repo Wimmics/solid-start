@@ -36,8 +36,8 @@ export function StrategyCard(props: {strategy: Strategy, targets: Targets, onCha
         
         <Accordion 
           title="See/hide SPARQL query"
-          content={<pre>{strategy.getSparqlQuery()}</pre>}
-        />
+          content={<pre>{strategy.getSparqlQuery(targets)}</pre>}
+        /> 
 
         <Accordion 
           title={`See/hide targeted sources (${strategy.getTargetedSources(targets).length})`}

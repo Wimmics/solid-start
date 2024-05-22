@@ -1,7 +1,7 @@
 import { Targets } from "./lib/strategy/Strategy";
 import { DistributedSourceProvider } from "./lib/sourceProvider/DistributedSourceProvider";
 import { FederatedSourceProvider } from "./lib/sourceProvider/FederatedSourceProvider";
-import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery, cityTraversalQuery, skillRootTraversalQuery, skillRootNamedGraphTraversalQuery, cityQuery } from "./queries";
+import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery, cityTraversalQuery, skillRootTraversalQuery, skillRootNamedGraphTraversalQuery, cityQuery, skillCityTraversalMetaQuery } from "./queries";
 import StrategyComunica from "./lib/strategy/StrategyComunica";
 import StrategyFilter from "./lib/strategy/StrategyFilter";
 import { Match } from "./lib/match/Match";
@@ -156,5 +156,12 @@ export const strategies = [
         skillRootNamedGraphTraversalQuery('12'), 
         new QueryEngineTraversal(),
         (t: Targets) => new SourceProviderBase().addSource("http://localhost:8000/org/indexes/root"),
+    ),
+    new StrategyComunica(
+        "Skill and city from distributed meta indexes with traversal (distributed)",
+        "Query the distributed meta indexes to find users with the given skills and cities.",
+        skillCityTraversalMetaQuery, 
+        new QueryEngineTraversal(),
+        (t: Targets) => new DistributedSourceProvider(32).addMetaIndexes(),
     ),
 ]

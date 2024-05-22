@@ -26,4 +26,11 @@ export class DistributedSourceProvider extends SourceProviderBase {
         });
         return this;
     }
+
+    public addMetaIndexes(): DistributedSourceProvider {
+        for (let i = 1; i <= this.instanceNumber; i++) { 
+            this.addSource(`http://localhost:${8000 + i}/indexes/root`)
+        };
+        return this;
+    }
 }

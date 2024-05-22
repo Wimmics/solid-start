@@ -2,7 +2,7 @@ import { SourceProvider } from "../sourceProvider/SourceProvider";
 import User from "../user/User";
 import UserBase from "../user/UserBase";
 import { Targets } from "./Strategy";
-import { StrategyBaseSparql } from "./StrategyBaseSparql";
+import { DynamicSparqlQuery, StrategyBaseSparql } from "./StrategyBaseSparql";
 
 /**
  * A `StrategyBase` that uses Comunica to find results.
@@ -13,7 +13,7 @@ export default class StrategyComunica extends StrategyBaseSparql {
     /**
      * @inheritdoc
      */
-    constructor(name: string, description: string, sparqlQuery: string, engine: any, sourceProvider: (targets: Targets) => SourceProvider) {
+    constructor(name: string, description: string, sparqlQuery: string | DynamicSparqlQuery, engine: any, sourceProvider: (targets: Targets) => SourceProvider) {
         super(name, description, sparqlQuery, sourceProvider);
         this.engine = engine;
     }
@@ -26,7 +26,7 @@ export default class StrategyComunica extends StrategyBaseSparql {
         await super.execute(targets);
         this.setRunning();
         
-        const bindingsStream = await this.getEngine().queryBindings(this.getSparqlQuery(), {
+        const bindingsStream = await this.getEngine().queryBindings(this.getSparqlQuery(targets), {
             lenient: true, // ignore HTTP fails
             sources: this.getSources(),
         });

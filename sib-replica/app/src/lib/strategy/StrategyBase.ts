@@ -117,7 +117,7 @@ export class StrategyBase implements Strategy {
         return this.result!;
     }
 
-    public getSparqlQuery(): string {
+    public getSparqlQuery(targets: Targets): string {
         return "";
     }
 

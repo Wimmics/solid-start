@@ -19,7 +19,7 @@ export interface Strategy {
     /**
      * Returns the SPARQL query that will be executed by the strategy.
      */
-    getSparqlQuery(): string;
+    getSparqlQuery(targets: Targets): string;
 
     /**
      * Executes the strategy to find users corresponding to the targets.

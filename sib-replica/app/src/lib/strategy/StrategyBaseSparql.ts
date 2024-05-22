@@ -3,6 +3,7 @@ import { SourceProvider } from "../sourceProvider/SourceProvider";
 import { StrategyBase } from "./StrategyBase";
 
 export type SourceProviderFactory = (targets: Targets) => SourceProvider;
+export type DynamicSparqlQuery = (targets: Targets) => string;
 
 /**
  * An indexing strategy that does nothing.
@@ -12,7 +13,7 @@ export type SourceProviderFactory = (targets: Targets) => SourceProvider;
  * This class provides somes callbacks to get notified when some values change (status, matches).
  */
 export class StrategyBaseSparql extends StrategyBase {
-    private sparqlQuery: string;
+    private sparqlQuery: string | DynamicSparqlQuery;
     private sourceProviderFactory: SourceProviderFactory;
     private sources: string[];
 
@@ -23,7 +24,7 @@ export class StrategyBaseSparql extends StrategyBase {
      * @param sparqlQuery The SPARQL query that the strategy will process.
      * @param sourceProviderFactory A function to get a `SourceProvider` given some targets.
      */
-    constructor(name: string, description: string, sparqlQuery: string, sourceProviderFactory: SourceProviderFactory) {
+    constructor(name: string, description: string, sparqlQuery: string | DynamicSparqlQuery, sourceProviderFactory: SourceProviderFactory) {
         super(name, description);
         this.sparqlQuery = sparqlQuery;
         this.sources = [];
@@ -52,8 +53,8 @@ export class StrategyBaseSparql extends StrategyBase {
         return Promise.resolve();
     }
 
-    public getSparqlQuery(): string {
-        return this.sparqlQuery;
+    public getSparqlQuery(targets: Targets): string {
+        return typeof this.sparqlQuery === 'string'? this.sparqlQuery: this.sparqlQuery(targets);
     }
 
 }

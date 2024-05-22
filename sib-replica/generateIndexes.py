@@ -11,10 +11,11 @@ globalSkillIndex = {} # { skill => [users] }
 localSkillIndex = {} # { instance => { skill => [users] } }
 localCityIndex = {} # { instance => { city => [users] } }
 
-def generateIndexHeader(indexType):
-    return f'''@prefix ex: <http://example.org#>.
+def generateIndexHeader(indexType, isClosed = False):
+    return f'''@prefix : <#>.
+@prefix ex: <http://example.org#>.
 
-<> a {indexType};
+<> a {indexType}{'.' if isClosed else ';'}
     '''
 
 def generateIndexEntry(entry):
@@ -87,7 +88,7 @@ def generateGlobalCityIndex(city):
     f.write(entries)
     f.close()
 
-def generateRootIndex(filename, indexesUrl):
+def generateFederatedRootIndex(filename, indexesUrl):
     skills = f"""{indexesUrl}skills"""
     cities = f"""{indexesUrl}cities"""
 
@@ -131,6 +132,29 @@ def generateRootSkillIndex():
     f.write(index)
     f.close()
 
+def generateDistributedRootIndex(instance):
+    filename = f"""./data/instances/{str(instance)}/indexes/root$.ttl"""
+    os.makedirs(os.path.dirname(filename), exist_ok=True)
+    f = open(filename, "w")
+
+    f.write(generateIndexHeader("ex:SourceSelectionIndex", True) + "\n")
+
+    for skill in localSkillIndex[instance]:
+        f.write(f""":{str(skill)} a ex:SourceSelectionIndexRegistration;
+    ex:forProperty ex:hasSkill;
+    ex:forValue "{str(skill)}";
+    ex:instancesIn <http://localhost:{8000+instance}/indexes/skill/{str(skill)}>;
+    ex:hasSource <http://localhost:{8000+instance}>.\n\n""")
+
+    for city in localCityIndex[instance]:
+        f.write(f""":{str(city)} a ex:SourceSelectionIndexRegistration;
+    ex:forProperty ex:hasLocation;
+    ex:forValue "{str(city)}";
+    ex:instancesIn <http://localhost:{8000+instance}/indexes/city/{city}>;
+    ex:hasSource <http://localhost:{8000+instance}>.\n\n""")
+    
+    f.close()
+
 def generateLocalCityIndex(instance):
     for city in localCityIndex[instance]:
         filename = f"""./data/instances/{str(instance)}/indexes/city/{city}$.ttl"""
@@ -165,29 +189,34 @@ for user in users.all():
     populateCityIndexes(user)
     populateSkillIndexes(user)
 
-print("Generate federated city indexes")
-for city in globalCityIndex:
-    generateGlobalCityIndex(city)
-generateACL("./data/app/org/indexes/city/.acl")
+    print("Generate federated city indexes")
+    for city in globalCityIndex:
+        generateGlobalCityIndex(city)
+    generateACL("./data/app/org/indexes/city/.acl")
 
-print("Generate distributed city indexes")
-for instance in localCityIndex:
-    generateLocalCityIndex(instance)
-    generateACL(f'''./data/instances/{instance}/indexes/city/.acl''')
+    print("Generate distributed city indexes")
+    for instance in localCityIndex:
+        generateLocalCityIndex(instance)
+        generateACL(f'''./data/instances/{instance}/indexes/city/.acl''')
 
-print("Generate skill indexes")
-for skill in globalSkillIndex:
-    generateGlobalSkillIndex(skill)
-generateACL("./data/app/org/indexes/skill/.acl")
+    print("Generate skill indexes")
+    for skill in globalSkillIndex:
+        generateGlobalSkillIndex(skill)
+    generateACL("./data/app/org/indexes/skill/.acl")
 
-print("Generate distributed skill indexes")
-for instance in localSkillIndex:
-    generateLocalSkillIndex(instance)
-    generateACL(f'''./data/instances/{instance}/indexes/skill/.acl''')
+    print("Generate distributed skill indexes")
+    for instance in localSkillIndex:
+        generateLocalSkillIndex(instance)
+        generateACL(f'''./data/instances/{instance}/indexes/skill/.acl''')
 
-print("Generate federated root index")
-generateRootIndex("./data/app/org/indexes/root$.ttl", "http://localhost:8000/org/indexes/")
-generateACL('./data/app/org/indexes/.acl')
+    print("Generate federated root index")
+    generateFederatedRootIndex("./data/app/org/indexes/root$.ttl", "http://localhost:8000/org/indexes/")
+    generateACL('./data/app/org/indexes/.acl')
 
-print("Generate federated root skill index")
-generateRootSkillIndex()
+    print("Generate federated root skill index")
+    generateRootSkillIndex()
+
+print("Generate distributed root index")
+for instance in range (1, 33):
+    generateACL(f'''./data/instances/{instance}/indexes/.acl''')
+    generateDistributedRootIndex(instance)
