@@ -1,11 +1,12 @@
 import { Targets } from "./lib/strategy/Strategy";
 import { DistributedSourceProvider } from "./lib/sourceProvider/DistributedSourceProvider";
 import { FederatedSourceProvider } from "./lib/sourceProvider/FederatedSourceProvider";
-import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery, cityTraversalQuery, skillRootTraversalQuery, skillRootNamedGraphTraversalQuery, cityQuery, skillCityTraversalMetaQuery } from "./queries";
+import { skillQuery, skillTraversalQuery, skillCityQuery, skillCityTraversalQuery, cityTraversalQuery, skillRootTraversalQuery, skillRootNamedGraphTraversalQuery, cityQuery, skillCityTraversalMetaQuery, sourcesFromDistributedMetaIndexQuery } from "./queries";
 import StrategyComunica from "./lib/strategy/StrategyComunica";
 import StrategyFilter from "./lib/strategy/StrategyFilter";
 import { Match } from "./lib/match/Match";
 import { SourceProviderBase } from "./lib/sourceProvider/SourceProviderBase";
+import StrategyComunicaSourceSelection from "./lib/strategy/StrategyComunicaSourceSelection";
 
 const QueryEngine = require('@comunica/query-sparql').QueryEngine;
 const QueryEngineTraversal = require('@comunica/query-sparql-link-traversal').QueryEngine;
@@ -162,6 +163,14 @@ export const strategies = [
         "Query the distributed meta indexes to find users with the given skills and cities.",
         skillCityTraversalMetaQuery, 
         new QueryEngineTraversal(),
+        (t: Targets) => new DistributedSourceProvider(32).addMetaIndexes(),
+    ),
+    new StrategyComunicaSourceSelection(
+        "Instances URL of selected skill(s) and city(ies) (distributed)",
+        "Gives the instances URL where we can find the selected skill(s) and city(ies) (distributed)",
+        sourcesFromDistributedMetaIndexQuery, 
+        skillCityQuery,
+        new QueryEngine(),
         (t: Targets) => new DistributedSourceProvider(32).addMetaIndexes(),
     ),
 ]

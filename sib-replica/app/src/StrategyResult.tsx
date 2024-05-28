@@ -12,7 +12,7 @@ export function StrategyResult(props: {strategy: Strategy}) {
 
     useEffect(() => {
         strategy.registerCallbackForStatusChange((status) => setStatus(status));
-        strategy.registerCallbackForMatchesChange((match) => setMatches(strategy.getResult().getMatches()));
+        strategy.registerCallbackForMatchesChange((match) => setMatches(strategy.getResult().getMatches().slice()));
     }, []);
 
     return (

@@ -13,6 +13,11 @@ export class SourceProviderBase implements SourceProvider {
         return this;
     }
 
+    public addSourceAll(sources: string[]): SourceProviderBase {
+        sources.forEach(source => this.sources.push(source));
+        return this;
+    }
+
     public getSources(): string[] {
         return this.sources;
     }

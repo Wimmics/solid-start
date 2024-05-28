@@ -111,3 +111,30 @@ export const skillCityTraversalMetaQuery = (t: Targets) => `SELECT DISTINCT ?use
   ${t.cities.map(c => `?indexCity${c} a <http://example.org#CityIndex>;
   <http://example.org#entry> ?user.`)}
 } LIMIT 100`;
+
+export const skillCityFromDistributedMetaIndexQuery = (t: Targets) => `SELECT DISTINCT ?indexes WHERE {
+  ${t.skills.map(s => `?${s} a <http://example.org#SourceSelectionIndexRegistration>;
+  <http://example.org#forProperty> <http://example.org#hasSkill>;
+  <http://example.org#forValue> "${s}";
+  <http://example.org#instancesIn> ?indexSkill${s};
+  <http://example.org#hasSource> ?source.`)}
+
+  ${t.cities.map(c => `?${c} a <http://example.org#SourceSelectionIndexRegistration>;
+  <http://example.org#forProperty> <http://example.org#hasLocation>;
+  <http://example.org#forValue> "${c}";
+  <http://example.org#instancesIn> ?indexCity${c};
+  <http://example.org#hasSource> ?source.`)}
+} LIMIT 100`;
+
+export const sourcesFromDistributedMetaIndexQuery = (t: Targets) => `SELECT DISTINCT ?instancesSkill ?instancesCity WHERE {
+  ${t.skills.reduce((ps, cs) => `${ps}\n?${cs} a <http://example.org#SourceSelectionIndexRegistration>;
+  <http://example.org#forProperty> <http://example.org#hasSkill>;
+  <http://example.org#forValue> "${cs}";
+  <http://example.org#instancesIn> ?instancesSkill;
+  <http://example.org#hasSource> ?source.\n`, "")}
+  ${t.cities.reduce((pc, cc) => `${pc}\n?${cc} a <http://example.org#SourceSelectionIndexRegistration>;
+  <http://example.org#forProperty> <http://example.org#hasLocation>;
+  <http://example.org#forValue> "${cc}";
+  <http://example.org#instancesIn> ?instancesCity;
+  <http://example.org#hasSource> ?source.`, "")}
+} LIMIT 100`;
