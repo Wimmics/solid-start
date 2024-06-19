@@ -67,101 +67,8 @@
       <section>
         <h4>Property-value indexes</h4>
 
-        <aside class="example">
-          <pre>
-            : a ex:Index;
-              ex:forProperty schema:property;
-              ex:forValue "some value";
-              ex:instance 
-                &lt;path/to/an/instance&gt; 
-                &lt;path/to/a/second/instance&gt;.
-          </pre>
-          <p>Instead of using the <code>ex:instance</code> predicate do we annotate indices directly like:</p>
-          <pre>
-            &lt;&gt; a ex:Index.
-
-            &lt;path/to/an/instance&gt a ex:IndexEntry;
-              ex:forProperty schema:property1;
-              ex:forValue "some value".
-
-            &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-              ex:forProperty schema:property2;
-              ex:forValue "some value".
-          </pre>
-
-          <p>With a shape:</p>
-          <pre>
-            &lt;&gt; a ex:Index.
-
-            &lt;path/to/an/instance&gt a ex:IndexEntry;
-              ex:hasShape [
-                sh:property [
-                  sh:path schema:property1;
-                  sh:hasValue "some value"
-                ]
-              ].
-
-            &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-              ex:hasShape [
-                sh:property [
-                  sh:path schema:property2;
-                  sh:hasValue "some value"
-                ]
-              ].
-          </pre>
-        </aside>
-
-        <p>
-          When the same property is indexed in the whole index, the <code>ex:forProperty</code> predicate can be defined in the index itself like:
-          <aside class="example">
-            <pre>
-              &lt;&gt; a ex:Index;
-                ex:forProperty schema:property.
-
-              &lt;path/to/an/instance&gt a ex:IndexEntry;
-                ex:forValue "some value".
-
-              &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-                ex:forValue "some value".
-            </pre>
-          </aside>
-        </p>
-      </section>
-
-      <section>
-        <h4>SKOS indexes</h4>
-
-        <aside class="example">
-          <pre>
-            &lt;&gt; a ex:Index.
-
-            &lt;path/to/an/instance&gt a ex:IndexEntry;
-              ex:mentions schema:someSkosConcept.
-
-            &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-              ex:mentions schema:someOtherSkosConcept.
-          </pre>
-
-          <p>With shape:</p>
-          <pre>
-            &lt;&gt; a ex:Index.
-
-            &lt;path/to/an/instance&gt a ex:IndexEntry;
-              ex:hasShape [
-                sh:property [
-                  sh:path schema:property1;
-                  sh:hasValue schema:someSkosConcept
-                ]
-              ].
-
-            &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-              ex:hasShape [
-                sh:property [
-                  sh:path schema:property2;
-                  sh:hasValue schema:someOtherSkosConcept
-                ]
-              ].
-          </pre>
+        <aside class="example" title="Index of people living in Paris.">
+          <pre data-include="./example1.ttl" data-include-format='text' />
         </aside>
       </section>
 
@@ -169,26 +76,8 @@
         <h4>String indexes</h4>
 
         <p>
-          <aside class="example">
-            <pre>
-              &lt;&gt; a ex:Index.
-
-              &lt;path/to/an/instance&gt a ex:IndexEntry;
-                ex:hasShape [
-                  sh:property [
-                    sh:path schema:property1;
-                    sh:pattern "a.*"
-                  ]
-                ].
-
-              &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-                ex:hasShape [
-                  sh:property [
-                    sh:path schema:property2;
-                    sh:pattern "a.*"
-                  ]
-                ].
-            </pre>
+          <aside class="example" title='Index of people with a given name starting with "a".'>
+            <pre data-include="./example3.ttl" data-include-format='text' />
           </aside>
         </p>
       </section>
@@ -196,59 +85,33 @@
 
     <section>
       <h3>Meta indexes</h3>
+
+      <p>Meta indexes are indexes that are indexing other indexes.</p>
     
       <section>
         <h4>Source selection indexes</h4>
 
-        <aside class="example">
-          <pre>
-            &lt;&gt; a ex:Index.
-
-            &lt;path/to/an/instance&gt a ex:IndexEntry;
-              ex:hasShape _:b1;
-              ex:hasCount 8.
-
-            &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-              ex:hasShape _:b1;
-              ex:hasCount 25.
-
-            _:b1 a sh:NodeShape;
-              sh:property [
-                sh:path schema:property1;
-                sh:hasValue "some value"
-              ].
-          </pre>
-
-          <p>Using a <code>sh:ValidationResult</code>:</p>
-          <pre>
-            &lt;&gt; a ex:Index.
-
-            &lt;path/to/an/instance&gt a ex:IndexEntry;
-              ex:hasShape _:b1;
-              ex:hasValidationResult [
-                a sh:ValidationResult;
-                sh:minCount 8;
-                sh:maxCount 8;
-              ].
-
-            &lt;path/to/a/second/instance&gt a ex:IndexEntry;
-              ex:hasShape _:b1;
-              ex:hasValidationResult [
-                a sh:ValidationResult;
-                sh:minCount 25;
-                sh:maxCount 25;
-              ].
-
-            _:b1 a sh:NodeShape;
-              sh:property [
-                sh:path schema:property1;
-                sh:hasValue "some value"
-              ].
-          </pre>
+        <aside class="example" title="Meta index of instances having people living in Paris with an indication of how much people each instance have.">
+          <pre data-include="./example4.ttl" data-include-format='text' />
         </aside>
       </section>
+
+      </section>
+
+      <section>
+        <h3>Sorting indexes</h3>
+
+      </section>
+
+      <section>
+        <h3>Indexing using the LDP structure</h3>
+
+      </section>
+
   </section>
 
+  <section>
+    <h2>Indexing strategies</h2>
   </section>
 
   <section>

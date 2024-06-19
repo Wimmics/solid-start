@@ -1,0 +1,17 @@
+<> a ex:Index;
+    ex:hasShape [
+        a sh:NodeShape;
+        sh:targetClass ex:Index;
+        sh:property [
+            sh:path schema:hasLocation;
+            sh:hasValue "Paris"
+        ];
+    ].
+
+:entry1 a ex:IndexEntry;
+    ex:hasTarget <https://instance1.solidcommunity.net/webid#this>.
+    ex:hasCount 8.
+
+:entry2 a ex:IndexEntry;
+    ex:hasTarget <https://instance2.solidcommunity.net/webid#this>.
+    ex:hasCount 15.

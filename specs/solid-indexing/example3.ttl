@@ -1,0 +1,16 @@
+<> a ex:Index;
+    ex:hasShape [
+        a sh:NodeShape;
+        sh:targetClass foaf:Person;
+        sh:closed false;
+        sh:property [
+            sh:path foaf:givenName;
+            sh:pattern "a.*"
+        ];
+    ].
+
+:entry1 a ex:IndexEntry;
+    ex:hasTarget <https://alice.solidcommunity.net/profile/card#me>.
+
+:entry2 a ex:IndexEntry;
+    ex:hasTarget <https://albert.solidcommunity.net/profile/card#me>.
