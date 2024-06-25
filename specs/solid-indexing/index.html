@@ -24,7 +24,7 @@
       data in one or several storage(s). This document describes some mechanisms to index data on Solid storages
       that client-side or [=server-side applications=] can use to allow faster
       searching. As the Solid server does not need to know about these indexes, editors of application should define the
-      indexes they are using in their [=client to client protocol=].</p>
+      indexes they are using in their [=client-to-client protocol=].</p>
   </section>
 
   <section id="sotd">
@@ -35,18 +35,36 @@
   <section class="informative">
     <h2>Introduction</h2>
 
-    <p>Indexes are a well kwnow mechanism that allow faster searching. Indeed, an index...</p>
+    <p>The current Solid protocol (version 0.11.0) does not provide a built-in server mechanism to search for data. This
+      is left to [=client-to-client protocols=]. This presents the advantage of keeping the Solid protocol as simple as
+      possible. In this document we are proposing an indexing mechanism that stays in the perimeter of client-to-client
+      protocols. Although any editor of application is free to define the mechanism of its choice we are proposing a
+      generic vocabulary to do indexing. Using a common vocabulary is indeed encouraged to facilitate interoperability.
+    </p>
+
+    <p>Indexing is a largely used mechanism that allow to find data faster thanks to [=indexes=]. By querying
+      the appropriate indexes one can avoid to browse the entire dataset to find a particular piece. This document tries
+      to answer questions like who is indexing and how.</p>
+
+    <p>Quelle genre de données voulons nous indexer?</p>
+
+    <p>Parler des différents types d'indexation, single, multiple, fédéré, distribué...</p>
 
     <section>
       <h3>Terminology</h3>
 
       <p>
-        <dfn>server-side application</dfn>
+        <dfn data-lt="indexes">Index</dfn>
         TBD.
       </p>
 
       <p>
-        <dfn>client to client protocol</dfn>
+        <dfn>Server-side application</dfn>
+        TBD.
+      </p>
+
+      <p>
+        <dfn>Client-to-client protocol</dfn>
         TBD.
       </p>
     </section>
@@ -61,73 +79,113 @@
   <section>
     <h2>Indexes</h2>
 
+    <p>This document proposes the <a href="./ontology.ttl" alt="">Indexing ontology</a> as vocabulary for the indexes.
+      This ontology is using [[SHACL]] shapes to
+      express what is indexed.</p>
+
     <section>
-      <h3>Instance indexes</h3>
-  
-      <section>
-        <h4>Property-value indexes</h4>
+      <h3>General indexes</h3>
 
-        <aside class="example" title="Index of people living in Paris.">
-          <pre data-include="./example1.ttl" data-include-format='text' />
-        </aside>
-      </section>
+      <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>ex:Index</code> which contain entries conforming to
+        a
+        particular shape. The shape the index is targeting is expressed with the <code>ex:hasShape</code> predicate.</p>
 
-      <section>
-        <h4>String indexes</h4>
+      <p>An entry is of type <code>ex:IndexEntry</code> and targets a resource using the <code>ex:hasTarget</code>
+        predicate. The resource the entry is targeting MUST conform to the shape of the index.</p>
 
-        <p>
-          <aside class="example" title='Index of people with a given name starting with "a".'>
-            <pre data-include="./example3.ttl" data-include-format='text' />
-          </aside>
+      <p>For instance an index of people living in Paris could be expressed like in the example.</p>
+
+      <aside id="example1" class="example" title="Index of people living in Paris.">
+        <p>Alice and Bob are people indexed by this index because they are conforming to the shape of the index: they
+          are instances of the <code>foaf:Person</code> class and have the value "Paris" set for the
+          <code>schema:hasLocation</code> predicate.
         </p>
-      </section>
+        <pre data-include="./example1.ttl" data-include-format='text' />
+      </aside>
+
+      <aside class="example" title='Index of people with a given name starting with "a".'>
+        <pre data-include="./example3.ttl" data-include-format='text' />
+      </aside>
+    </section>
+
+    <section>
+      <h3>Indexing using the LDP structure</h3>
+
+      <p>Indexing can be done with LDP when the folder structure has a defined meaning. For instance, messages of the
+        [Solid chat] protocol are stored in a hierachy of date folder. Therefore this client rule can be used to find
+        data faster. For instance one can find the messages from 2024 in the 2024 folder.</p>
     </section>
 
     <section>
       <h3>Meta indexes</h3>
 
-      <p>Meta indexes are indexes that are indexing other indexes.</p>
-    
+      <p>Meta indexes are indexes that are indexing other indexes. They can be used to divide a entire index into
+        smaller parts. While more queries are needed to load the data of interest, meta indexes might reduce the 
+        size of the transfered data by targeting parts with precision. It can also give faster results especially 
+        when combined with an heuristic like detailed in the next section.</p>
+
       <section>
         <h4>Source selection indexes</h4>
 
-        <aside class="example" title="Meta index of instances having people living in Paris with an indication of how much people each instance have.">
+        <p>Source selection is a technique that can be used to query the most relevant indexes first. This way it's 
+          possible to get results faster. This technique relies on one or several heuristics. One example of heuristic 
+          is the number of item that can be found in an index.</p>
+
+        <p>When the data to be found is distributed across multiple indexes, one has to query each of them to complete.
+          Without a source selection step before querying, there is no indication on which index to query first: they
+          are all equal. This can be very ineffiscient especially when relevant data is part of an index that is at the 
+          end of the querying queue.</p>
+
+        <aside class="example"
+          title="Meta index of instances having people living in Paris with an indication of how much people each instance have.">
           <pre data-include="./example4.ttl" data-include-format='text' />
         </aside>
       </section>
 
-      </section>
+    </section>
 
-      <section>
-        <h3>Sorting indexes</h3>
+    <section>
+      <h3>Sorting the index entries</h3>
 
-      </section>
+      <p>MUST use RDF lists.</p>
+    </section>
 
-      <section>
-        <h3>Indexing using the LDP structure</h3>
+    <section>
+      <h3>Pagination</h3>
 
-      </section>
+      <p>Use [[LDP-Paging]]</p>
+    </section>
 
   </section>
 
   <section>
     <h2>Indexing strategies</h2>
-  </section>
 
-  <section>
-    <h2>Indexing a single storage</h2>
+    <section>
+      <h3>Indexed data</h3>
 
-  </section>
+      <p>While we can use indexes to find data on a single storage, they can also be used to find data accross multiple
+        storages. This kind of indexing can be used for example to index people having their own storage. </p>
 
-  <section>
-    <h2>Indexing multiple storages</h2>
+      <section>
+        <h4>Indexing a single storage</h4>
+      </section>
+
+      <section>
+        <h4>Indexing multiple storages</h4>
+      </section>
+    </section>
 
     <section>
       <h3>Using distributed indexes</h3>
+
+      <p>When indexes are only present on each storage we talk about distributed indexing.</p>
     </section>
 
     <section>
       <h3>Using federated indexes</h3>
+
+      <p></p>
     </section>
 
     <section>
@@ -136,14 +194,30 @@
 
   </section>
 
+  </section>
+
   <section>
     <h2>Discovery of indexes</h2>
 
+    <p>Indexes can be discovered by any means. However implementers SHOULD use the mechanisms recommened by the
+      client-to-client protocol if any.</p>
+
+    <p>A possible discovery mean is Type Indexes. They are a well known mechanism used by applications implementing the
+      [[Solid-protocol]].</p>
   </section>
 
   <section>
     <h2>Querying indexes</h2>
+
+    <p>Comunica can be used with streams.</p>
   </section>
+
+  <section>
+    <h2>Relation to Solid Type indexes</h2>
+
+    <p>Solid Type Indexes are designed to...</p>
+  </section>
+
   <section id="conformance">
     <p>
       This is required for specifications that contain normative material.

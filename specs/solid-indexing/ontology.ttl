@@ -1,0 +1,58 @@
+prefix idx: <https://ns.inria.fr/idx/terms#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix dc: <http://purl.org/dc/terms/>
+prefix sh: <https://www.w3.org/ns/shacl>
+
+<https://ns.inria.fr/idx/terms#>
+    a owl:Ontology ;
+    dc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    rdfs:label "Indexing"@en ;
+    rdfs:comment "The Indexing vocabulary defines terms used to index data."@en ;
+    rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
+    dc:issued "2024-06-21"^^xsd:date ;
+    vann:preferredNamespacePrefix "idx" ;
+    vann:preferredNamespaceUri "https://ns.inria.fr/idx/terms#"^^xsd:anyURI .
+
+idx:Index
+    a rdfs:Class ;
+    dc:issued "2024-06-21"^^xsd:date ;
+    rdfs:comment "An index."@en ;
+    rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
+    rdfs:label "Index"@en .
+
+idx:IndexEntry
+    a rdfs:Class ;
+    dc:issued "2024-06-21"^^xsd:date ;
+    rdfs:comment "An index entry."@en ;
+    rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
+    rdfs:label "IndexEntry"@en .
+
+idx:hasTarget
+    a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+    dc:issued "2024-06-21"^^xsd:date ;
+    rdfs:comment "The indexed document."@en ;
+    rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
+    rdfs:label "hasTarget"@en ;
+    rdfs:domain idx:Index idx:IndexEntry ;
+    rdfs:range xsd:anyUri .
+
+idx:hasShape
+    a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+    dc:issued "2024-06-21"^^xsd:date ;
+    rdfs:comment "The indexed SHACL shape."@en ;
+    rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
+    rdfs:label "hasShape"@en ;
+    rdfs:domain idx:Index idx:IndexEntry ;
+    rdfs:range sh:NodeShape .
+
+idx:hasCount
+    a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+    dc:issued "2024-06-21"^^xsd:date ;
+    rdfs:comment "The number of item that can be found in a targeted document."@en ;
+    rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
+    rdfs:label "hasCount"@en ;
+    rdfs:domain idx:IndexEntry ;
+    rdfs:range xsd:integer .
