@@ -5,6 +5,7 @@ prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix dc: <http://purl.org/dc/terms/>
 prefix sh: <https://www.w3.org/ns/shacl>
+prefix vann: <http://purl.org/vocab/vann/>
 
 <https://ns.inria.fr/idx/terms#>
     a owl:Ontology ;
@@ -36,7 +37,7 @@ idx:hasTarget
     rdfs:comment "The indexed document."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "hasTarget"@en ;
-    rdfs:domain idx:Index idx:IndexEntry ;
+    rdfs:domain idx:Index, idx:IndexEntry ;
     rdfs:range xsd:anyUri .
 
 idx:hasShape
@@ -45,7 +46,7 @@ idx:hasShape
     rdfs:comment "The indexed SHACL shape."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "hasShape"@en ;
-    rdfs:domain idx:Index idx:IndexEntry ;
+    rdfs:domain idx:Index, idx:IndexEntry ;
     rdfs:range sh:NodeShape .
 
 idx:hasCount
