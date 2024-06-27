@@ -1,16 +1,19 @@
-<> a ex:Index;
-    ex:hasShape [
+<> a idx:Index;
+    idx:hasShape [
         a sh:NodeShape;
-        sh:targetClass foaf:Person;
         sh:closed false;
+        sh:property [
+            sh:path rdf:type;
+            sh:hasValue foaf:Person
+        ];
         sh:property [
             sh:path schema:hasLocation;
             sh:hasValue "Paris"
         ];
     ].
 
-:entry1 a ex:IndexEntry;
-    ex:hasTarget <https://alice.solidcommunity.net/profile/card#me>.
+:entry1 a idx:IndexEntry;
+    idx:hasTarget <https://alice.solidcommunity.net/profile/card#me>.
 
-:entry2 a ex:IndexEntry;
-    ex:hasTarget <https://bob.solidcommunity.net/profile/card#me>.
+:entry2 a idx:IndexEntry;
+    idx:hasTarget <https://bob.solidcommunity.net/profile/card#me>.

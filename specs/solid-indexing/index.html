@@ -72,7 +72,28 @@
     <section>
       <h3>Namespaces</h3>
 
-      TBD.
+      <table>
+        <tr>
+          <th>Prefix</th>
+          <th>Namespace</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>idx</code></td>
+          <td>https://ns.inria.fr/idx/terms#</td>
+          <td>Indexing ontology</td>
+        </tr>
+        <tr>
+          <td><code>sh</code></td>
+          <td>https://www.w3.org/ns/shacl</td>
+          <td>[[SHACL]]</td>
+        </tr>
+        <tr>
+          <td><code>rdf</code></td>
+          <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+          <td>[[RDF-SCHEMA]]</td>
+        </tr>
+      </table>
     </section>
   </section>
 
@@ -86,11 +107,12 @@
     <section>
       <h3>General indexes</h3>
 
-      <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>ex:Index</code> which contain entries conforming to
-        a
-        particular shape. The shape the index is targeting is expressed with the <code>ex:hasShape</code> predicate.</p>
+      <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>idx:Index</code> containing entries which point to
+        instances conforming to a particular shape. The shape the index or an entry is targeting is expressed with the
+        <code>idx:hasShape</code> predicate.
+      </p>
 
-      <p>An entry is of type <code>ex:IndexEntry</code> and targets a resource using the <code>ex:hasTarget</code>
+      <p>An entry is of type <code>idx:IndexEntry</code> and targets a resource using the <code>idx:hasTarget</code>
         predicate. The resource the entry is targeting MUST conform to the shape of the index.</p>
 
       <p>For instance an index of people living in Paris could be expressed like in the example.</p>
@@ -120,26 +142,42 @@
       <h3>Meta indexes</h3>
 
       <p>Meta indexes are indexes that are indexing other indexes. They can be used to divide a entire index into
-        smaller parts. While more queries are needed to load the data of interest, meta indexes might reduce the 
-        size of the transfered data by targeting parts with precision. It can also give faster results especially 
+        smaller parts. While more queries are needed to load the data of interest, meta indexes might reduce the
+        size of the transfered data by targeting parts with precision. It can also give faster results especially
         when combined with an heuristic like detailed in the next section.</p>
 
       <section>
-        <h4>Source selection indexes</h4>
+        <h4>Source selection</h4>
 
-        <p>Source selection is a technique that can be used to query the most relevant indexes first. This way it's 
-          possible to get results faster. This technique relies on one or several heuristics. One example of heuristic 
-          is the number of item that can be found in an index.</p>
+        <p>Source selection is a technique that consists in selecting indexes that are juged relevant in a bunch of indexes. 
+          This way it's possible to get results faster. This technique relies on one or several heuristics. One example of 
+          heuristic is the number of item that can be found in an index. Setting a minimun number of results might reduce the 
+          number of selected indexes.</p>
 
         <p>When the data to be found is distributed across multiple indexes, one has to query each of them to complete.
-          Without a source selection step before querying, there is no indication on which index to query first: they
-          are all equal. This can be very ineffiscient especially when relevant data is part of an index that is at the 
-          end of the querying queue.</p>
+          Without a source selection step before querying, there is no indication on which index to query: they
+          are considered all equal. This can be very ineffiscient as some indexes without any valid results might be
+          queried.</p>
 
         <aside class="example"
           title="Meta index of instances having people living in Paris with an indication of how much people each instance have.">
           <pre data-include="./example4.ttl" data-include-format='text' />
         </aside>
+      </section>
+
+      <section>
+        <h4>Source ordering</h4>
+
+        <p>Source ordering consists in querying the most relevant indexes first. This technique uses one or several 
+          criterias to order the indexes. One example of a criteria is the number of results contained in an index. 
+          If we take the previous example the <code>:entry2</code> index will be queried before the <code>:entry1</code> 
+          index as it presents more results (the value of the <code>idx:hasCount</code> is higher).
+        </p>
+
+        <p>Source ordering can be used to get results faster as it introduces a priority level between indexes based on 
+          some heuristic(s). Without source ordering results can be slower to come especially when relevant data is part 
+          of an index that is at the end of the querying queue.
+        </p>
       </section>
 
     </section>
