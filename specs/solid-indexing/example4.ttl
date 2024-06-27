@@ -3,7 +3,7 @@
         a sh:NodeShape;
         sh:property [
             sh:path rdf:type;
-            sh:hasValue idx:Index
+            sh:hasValue foaf:PersonalProfileDocument
         ];
         sh:property [
             sh:path schema:hasLocation;

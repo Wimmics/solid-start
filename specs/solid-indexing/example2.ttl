@@ -1,19 +1,23 @@
-<> a ex:Index.
-
-:entry1 a ex:IndexEntry;
-  ex:hasTarget <path/to/an/instance>;
-  ex:hasShape [
-    sh:property [
-      sh:path schema:hasType;
-      sh:hasValue schema:someSkosConcept;
-    ]
+<> a idx:Index;
+  idx:hasShape [
+      a sh:NodeShape;
+      sh:property [
+          sh:path rdf:type;
+          sh:hasValue idx:Index
+      ];
+      sh:property [
+        sh:path schema:hasLocation;
+      ];  
   ].
 
-:entry2 a ex:IndexEntry;
-  ex:hasTarget <path/to/a/second/instance>;
-  ex:hasShape [
-    sh:property [
-      sh:path schema:hasType;
-      sh:hasValue schema:someSkosConcept;
-    ]
-  ].
+:entry1 a idx:IndexEntry;
+  sh:property [
+    sh:hasValue "Paris"
+  ];
+  idx:hasTarget <https://storage.net/indexParis>.
+
+:entry2 a idx:IndexEntry;
+  sh:property [
+    sh:hasValue "Toulouse"
+  ];
+  idx:hasTarget <https://storage.net/indexToulouse>.
