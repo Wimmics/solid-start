@@ -37,8 +37,7 @@ idx:hasTarget
     rdfs:comment "The indexed document."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:domain idx:IndexEntry ;
-    rdfs:label "has target"@en ;
-    rdfs:range xsd:anyUri .
+    rdfs:label "has target"@en.
 
 idx:hasShape
     a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
