@@ -1,23 +1,26 @@
-<> a idx:Index;
-  idx:hasShape [
-      a sh:NodeShape;
-      sh:property [
-          sh:path rdf:type;
-          sh:hasValue idx:Index
-      ];
-      sh:property [
-        sh:path schema:hasLocation;
-      ];  
-  ].
+<> a idx:Index.
+
+_:foafPersonTarget sh:path rdf:type;
+  sh:hasValue foaf:Person.
 
 :entry1 a idx:IndexEntry;
-  sh:property [
-    sh:hasValue "Paris"
+  idx:hasShape [
+    a sh:NodeShape;
+    sh:property _:foafPersonTarget;
+    sh:property [
+      sh:path schema:hasLocation;
+      sh:hasValue "Paris"
+    ]
   ];
-  idx:hasTarget <https://storage.net/indexParis>.
+  idx:hasSubIndex <https://storage.net/indexParis>.
 
 :entry2 a idx:IndexEntry;
-  sh:property [
-    sh:hasValue "Toulouse"
+  idx:hasShape [
+    a sh:NodeShape;
+    sh:property _:foafPersonTarget;
+    sh:property [
+      sh:path schema:hasLocation;
+      sh:hasValue "Toulouse"
+    ]
   ];
-  idx:hasTarget <https://storage.net/indexToulouse>.
+  idx:hasSubIndex <https://storage.net/indexToulouse>.

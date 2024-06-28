@@ -1,20 +1,21 @@
-<> a idx:Index;
-    idx:hasShape [
-        a sh:NodeShape;
-        sh:property [
-            sh:path rdf:type;
-            sh:hasValue foaf:PersonalProfileDocument
-        ];
-        sh:property [
-            sh:path schema:hasLocation;
-            sh:hasValue "Paris"
-        ];
+<> a idx:Index.
+
+:shape a sh:NodeShape;
+    sh:property [
+        sh:path rdf:type;
+        sh:hasValue foaf:PersonalProfileDocument
+    ];
+    sh:property [
+        sh:path schema:hasLocation;
+        sh:hasValue "Paris"
     ].
 
 :entry1 a idx:IndexEntry;
+    idx:hasShape :shape;
     idx:hasTarget <https://instance1.solidcommunity.net/webid#this>.
     idx:hasCount 8.
 
 :entry2 a idx:IndexEntry;
+    idx:hasShape :shape;
     idx:hasTarget <https://instance2.solidcommunity.net/webid#this>.
     idx:hasCount 15.

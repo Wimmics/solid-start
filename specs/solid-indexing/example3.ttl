@@ -1,19 +1,20 @@
-<> a idx:Index;
-    idx:hasShape [
-        a sh:NodeShape;
-        sh:closed false;
-        sh:property [
-            sh:path rdf:type;
-            sh:hasValue foaf:Person
-        ];
-        sh:property [
-            sh:path foaf:givenName;
-            sh:pattern "a.*"
-        ];
+<> a idx:Index.
+    
+:shape a sh:NodeShape;
+    sh:closed false;
+    sh:property [
+        sh:path rdf:type;
+        sh:hasValue foaf:Person
+    ];
+    sh:property [
+        sh:path foaf:givenName;
+        sh:pattern "a.*"
     ].
 
 :entry1 a idx:IndexEntry;
+    idx:hasShape :shape;
     idx:hasTarget <https://alice.solidcommunity.net/profile/card#me>.
 
 :entry2 a idx:IndexEntry;
+    idx:hasShape :shape;
     idx:hasTarget <https://albert.solidcommunity.net/profile/card#me>.

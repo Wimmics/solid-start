@@ -37,7 +37,7 @@ idx:hasTarget
     rdfs:comment "The indexed document."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "hasTarget"@en ;
-    rdfs:domain idx:Index, idx:IndexEntry ;
+    rdfs:domain idx:IndexEntry ;
     rdfs:range xsd:anyUri .
 
 idx:hasShape
@@ -46,7 +46,7 @@ idx:hasShape
     rdfs:comment "The indexed SHACL shape."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "hasShape"@en ;
-    rdfs:domain idx:Index, idx:IndexEntry ;
+    rdfs:domain idx:IndexEntry ;
     rdfs:range sh:NodeShape .
 
 idx:hasCount
@@ -57,3 +57,12 @@ idx:hasCount
     rdfs:label "hasCount"@en ;
     rdfs:domain idx:IndexEntry ;
     rdfs:range xsd:integer .
+
+idx:hasSubIndex
+    a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+    dc:issued "2024-06-28"^^xsd:date ;
+    rdfs:comment "Any sub index that should be queried to find results about the shape."@en ;
+    rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
+    rdfs:label "hasSubIndex"@en ;
+    rdfs:domain idx:IndexEntry ;
+    rdfs:range xsd:anyUri .
