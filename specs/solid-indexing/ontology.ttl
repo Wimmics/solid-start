@@ -63,6 +63,6 @@ idx:hasSubIndex
     dc:issued "2024-06-28"^^xsd:date ;
     rdfs:comment "Any sub index that should be queried to find results about the shape."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
-    rdfs:label "hasSubIndex"@en ;
+    rdfs:label "has sub index"@en ;
     rdfs:domain idx:IndexEntry ;
-    rdfs:range xsd:anyUri .
+    rdfs:range idx:Index .
