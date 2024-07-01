@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Solid indexing</title>
+  <title>Indexing Ontology</title>
   <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove" defer></script>
   <script class="remove">
     // All config options at https://respec.org/docs/
@@ -20,11 +20,7 @@
 
 <body>
   <section id="abstract">
-    <p>With Solid data is distributed accross storages. Depending on the use cases, a client application can search for
-      data in one or several storage(s). This document describes some mechanisms to index data on Solid storages
-      that client-side or [=server-side applications=] can use to allow faster
-      searching. As the Solid server does not need to know about these indexes, editors of application should define the
-      indexes they are using in their [=client-to-client protocol=].</p>
+    <p>This document describes some mechanisms to index linked data hosted on one or different servers.</p>
   </section>
 
   <section id="sotd">
@@ -35,11 +31,8 @@
   <section class="informative">
     <h2>Introduction</h2>
 
-    <p>The current Solid protocol (version 0.11.0) does not provide a built-in server mechanism to search for data. This
-      is left to [=client-to-client protocols=]. This presents the advantage of keeping the Solid protocol as simple as
-      possible. In this document we are proposing an indexing mechanism that stays in the perimeter of client-to-client
-      protocols. Although any editor of application is free to define the mechanism of its choice we are proposing a
-      generic vocabulary to do indexing. Using a common vocabulary is indeed encouraged to facilitate interoperability.
+    <p>Although any editor of application is free to define the vocabulary of its choice to do indexing we are proposing a
+      generic vocabulary to do so. Using a common vocabulary is indeed encouraged to facilitate interoperability.
     </p>
 
     <p>Indexing is a largely used mechanism that allow to find data faster thanks to [=indexes=]. By querying
@@ -131,14 +124,6 @@
     </section>
 
     <section>
-      <h3>Indexing using the LDP structure</h3>
-
-      <p>Indexing can be done with LDP when the folder structure has a defined meaning. For instance, messages of the
-        [Solid chat] protocol are stored in a hierachy of date folder. Therefore this client rule can be used to find
-        data faster. For instance one can find the messages from 2024 in the 2024 folder.</p>
-    </section>
-
-    <section>
       <h3>Meta indexes</h3>
 
       <p>Meta indexes are indexes that are indexing other indexes. They can be used to divide a entire index into
@@ -165,7 +150,7 @@
           queried.</p>
 
         <aside class="example"
-          title="A source selection index that lists the WebId of organizations having people living in Paris with an indication of how much people living in Paris each organization has.">
+          title="A source selection index that lists some distributed indexes of people living in Paris. The idx:hasCount property indicates how much people living in Paris are listed by each distributed index.">
           <pre data-include="./example4.ttl" data-include-format='text' />
         </aside>
       </section>
@@ -256,9 +241,34 @@
   </section>
 
   <section>
-    <h2>Relation to Solid Type indexes</h2>
+    <h2>Indexing with Solid</h2>
 
-    <p>Solid Type Indexes are designed to...</p>
+    <p>With Solid data is distributed accross storages. Depending on the use cases, a client application can search for
+      data in one or several storage(s). This document describes some mechanisms to index data on Solid storages
+      that client-side or [=server-side applications=] can use to allow faster
+      searching. As the Solid server does not need to know about these indexes, editors of application should define the
+      indexes they are using in their [=client-to-client protocol=].
+    </p>
+
+    <p>The current Solid protocol (version 0.11.0) does not provide a built-in server mechanism to search for data. This
+      is left to [=client-to-client protocols=]. This presents the advantage of keeping the Solid protocol as simple as
+      possible. In this document we are proposing an indexing mechanism that stays in the perimeter of client-to-client
+      protocols.
+    </p>
+
+    <section>
+      <h3>Indexing using the LDP structure</h3>
+
+      <p>Indexing can be done with LDP when the folder structure has a defined meaning. For instance, messages of the
+        [Solid chat] protocol are stored in a hierachy of date folder. Therefore this client rule can be used to find
+        data faster. For instance one can find the messages from 2024 in the 2024 folder.</p>
+    </section>
+
+    <section>
+      <h3>Relation to Solid Type indexes</h3>
+
+      <p>Solid Type Indexes are designed to...</p>
+    </section>
   </section>
 
   <section id="conformance">

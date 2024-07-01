@@ -3,7 +3,7 @@
 :shape a sh:NodeShape;
     sh:property [
         sh:path rdf:type;
-        sh:hasValue foaf:PersonalProfileDocument
+        sh:hasValue foaf:Person
     ];
     sh:property [
         sh:path schema:hasLocation;
@@ -12,10 +12,10 @@
 
 :entry1 a idx:IndexEntry;
     idx:hasShape :shape;
-    idx:hasTarget <https://instance1.solidcommunity.net/webid#this>.
+    idx:hasSubIndex <https://server1.ex/indexes/indexParis>.
     idx:hasCount 8.
 
 :entry2 a idx:IndexEntry;
     idx:hasShape :shape;
-    idx:hasTarget <https://instance2.solidcommunity.net/webid#this>.
+    idx:hasSubIndex <https://server2.ex/indexes/indexParis>.
     idx:hasCount 15.
