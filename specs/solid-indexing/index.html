@@ -20,7 +20,8 @@
 
 <body>
   <section id="abstract">
-    <p>This document describes some mechanisms to index linked data hosted on one or different servers.</p>
+    <p>This document describes a vocabulary and some techniques to index and find linked RDF data on the Web. TODO: à
+      qui s'adresse ce document ?</p>
   </section>
 
   <section id="sotd">
@@ -31,24 +32,51 @@
   <section class="informative">
     <h2>Introduction</h2>
 
-    <p>Although any editor of application is free to define the vocabulary of its choice to do indexing we are proposing a
-      generic vocabulary to do so. Using a common vocabulary is indeed encouraged to facilitate interoperability.
+    <p>The Web is made of documents like web pages, API data, images and so on that are linked together. They are
+      information that anyone with the proper authorization can access to. Documents can be found everywhere
+      on the web and we often have to follow the links between them in order to find relevant information. The
+      web is therefore browsable but browsing it manually can be very long to find what we are searching for.
+      That's why search engines have been invented. They browse the web for us by following the
+      links they find in documents so they can tell us where to get documents about a particular subject.
     </p>
 
-    <p>Indexing is a largely used mechanism that allow to find data faster thanks to [=indexes=]. By querying
-      the appropriate indexes one can avoid to browse the entire dataset to find a particular piece. This document tries
-      to answer questions like who is indexing and how.</p>
+    <p>Web engines are doing indexing. Indexing is a largely used mechanism that allow to find data faster thanks to
+      [=indexes=]. By querying
+      the appropriate indexes one can avoid to search at unuseful places. Indexing is also widely used in all kind of software, especially in databases. On the traditionnal web, search engines are indexing  
+      documents globally so even if we saved time we still have to look at the content of the documents by ourselves to see 
+      if the thing we are searching for is there.
+    </p>
 
-    <p>Quelle genre de données voulons nous indexer?</p>
+    <p>There is an other Web, the semantic Web, sometimes called the Web of data or the Web 3.0. It works the same as the 
+      traditionnal Web except that information is described to machines so they can "understand" what documents and the 
+      things they contain are about. This way we can directly get the information we need without having to look at the 
+      content of documents. This is made possible thanks to the Resource Description Framework (RDF). On this improved Web, 
+      knowledge can be deducted automatically by machines. For instance, if a document is about a person and the machines 
+      know a person is a human, they can deduce that this person is a human. Search engines can benefit a lot from the web 
+      of data and some engines already take advantage of it to better respond to our queries.
+    </p>
 
-    <p>Parler des différents types d'indexation, single, multiple, fédéré, distribué...</p>
+    <p>
+      In this document we introduce a reusable RDF vocabulary and techniques to index semantic data. A reusable vocabulary 
+      is great to facilitate interoperability and we hope that you will find it suited to your needs. Even if there is no 
+      search field in your application, search operation are often trigerred for instance when some data is displayed. 
+      Indexing you data should improve the performances of your application. Indexing is also useful to make your data 
+      discoverable.
+    </p>
+
+    <ul>
+      <li>indexer des données privées ?</li>
+      <li>Mettre les pattern à une lettre dans un index. Exemple straight + section optimisation.</li>
+      <li>Parler des différents types d'indexation, single, multiple, fédéré, distribué...</li>
+    </ul>
 
     <section>
       <h3>Terminology</h3>
 
       <p>
         <dfn data-lt="indexes">Index</dfn>
-        TBD.
+        A list of keywords with pointers to where further information about the keyword is found. An index summarizes or
+        characterizes the content and its location.
       </p>
 
       <p>
@@ -129,19 +157,21 @@
       <p>Meta indexes are indexes that are indexing other indexes. They can be used to divide a entire index into
         smaller parts. While more queries are needed to load the data of interest, meta indexes might reduce the
         size of the transfered data by targeting parts with precision. It can also give faster results especially
-        when combined with an heuristic like detailed in the next section.</p>
+        when combined with an heuristic like detailed in the source selection section.</p>
 
-      <aside class="example"
-        title="Meta index listing indexes having people living in Paris and Toulouse.">
+      <aside class="example" title="Meta index listing indexes having people living in Paris and Toulouse.">
         <pre data-include="./example2.ttl" data-include-format='text' />
       </aside>
 
       <section>
         <h4>Source selection</h4>
 
-        <p>Source selection is a technique that consists in selecting indexes that are juged relevant in a bunch of indexes. 
-          This way it's possible to get results faster. This technique relies on one or several heuristics. One example of 
-          heuristic is the number of item that can be found in an index. Setting a minimun number of results might reduce the 
+        <p>Source selection is a technique that consists in selecting indexes that are juged relevant in a bunch of
+          indexes.
+          This way it's possible to get results faster. This technique relies on one or several heuristics. One example
+          of
+          heuristic is the number of item that can be found in an index. Setting a minimun number of results might
+          reduce the
           number of selected indexes.</p>
 
         <p>When the data to be found is distributed across multiple indexes, one has to query each of them to complete.
@@ -158,14 +188,14 @@
       <section>
         <h4>Source ordering</h4>
 
-        <p>Source ordering consists in querying the most relevant indexes first. This technique uses one or several 
-          criterias to order the indexes. One example of a criteria is the number of results contained in an index. 
-          If we take the previous example the <code>:entry2</code> index will be queried before the <code>:entry1</code> 
+        <p>Source ordering consists in querying the most relevant indexes first. This technique uses one or several
+          criterias to order the indexes. One example of a criteria is the number of results contained in an index.
+          If we take the previous example the <code>:entry2</code> index will be queried before the <code>:entry1</code>
           index as it presents more results (the value of the <code>idx:hasCount</code> is higher).
         </p>
 
-        <p>Source ordering can be used to get results faster as it introduces a priority level between indexes based on 
-          some heuristic(s). Without source ordering results can be slower to come especially when relevant data is part 
+        <p>Source ordering can be used to get results faster as it introduces a priority level between indexes based on
+          some heuristic(s). Without source ordering results can be slower to come especially when relevant data is part
           of an index that is at the end of the querying queue.
         </p>
       </section>
@@ -189,42 +219,38 @@
   <section>
     <h2>Indexing strategies</h2>
 
+    <p>Indexing always starts from a federated point.</p>
+
     <section>
       <h3>Indexed data</h3>
 
-      <p>While we can use indexes to find data on a single storage, they can also be used to find data accross multiple
-        storages. This kind of indexing can be used for example to index people having their own storage. </p>
+      <p>When indexing .
+      </p>
 
-      <section>
-        <h4>Indexing a single storage</h4>
-      </section>
-
-      <section>
-        <h4>Indexing multiple storages</h4>
-      </section>
+      <p>TODO: indexing private data.</p>
     </section>
 
     <section>
-      <h3>Using distributed indexes</h3>
+      <h3>Distributed indexing</h3>
 
       <p>When indexes are only present on each storage we talk about distributed indexing.</p>
     </section>
 
     <section>
-      <h3>Using federated indexes</h3>
+      <h3>Federated indexing</h3>
 
       <p></p>
     </section>
 
     <section>
-      <h3>Using hybrid indexes</h3>
+      <h3>Hybrid indexing</h3>
     </section>
 
   </section>
 
   </section>
 
-  <section>
+  <section class="informative">
     <h2>Discovery of indexes</h2>
 
     <p>Indexes can be discovered by any means. However implementers SHOULD use the mechanisms recommened by the
@@ -234,17 +260,18 @@
       [[Solid-protocol]].</p>
   </section>
 
-  <section>
+  <section class="informative">
     <h2>Querying indexes</h2>
 
     <p>Comunica can be used with streams.</p>
   </section>
 
-  <section>
+  <section class="informative">
     <h2>Indexing with Solid</h2>
 
     <p>With Solid data is distributed accross storages. Depending on the use cases, a client application can search for
-      data in one or several storage(s). This document describes some mechanisms to index data on Solid storages
+      data in one or several storage(s). The mechanisms described in this document can be used to index data on Solid
+      storages
       that client-side or [=server-side applications=] can use to allow faster
       searching. As the Solid server does not need to know about these indexes, editors of application should define the
       indexes they are using in their [=client-to-client protocol=].
@@ -252,7 +279,7 @@
 
     <p>The current Solid protocol (version 0.11.0) does not provide a built-in server mechanism to search for data. This
       is left to [=client-to-client protocols=]. This presents the advantage of keeping the Solid protocol as simple as
-      possible. In this document we are proposing an indexing mechanism that stays in the perimeter of client-to-client
+      possible. The indexing mechanisms listed in this document stay in the perimeter of client-to-client
       protocols.
     </p>
 
