@@ -121,7 +121,7 @@
   <section>
     <h2>Indexes</h2>
 
-    <p>This document proposes the <a href="./ontology.ttl" alt="">Indexing ontology</a> as vocabulary for the indexes.
+    <p>This document proposes the <a href="./ontology.ttl" alt="">Indexing ontology</a> as vocabulary for describing indexes.
       This ontology is using [[SHACL]] shapes to
       express what is indexed.</p>
 
@@ -129,7 +129,7 @@
       <h3>General indexes</h3>
 
       <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>idx:Index</code> containing entries which point to
-        instances conforming to a particular shape. The shape the index or an entry is targeting is expressed with the
+        instances conforming to a particular shape. The shape that the index or an entry is targeting is expressed with the
         <code>idx:hasShape</code> predicate.
       </p>
 
@@ -152,22 +152,21 @@
     </section>
 
     <section>
-      <h3>Meta indexes</h3>
+      <h3>Meta-indexes</h3>
 
-      <p>Meta indexes are indexes that are indexing other indexes. They can be used to divide a entire index into
-        smaller parts. While more queries are needed to load the data of interest, meta indexes might reduce the
+      <p>Meta-indexes are indexes that are indexing other indexes. They can be used to divide a entire index into
+        smaller parts. While more queries are needed to load the data of interest, meta-indexes might reduce the
         size of the transfered data by targeting parts with precision. It can also give faster results especially
-        when combined with an heuristic like detailed in the source selection section.</p>
+        when combined with a heuristics like the one detailed in <a href="#source-selection"></a>.</p>
 
-      <aside class="example" title="Meta index listing indexes having people living in Paris and Toulouse.">
+      <aside class="example" title="Meta-index listing indexes having people living in Paris and Toulouse.">
         <pre data-include="./example2.ttl" data-include-format='text' />
       </aside>
 
-      <section>
+      <section id="source-selection">
         <h4>Source selection</h4>
 
-        <p>Source selection is a technique that consists in selecting indexes that are juged relevant in a bunch of
-          indexes.
+        <p>Source selection is a technique that consists in selecting from a set of indexes those that are judged relevant.
           This way it's possible to get results faster. This technique relies on one or several heuristics. One example
           of
           heuristic is the number of item that can be found in an index. Setting a minimun number of results might
@@ -179,7 +178,7 @@
           are considered all equal. This can be very ineffiscient as some indexes without any valid results might be
           queried.</p>
 
-        <aside class="example"
+        <aside id="example-source-selection" class="example"
           title="A source selection index that lists some distributed indexes of people living in Paris. The idx:hasCount property indicates how much people living in Paris are listed by each distributed index.">
           <pre data-include="./example4.ttl" data-include-format='text' />
         </aside>
@@ -190,12 +189,12 @@
 
         <p>Source ordering consists in querying the most relevant indexes first. This technique uses one or several
           criterias to order the indexes. One example of a criteria is the number of results contained in an index.
-          If we take the previous example the <code>:entry2</code> index will be queried before the <code>:entry1</code>
-          index as it presents more results (the value of the <code>idx:hasCount</code> is higher).
+          In <a href="#example-source-selection"></a> the subindex of <code>:entry2</code> will be queried before that of <code>:entry1</code>
+          as it presents more results (the value of the <code>idx:hasCount</code> is higher).
         </p>
 
         <p>Source ordering can be used to get results faster as it introduces a priority level between indexes based on
-          some heuristic(s). Without source ordering results can be slower to come especially when relevant data is part
+          some heuristics. Without source ordering results can be slower to come especially when relevant data is part
           of an index that is at the end of the querying queue.
         </p>
       </section>
