@@ -3,7 +3,7 @@
 _:foafPersonTarget sh:path rdf:type;
   sh:hasValue foaf:Person.
 
-:entry1 a idx:IndexEntry;
+<#entry1> a idx:IndexEntry;
   idx:hasShape [
     a sh:NodeShape;
     sh:property _:foafPersonTarget;
@@ -14,7 +14,7 @@ _:foafPersonTarget sh:path rdf:type;
   ];
   idx:hasSubIndex <https://storage.net/indexParis>.
 
-:entry2 a idx:IndexEntry;
+<#entry2> a idx:IndexEntry;
   idx:hasShape [
     a sh:NodeShape;
     sh:property _:foafPersonTarget;
