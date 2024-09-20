@@ -18,51 +18,60 @@
   </script>
   <style type="text/css">
     .entity h3 {
-  margin-top: 3px;
-  padding-bottom: 5px;
-  border-bottom: 1px solid navy;
-}
+      margin-top: 3px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid navy;
+    }
+
     .hlist {
       border: 1px solid navy;
-  padding: 5px;
-  background-color: #F4FFFF;
+      padding: 5px;
+      background-color: #F4FFFF;
     }
+
     .hlist li {
-  display: inline;
-  display: inline-table;
-  list-style-type: none;
-  padding-right: 20px;
+      display: inline;
+      display: inline-table;
+      list-style-type: none;
+      padding-right: 20px;
     }
+
     .entity {
       border: 1px solid navy;
       margin: 5px 0px 5px 0px;
       padding: 5px;
     }
+
     .description {
-  border-top: 1px dashed gray;
-  border-bottom: 1px dashed gray;
-  background-color: #f2f3f4;
-  margin-top: 5px;
-  padding-bottom: 5px;
-}
-.type-c {
-  cursor: help;
-  color: orange;
-}
-.type-op {
-  cursor: help;
-  color: navy;
-}
-.type-dp {
-  cursor: help;
-  color: green;
-}
+      border-top: 1px dashed gray;
+      border-bottom: 1px dashed gray;
+      background-color: #f2f3f4;
+      margin-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .type-c {
+      cursor: help;
+      color: orange;
+    }
+
+    .type-op {
+      cursor: help;
+      color: navy;
+    }
+
+    .type-dp {
+      cursor: help;
+      color: green;
+    }
   </style>
 </head>
 
 <body>
   <section id="abstract">
-    <p>This document proposes an RDF vocabulary to describe indexes which are intended to be published on the Web,  to facilitate the search of data by Semantic Web agents. Some indexing and index-querying techniques are also introduced.</p>
+    <p>This document proposes an RDF vocabulary to describe indexes which are intended to be published on the Web, to
+      facilitate the search of data by Semantic Web agents. Some indexing and index-querying techniques are also
+      introduced.</p>
   </section>
 
   <section id="sotd">
@@ -73,13 +82,22 @@
   <section class="informative">
     <h2>Introduction</h2>
 
-    <p>The Semantic Web vision consists in publishing on the Web machine-readable documents so that machine, like humans, become able to browse the Web, following links from one document to another, in order to gather information and answer complex questions.</p>
+    <p>The Semantic Web vision consists in publishing on the Web machine-readable documents so that machine, like
+      humans, become able to browse the Web, following links from one document to another, in order to gather
+      information and answer complex questions.</p>
 
-    <p>Hovewer, when a lot of data is available, gathering information and answering complex questions becomes very ineffiscient without indexes. Indexes are made of meta-data that allow to find data more easily and more quickly. Indexing is a widely used mechanism in all kind of software, especially in databases.</p>
+    <p>Hovewer, when a lot of data is available, gathering information and answering complex questions becomes very
+      ineffiscient without indexes. Indexes are made of meta-data that allow to find data more easily and more quickly.
+      Indexing is a widely used mechanism in all kind of software, especially in databases.</p>
 
-    <p>This document proposes an RDF vocabulary to describe one kind of such indexes, which are also intended to be published on the Web, to facilitate the search of data by Semantic Web agents. In addition, this document also presents some indexing and index-querying techniques.</p>
+    <p>This document proposes an RDF vocabulary to describe one kind of such indexes, which are also intended to be
+      published on the Web, to facilitate the search of data by Semantic Web agents. In addition, this document also
+      presents some indexing and index-querying techniques.</p>
 
-    <p>This need for a standard indexing vocabulary appeared in the context of the Solid protocol where several applications interact in the same way with the same data to achieve interoperability. Indeed, as the data is decoupled from the applications, these applications must agree on a client-to-client protocol to work together. If they want to be able to use the same indexes, these must be standardized.</p>
+    <p>This need for a standard indexing vocabulary appeared in the context of the Solid protocol where several
+      applications interact in the same way with the same data to achieve interoperability. Indeed, as the data is
+      decoupled from the applications, these applications must agree on a client-to-client protocol to work together. If
+      they want to be able to use the same indexes, these must be standardized.</p>
 
     <section>
       <h3>Terminology</h3>
@@ -139,245 +157,32 @@
     </section>
   </section>
 
+  <section data-include="widoco.html"></section>
+
   <section>
+    <h2>Ontology description</h3>
 
-    <h2 class="widoco">Vocabulary</h2>
+      <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>idx:Index</code>. It contains entries of type
+        <code>idf:IndexEntry</code>, each one
+        being linked to a shape with the <code>idx:hasShape</code> predicate.</p>
 
-    <p>This section provides details for each class and property defined by this ontology and uses the following superscripts:</p>
+      <p>An entry MUST refer to a resource matching the shape or to another index referring to such resources, with
+        predicate <code>idx:hasTarget</code> or <code>idx:hasSubIndex</code> respectively.</p>
 
-    <div class="">
-      <sup class="type-c" title="Classes">c</sup>: Classes <br>
-      <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br>
-      <sup class="type-dp" title="Datatype Properties">dp</sup>: Datatype Properties <br>
-      <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
-    </div>
-    
-    <h3 id="classes-headline" class="list">Classes</h3>
-       <ul class="hlist">
-        <li><a href="#Index" title="https://ns.inria.fr/idx/terms#Index">Index</a></li>
-        <li><a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">IndexEntry</a></li>
-       </ul>
-       <div class="entity" id="Index">
-        <h3>Index<sup class="type-c" title="class">c</sup></h3>
-        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#Index</p>
-        <div class="comment">
-         <p>A RDF document representing an index.</p>
-      
-        </div>
-        <dl class="definedBy">
-         <dt>
-          Is defined by
-         </dt>
-         <dd>
-          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
-         </dd>
-        </dl>
-        <dl class="description">
-         <dt>
-          is in range of
-         </dt>
-         <dd>
-          <a href="#hasSubIndex" title="https://ns.inria.fr/idx/terms#hasSubIndex">has sub index</a> <sup class="type-op" title="object property">op</sup>
-         </dd>
-        </dl>
-       </div>
-       <div class="entity" id="IndexEntry">
-        <h3>IndexEntry<sup class="type-c" title="class">c</sup></h3>
-        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#IndexEntry</p>
-        <div class="comment">
-         <p>An entry in the index that characterizes a source.</p>
-      
-        </div>
-        <dl class="definedBy">
-         <dt>
-          Is defined by
-         </dt>
-         <dd>
-          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
-         </dd>
-        </dl>
-        <dl class="description">
-         <dt>
-          is in domain of
-         </dt>
-         <dd>
-          <a href="#hasCount" title="https://ns.inria.fr/idx/terms#hasCount">has count</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasShape" title="https://ns.inria.fr/idx/terms#hasShape">has shape</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSubIndex" title="https://ns.inria.fr/idx/terms#hasSubIndex">has sub index</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTarget" title="https://ns.inria.fr/idx/terms#hasTarget">has target</a> <sup class="type-op" title="object property">op</sup>
-         </dd>
-        </dl>
-       </div>
-      </div>
-      
-       <h3 id="properties" class="list">Object Properties</h3>
-       <ul class="hlist">
-        <li><a href="#hasCount" title="https://ns.inria.fr/idx/terms#hasCount"> <span>hasCount</span> </a></li>
-        <li><a href="#hasShape" title="https://ns.inria.fr/idx/terms#hasShape">hasShape</a></li>
-        <li><a href="#hasSubIndex" title="https://ns.inria.fr/idx/terms#hasSubIndex">hasSubIndex</a></li>
-        <li><a href="#hasTarget" title="https://ns.inria.fr/idx/terms#hasTarget">hasTarget</a></li>
-       </ul>
-       <div class="entity" id="hasCount">
-        <h3>hasCount<sup class="type-op" title="object property">op</sup></h3>
-        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasCount</p>
-        <div class="description">
-         <p><strong>has characteristics: </strong> functional</p>
-         <dl>
-          <dt>
-           has domain
-          </dt>
-          <dd>
-           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
-          </dd>
-          <dt>
-           is also defined as
-          </dt>
-          <dd>
-           <a href="#hasCount">data property</a>
-          </dd>
-         </dl>
-        </div>
-       </div>
-       <div class="entity" id="hasShape">
-        <h3>hasShape<sup class="type-op" title="object property">op</sup></h3>
-        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasShape</p>
-        <div class="comment">
-         <p>specifies a SHACL shape capturing the pattern followed by an indexed source.</p>
-      
-        </div>
-        <dl class="definedBy">
-         <dt>
-          Is defined by
-         </dt>
-         <dd>
-          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
-         </dd>
-        </dl>
-        <div class="description">
-         <p><strong>has characteristics: </strong> functional</p>
-         <dl>
-          <dt>
-           has domain
-          </dt>
-          <dd>
-           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
-          </dd>
-          <dt>
-           has range
-          </dt>
-          <dd>
-           <a href="https://www.w3.org/ns/shaclNodeShape" target="_blank" title="https://www.w3.org/ns/shaclNodeShape">shacl Node Shape</a> <sup class="type-c" title="class">c</sup>
-          </dd>
-         </dl>
-        </div>
-       </div>
-       <div class="entity" id="hasSubIndex">
-        <h3>hasSubIndex<sup class="type-op" title="object property">op</sup></h3>
-        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasSubIndex</p>
-        <div class="comment">
-         <p>Any sub index that should be queried to find results about the shape.</p>
-      
-        </div>
-        <dl class="definedBy">
-         <dt>
-          Is defined by
-         </dt>
-         <dd>
-          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
-         </dd>
-        </dl>
-        <div class="description">
-         <p><strong>has characteristics: </strong> functional</p>
-         <dl>
-          <dt>
-           has domain
-          </dt>
-          <dd>
-           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
-          </dd>
-          <dt>
-           has range
-          </dt>
-          <dd>
-           <a href="#Index" title="https://ns.inria.fr/idx/terms#Index">index</a> <sup class="type-c" title="class">c</sup>
-          </dd>
-         </dl>
-        </div>
-       </div>
-       <div class="entity" id="hasTarget">
-        <h3>hasTarget<sup class="type-op" title="object property">op</sup></h3>
-        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasTarget</p>
-        <div class="comment">
-         <p>The indexed document.</p>
-      
-        </div>
-        <dl class="definedBy">
-         <dt>
-          Is defined by
-         </dt>
-         <dd>
-          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
-         </dd>
-        </dl>
-        <div class="description">
-         <p><strong>has characteristics: </strong> functional</p>
-         <dl>
-          <dt>
-           has domain
-          </dt>
-          <dd>
-           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
-          </dd>
-         </dl>
-        </div>
-
-      </div>
-      
-       <h3 id="dataproperties-headline" class="list">Data Properties</h3>
-       <ul class="hlist">
-        <li><a href="#hasCount" title="https://ns.inria.fr/idx/terms#hasCount"> <span>hasCount</span> </a></li>
-       </ul>
-       <div class="entity" id="hasCount">
-        <h3>hasCount<sup class="type-dp" title="data property">dp</sup></h3>
-        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasCount</p>
-        <div class="description">
-         <p><strong>has characteristics: </strong> functional</p>
-         <dl>
-          <dt>
-           has range
-          </dt>
-          <dd>
-           <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-          </dd>
-          <dt>
-           is also defined as
-          </dt>
-          <dd>
-           <a href="#hasCount">object property</a>
-          </dd>
-         </dl>
-        </div>
-       </div>
-
+      <p>A shape is...</p>
   </section>
 
   <section>
     <h2>Indexes</h2>
 
-    <p>This document proposes the <a href="./ontology.ttl" alt="">Indexing ontology</a> as vocabulary for describing indexes.
+    <p>This document proposes the <a href="./ontology.ttl" alt="">Indexing ontology</a> as vocabulary for describing
+      indexes.
       This ontology is using [[SHACL]] shapes to
       express what is indexed.</p>
 
     <section>
-      <h3>General indexes</h3>
-
-      <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>idx:Index</code>. It contains entries of type <code>idf:IndexEntry</code>, each one 
-        being linked to a shape with the <code>idx:hasShape</code> predicate.</p>
-        
-      <p>An entry MUST refer to a resource matching the shape  or to another index referring to such resources, with predicate <code>idx:hasTarget</code> or <code>idx:hasSubIndex</code> respectively.</p>
-
-      <p>An instance is...</p>
-
-      <p>A sub index is...</p>
-
-      <p>A shape is...</p>
+      
+      <h3>General indexes</h3>     
 
       <p>For instance an index of people living in Paris could be expressed like in the example.</p>
 
@@ -409,7 +214,8 @@
       <section id="source-selection">
         <h4>Source selection</h4>
 
-        <p>Source selection is a technique that consists in selecting from a set of indexes those that are judged relevant.
+        <p>Source selection is a technique that consists in selecting from a set of indexes those that are judged
+          relevant.
           This way it's possible to get results faster. This technique relies on one or several heuristics. One example
           of
           heuristic is the number of item that can be found in an index. Setting a minimun number of results might
@@ -432,7 +238,8 @@
 
         <p>Source ordering consists in querying the most relevant indexes first. This technique uses one or several
           criterias to order the indexes. One example of a criteria is the number of results contained in an index.
-          In <a href="#example-source-selection"></a> the subindex of <code>:entry2</code> will be queried before that of <code>:entry1</code>
+          In <a href="#example-source-selection"></a> the subindex of <code>:entry2</code> will be queried before that
+          of <code>:entry1</code>
           as it presents more results (the value of the <code>idx:hasCount</code> is higher).
         </p>
 
