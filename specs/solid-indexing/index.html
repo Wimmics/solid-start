@@ -371,7 +371,7 @@
       <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>idx:Index</code>. It contains entries of type <code>idf:IndexEntry</code>, each one 
         being linked to a shape with the <code>idx:hasShape</code> predicate.</p>
         
-      <p>An entry MUST refer to either an instance or to a sub index with the respective predicates <code>idx:hasTarget</code> and <code>idx:hasSubIndex</code>.</p>
+      <p>An entry MUST refer to a resource matching the shape  or to another index referring to such resources, with predicate <code>idx:hasTarget</code> or <code>idx:hasSubIndex</code> respectively.</p>
 
       <p>An instance is...</p>
 
