@@ -16,6 +16,48 @@
       group: "my-working-group",
     };
   </script>
+  <style type="text/css">
+    .entity h3 {
+  margin-top: 3px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid navy;
+}
+    .hlist {
+      border: 1px solid navy;
+  padding: 5px;
+  background-color: #F4FFFF;
+    }
+    .hlist li {
+  display: inline;
+  display: inline-table;
+  list-style-type: none;
+  padding-right: 20px;
+    }
+    .entity {
+      border: 1px solid navy;
+      margin: 5px 0px 5px 0px;
+      padding: 5px;
+    }
+    .description {
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+  background-color: #f2f3f4;
+  margin-top: 5px;
+  padding-bottom: 5px;
+}
+.type-c {
+  cursor: help;
+  color: orange;
+}
+.type-op {
+  cursor: help;
+  color: navy;
+}
+.type-dp {
+  cursor: help;
+  color: green;
+}
+  </style>
 </head>
 
 <body>
@@ -44,8 +86,8 @@
 
       <p>
         <dfn data-lt="indexes">Index</dfn>
-        A list of keywords with pointers to where further information about the keyword is found. An index summarizes or
-        characterizes the content and its location.
+        A data-structure serving as a summary of a dataset,
+        aiming at quickly locating data in the dataset without having to scan it exhaustively.
       </p>
 
       <p>
@@ -81,14 +123,238 @@
         <tr>
           <td><code>rdf</code></td>
           <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
-          <td>[[RDF-SCHEMA]]</td>
+          <td>[[RDF]]</td>
+        </tr>
+        <tr>
+          <td><code>foaf</code></td>
+          <td>http://xmlns.com/foaf/0.1/</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><code>schema</code></td>
+          <td>http://schema.org/</td>
+          <td></td>
         </tr>
       </table>
     </section>
   </section>
 
   <section>
-    <h2>Vocabulary</h2>
+
+    <h2 class="widoco">Vocabulary</h2>
+
+    <p>This section provides details for each class and property defined by this ontology and uses the following superscripts:</p>
+
+    <div class="">
+      <sup class="type-c" title="Classes">c</sup>: Classes <br>
+      <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br>
+      <sup class="type-dp" title="Datatype Properties">dp</sup>: Datatype Properties <br>
+      <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+    </div>
+    
+    <h3 id="classes-headline" class="list">Classes</h3>
+       <ul class="hlist">
+        <li><a href="#Index" title="https://ns.inria.fr/idx/terms#Index">Index</a></li>
+        <li><a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">IndexEntry</a></li>
+       </ul>
+       <div class="entity" id="Index">
+        <h3>Index<sup class="type-c" title="class">c</sup></h3>
+        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#Index</p>
+        <div class="comment">
+         <p>A RDF document representing an index.</p>
+      
+        </div>
+        <dl class="definedBy">
+         <dt>
+          Is defined by
+         </dt>
+         <dd>
+          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
+         </dd>
+        </dl>
+        <dl class="description">
+         <dt>
+          is in range of
+         </dt>
+         <dd>
+          <a href="#hasSubIndex" title="https://ns.inria.fr/idx/terms#hasSubIndex">has sub index</a> <sup class="type-op" title="object property">op</sup>
+         </dd>
+        </dl>
+       </div>
+       <div class="entity" id="IndexEntry">
+        <h3>IndexEntry<sup class="type-c" title="class">c</sup></h3>
+        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#IndexEntry</p>
+        <div class="comment">
+         <p>An entry in the index that characterizes a source.</p>
+      
+        </div>
+        <dl class="definedBy">
+         <dt>
+          Is defined by
+         </dt>
+         <dd>
+          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
+         </dd>
+        </dl>
+        <dl class="description">
+         <dt>
+          is in domain of
+         </dt>
+         <dd>
+          <a href="#hasCount" title="https://ns.inria.fr/idx/terms#hasCount">has count</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasShape" title="https://ns.inria.fr/idx/terms#hasShape">has shape</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSubIndex" title="https://ns.inria.fr/idx/terms#hasSubIndex">has sub index</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTarget" title="https://ns.inria.fr/idx/terms#hasTarget">has target</a> <sup class="type-op" title="object property">op</sup>
+         </dd>
+        </dl>
+       </div>
+      </div>
+      
+       <h3 id="properties" class="list">Object Properties</h3>
+       <ul class="hlist">
+        <li><a href="#hasCount" title="https://ns.inria.fr/idx/terms#hasCount"> <span>hasCount</span> </a></li>
+        <li><a href="#hasShape" title="https://ns.inria.fr/idx/terms#hasShape">hasShape</a></li>
+        <li><a href="#hasSubIndex" title="https://ns.inria.fr/idx/terms#hasSubIndex">hasSubIndex</a></li>
+        <li><a href="#hasTarget" title="https://ns.inria.fr/idx/terms#hasTarget">hasTarget</a></li>
+       </ul>
+       <div class="entity" id="hasCount">
+        <h3>hasCount<sup class="type-op" title="object property">op</sup></h3>
+        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasCount</p>
+        <div class="description">
+         <p><strong>has characteristics: </strong> functional</p>
+         <dl>
+          <dt>
+           has domain
+          </dt>
+          <dd>
+           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
+          </dd>
+          <dt>
+           is also defined as
+          </dt>
+          <dd>
+           <a href="#hasCount">data property</a>
+          </dd>
+         </dl>
+        </div>
+       </div>
+       <div class="entity" id="hasShape">
+        <h3>hasShape<sup class="type-op" title="object property">op</sup></h3>
+        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasShape</p>
+        <div class="comment">
+         <p>specifies a SHACL shape capturing the pattern followed by an indexed source.</p>
+      
+        </div>
+        <dl class="definedBy">
+         <dt>
+          Is defined by
+         </dt>
+         <dd>
+          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
+         </dd>
+        </dl>
+        <div class="description">
+         <p><strong>has characteristics: </strong> functional</p>
+         <dl>
+          <dt>
+           has domain
+          </dt>
+          <dd>
+           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
+          </dd>
+          <dt>
+           has range
+          </dt>
+          <dd>
+           <a href="https://www.w3.org/ns/shaclNodeShape" target="_blank" title="https://www.w3.org/ns/shaclNodeShape">shacl Node Shape</a> <sup class="type-c" title="class">c</sup>
+          </dd>
+         </dl>
+        </div>
+       </div>
+       <div class="entity" id="hasSubIndex">
+        <h3>hasSubIndex<sup class="type-op" title="object property">op</sup></h3>
+        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasSubIndex</p>
+        <div class="comment">
+         <p>Any sub index that should be queried to find results about the shape.</p>
+      
+        </div>
+        <dl class="definedBy">
+         <dt>
+          Is defined by
+         </dt>
+         <dd>
+          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
+         </dd>
+        </dl>
+        <div class="description">
+         <p><strong>has characteristics: </strong> functional</p>
+         <dl>
+          <dt>
+           has domain
+          </dt>
+          <dd>
+           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
+          </dd>
+          <dt>
+           has range
+          </dt>
+          <dd>
+           <a href="#Index" title="https://ns.inria.fr/idx/terms#Index">index</a> <sup class="type-c" title="class">c</sup>
+          </dd>
+         </dl>
+        </div>
+       </div>
+       <div class="entity" id="hasTarget">
+        <h3>hasTarget<sup class="type-op" title="object property">op</sup></h3>
+        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasTarget</p>
+        <div class="comment">
+         <p>The indexed document.</p>
+      
+        </div>
+        <dl class="definedBy">
+         <dt>
+          Is defined by
+         </dt>
+         <dd>
+          <a href="https://ns.inria.fr/idx/terms#">https://ns.inria.fr/idx/terms#</a>
+         </dd>
+        </dl>
+        <div class="description">
+         <p><strong>has characteristics: </strong> functional</p>
+         <dl>
+          <dt>
+           has domain
+          </dt>
+          <dd>
+           <a href="#IndexEntry" title="https://ns.inria.fr/idx/terms#IndexEntry">index entry</a> <sup class="type-c" title="class">c</sup>
+          </dd>
+         </dl>
+        </div>
+
+      </div>
+      
+       <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+       <ul class="hlist">
+        <li><a href="#hasCount" title="https://ns.inria.fr/idx/terms#hasCount"> <span>hasCount</span> </a></li>
+       </ul>
+       <div class="entity" id="hasCount">
+        <h3>hasCount<sup class="type-dp" title="data property">dp</sup></h3>
+        <p><strong>IRI:</strong> https://ns.inria.fr/idx/terms#hasCount</p>
+        <div class="description">
+         <p><strong>has characteristics: </strong> functional</p>
+         <dl>
+          <dt>
+           has range
+          </dt>
+          <dd>
+           <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+          </dd>
+          <dt>
+           is also defined as
+          </dt>
+          <dd>
+           <a href="#hasCount">object property</a>
+          </dd>
+         </dl>
+        </div>
+       </div>
 
   </section>
 
@@ -102,13 +368,16 @@
     <section>
       <h3>General indexes</h3>
 
-      <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>idx:Index</code> containing entries which point to
-        instances conforming to a particular shape. The shape that the index or an entry is targeting is expressed with the
-        <code>idx:hasShape</code> predicate.
-      </p>
+      <p>An index is a RDF document [[RDF11-CONCEPTS]] of type <code>idx:Index</code>. It contains entries of type <code>idf:IndexEntry</code>, each one 
+        being linked to a shape with the <code>idx:hasShape</code> predicate.</p>
+        
+      <p>An entry MUST refer to a resource matching the shape  or to another index referring to such resources, with predicate <code>idx:hasTarget</code> or <code>idx:hasSubIndex</code> respectively.</p>
 
-      <p>An entry is of type <code>idx:IndexEntry</code> and targets a resource using the <code>idx:hasTarget</code>
-        predicate. The resource the entry is targeting MUST conform to the shape of the index.</p>
+      <p>An instance is...</p>
+
+      <p>A sub index is...</p>
+
+      <p>A shape is...</p>
 
       <p>For instance an index of people living in Paris could be expressed like in the example.</p>
 

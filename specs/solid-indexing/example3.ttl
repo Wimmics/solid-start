@@ -1,6 +1,6 @@
 <> a idx:Index.
     
-:shape a sh:NodeShape;
+<#shape> a sh:NodeShape;
     sh:closed false;
     sh:property [
         sh:path rdf:type;
@@ -11,10 +11,10 @@
         sh:pattern "a.*"
     ].
 
-:entry1 a idx:IndexEntry;
-    idx:hasShape :shape;
+<#entry1> a idx:IndexEntry;
+    idx:hasShape <#shape>;
     idx:hasTarget <https://alice.solidcommunity.net/profile/card#me>.
 
-:entry2 a idx:IndexEntry;
-    idx:hasShape :shape;
+<#entry2> a idx:IndexEntry;
+    idx:hasShape <#shape>;
     idx:hasTarget <https://albert.solidcommunity.net/profile/card#me>.

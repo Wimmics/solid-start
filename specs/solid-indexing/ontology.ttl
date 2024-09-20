@@ -1,17 +1,17 @@
-prefix idx: <https://ns.inria.fr/idx/terms#>
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix owl: <http://www.w3.org/2002/07/owl#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix dc: <http://purl.org/dc/terms/>
-prefix sh: <https://www.w3.org/ns/shacl>
-prefix vann: <http://purl.org/vocab/vann/>
+@prefix idx: <https://ns.inria.fr/idx/terms#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix sh: <https://www.w3.org/ns/shacl#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
 
-<https://ns.inria.fr/idx/terms#>
+<https://ns.inria.fr/idx/terms>
     a owl:Ontology ;
     dc:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    rdfs:label "Indexing Ontology"@en ;
-    rdfs:comment "The Indexing vocabulary defines terms used to index data."@en ;
+    rdfs:label "Shape-based Indexing Ontology"@en ;
+    rdfs:comment "The Shape-based Indexing vocabulary defines terms used to index data."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     dc:issued "2024-06-21"^^xsd:date ;
     vann:preferredNamespacePrefix "idx" ;
@@ -27,22 +27,27 @@ idx:Index
 idx:IndexEntry
     a rdfs:Class ;
     dc:issued "2024-06-21"^^xsd:date ;
-    rdfs:comment "An entry in the index that characterizes a source."@en ;
+    rdfs:comment "An entry in the index locating data matching a given shape."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "index entry"@en .
 
 idx:hasTarget
     a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
     dc:issued "2024-06-21"^^xsd:date ;
-    rdfs:comment "The indexed document."@en ;
+    rdfs:comment "A resource matching the shape of the subject entry."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
-    rdfs:domain idx:IndexEntry ;
+    rdfs:domain idx:IndexEntry, [
+        rdfs:comment "hasTarget and hasSubIndex are exclusive" ;
+        a owl:Restriction ;
+        owl:onProperty idx:hasSubIndex ;
+        owl:allValuesFrom owl:Nothing;
+    ] ;
     rdfs:label "has target"@en.
 
 idx:hasShape
-    a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
+    a rdf:Property, owl:ObjectProperty ;
     dc:issued "2024-06-21"^^xsd:date ;
-    rdfs:comment "specifies a SHACL shape capturing the pattern followed by an indexed source."@en ;
+    rdfs:comment "The shape that is matched by resources referred to by this entry."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "has shape"@en ;
     rdfs:domain idx:IndexEntry ;
@@ -51,17 +56,28 @@ idx:hasShape
 idx:hasCount
     a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
     dc:issued "2024-06-21"^^xsd:date ;
-    rdfs:comment "The number of items that can be found in a targeted document."@en ;
+    rdfs:comment "The number of resources that are referred to by the sub-index(es)."@en ;
+    rdfs:seeAlso idx:hasSubIndex ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "has count"@en ;
-    rdfs:domain idx:IndexEntry ;
+    rdfs:domain idx:IndexEntry, [
+        rdfs:comment "hasCount implies hasSubIndex" ;
+        a owl:Restriction ;
+        owl:onProperty idx:hasSubIndex ;
+        owl:someValuesFrom owl:Thing ;
+    ] ;
     rdfs:range xsd:integer .
 
 idx:hasSubIndex
     a rdf:Property, owl:ObjectProperty, owl:FunctionalProperty ;
-    dc:issued "2024-06-28"^^xsd:date ;
-    rdfs:comment "Any sub index that should be queried to find results about the shape."@en ;
+    dc:issued "2024-06-21"^^xsd:date ;
+    rdfs:comment "Another index referring to resources matching the shape of this entry."@en ;
     rdfs:isDefinedBy <https://ns.inria.fr/idx/terms#> ;
     rdfs:label "has sub index"@en ;
-    rdfs:domain idx:IndexEntry ;
+    rdfs:domain idx:IndexEntry, [
+        rdfs:comment "hasTarget and hasSubIndex are exclusive" ;
+        a owl:Restriction ;
+        owl:onProperty idx:hasShape ;
+        owl:allValuesFrom owl:Nothing ;
+    ] ;
     rdfs:range idx:Index .

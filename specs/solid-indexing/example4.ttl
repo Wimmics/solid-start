@@ -1,6 +1,6 @@
 <> a idx:Index.
 
-:shape a sh:NodeShape;
+<#shape> a sh:NodeShape;
     sh:property [
         sh:path rdf:type;
         sh:hasValue foaf:Person
@@ -10,12 +10,12 @@
         sh:hasValue "Paris"
     ].
 
-:entry1 a idx:IndexEntry;
-    idx:hasShape :shape;
-    idx:hasSubIndex <https://server1.ex/indexes/indexParis>.
+<#entry1> a idx:IndexEntry;
+    idx:hasShape <#shape>;
+    idx:hasSubIndex <https://server1.ex/indexes/indexParis>;
     idx:hasCount 8.
 
-:entry2 a idx:IndexEntry;
-    idx:hasShape :shape;
-    idx:hasSubIndex <https://server2.ex/indexes/indexParis>.
+<#entry2> a idx:IndexEntry;
+    idx:hasShape <#shape>;
+    idx:hasSubIndex <https://server2.ex/indexes/indexParis>;
     idx:hasCount 15.
