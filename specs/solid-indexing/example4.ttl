@@ -12,10 +12,10 @@
 
 <#entry1> a idx:IndexEntry;
     idx:hasShape <#shape>;
-    idx:hasSubIndex <https://server1.ex/indexes/indexParis>.
+    idx:hasSubIndex <https://server1.ex/indexes/indexParis>;
     idx:hasCount 8.
 
 <#entry2> a idx:IndexEntry;
     idx:hasShape <#shape>;
-    idx:hasSubIndex <https://server2.ex/indexes/indexParis>.
+    idx:hasSubIndex <https://server2.ex/indexes/indexParis>;
     idx:hasCount 15.
